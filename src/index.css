@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-display: 'Syne', 'Plus Jakarta Sans', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+
+    /* Dark theme defaults */
+    --bg-main: #212121;
+    --bg-sidebar: #171717;
+    --bg-surface: #2f2f2f;
+    --bg-surface-hover: #383838;
+    --text-primary: #ececec;
+    --text-secondary: #b4b4b4;
+    --text-muted: #8e8e8e;
+    --border-color: #333333;
+    --border-subtle: #262626;
+    --dot-color: rgba(255, 255, 255, 0.05);
+    --input-bg: #2f2f2f;
+    --input-border: #383838;
+    --user-bubble: #2f2f2f;
+    --user-bubble-text: #ffffff;
+    --code-bg: #171717;
+    --code-header: #212121;
+    --code-border: #383838;
+    --code-text: #e3e3e3;
+    --glow-amber: rgba(245, 158, 11, 0.045);
+    --glow-indigo: rgba(99, 102, 241, 0.025);
+  }
+
+  [data-theme="light"], .theme-light {
+    /* Light theme (ChatGPT light style) */
+    --bg-main: #ffffff;
+    --bg-sidebar: #f9f9f9;
+    --bg-surface: #f4f4f4;
+    --bg-surface-hover: #ebebeb;
+    --text-primary: #0d0d0d;
+    --text-secondary: #424242;
+    --text-muted: #71717a;
+    --border-color: #e5e5e5;
+    --border-subtle: #eaeaea;
+    --dot-color: rgba(0, 0, 0, 0.04);
+    --input-bg: #f4f4f4;
+    --input-border: #e5e5e5;
+    --user-bubble: #f4f4f4;
+    --user-bubble-text: #0d0d0d;
+    --code-bg: #f8f9fa;
+    --code-header: #eeeeee;
+    --code-border: #e0e0e0;
+    --code-text: #1f2328;
+    --glow-amber: rgba(245, 158, 11, 0.03);
+    --glow-indigo: rgba(99, 102, 241, 0.02);
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    overflow-x: hidden;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-mono-code {
+  font-family: var(--font-mono);
+}
+
+/* Custom minimal scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(128, 128, 128, 0.25);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(128, 128, 128, 0.4);
+}
+
+/* Code block highlight styles */
+pre code {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
+/* Stylish subtle ambient background texture */
+.bg-ambient-grid {
+  background-image: radial-gradient(var(--dot-color) 1px, transparent 1px);
+  background-size: 28px 28px;
+  mask-image: radial-gradient(ellipse 80% 70% at 50% 30%, black 25%, transparent 85%);
+  -webkit-mask-image: radial-gradient(ellipse 80% 70% at 50% 30%, black 25%, transparent 85%);
+}

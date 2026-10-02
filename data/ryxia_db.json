@@ -1,0 +1,667 @@
+{
+  "users": [
+    {
+      "id": "usr_1790939574033_wfzmz",
+      "name": "Adan",
+      "email": "adan@ryxia.ai",
+      "passwordHash": "$2b$10$UYLiyp2NduWELMLUs7WeXOcqCOdqfOt9fU.oxBZFKVPt1NXnhdQm2",
+      "createdAt": "2026-10-02T11:12:54.033Z",
+      "avatar": "https://api.dicebear.com/7.x/shapes/svg?seed=adan%40ryxia.ai"
+    },
+    {
+      "id": "guest_1790940032270_pwf0",
+      "name": "Invité",
+      "email": "guest_1790940032270_pwf0@ryxia.local",
+      "passwordHash": "$2b$10$am7Qjdz//bfmWY0u8Nq/MuS6yqopW0j0rXbgnYiB20x9C.tTsmqTy",
+      "createdAt": "2026-10-02T11:20:32.403Z",
+      "avatar": "https://api.dicebear.com/7.x/shapes/svg?seed=guest_1790940032270_pwf0"
+    },
+    {
+      "id": "guest_1790940048252_4r1i",
+      "name": "Invité",
+      "email": "guest_1790940048252_4r1i@ryxia.local",
+      "passwordHash": "$2b$10$vQobAqh/Z475fjSWMETavezr4RMSbJ7T3e1czo5Nuz8pdG/Aww/hG",
+      "createdAt": "2026-10-02T11:20:48.399Z",
+      "avatar": "https://api.dicebear.com/7.x/shapes/svg?seed=guest_1790940048252_4r1i"
+    },
+    {
+      "id": "guest_1790942860085_zaq8",
+      "name": "Invité",
+      "email": "guest_1790942860085_zaq8@ryxia.local",
+      "passwordHash": "$2b$10$LZeDF7kC7CAivWWSSG9/Kuba2/ZV7/vPRztjon3WX0TT83.UIelkq",
+      "createdAt": "2026-10-02T12:07:40.214Z",
+      "avatar": "https://api.dicebear.com/7.x/shapes/svg?seed=guest_1790942860085_zaq8"
+    },
+    {
+      "id": "guest_1790942868325_t26j",
+      "name": "Invité",
+      "email": "guest_1790942868325_t26j@ryxia.local",
+      "passwordHash": "$2b$10$ZYsjFvaIfvoFM4ha/rXIcOl66FooGO3p9pSrNKXBZWyu9W3yMW4Za",
+      "createdAt": "2026-10-02T12:07:48.435Z",
+      "avatar": "https://api.dicebear.com/7.x/shapes/svg?seed=guest_1790942868325_t26j"
+    },
+    {
+      "id": "guest_1790943368822_6v7z",
+      "name": "Invité",
+      "email": "guest_1790943368822_6v7z@ryxia.local",
+      "passwordHash": "$2b$10$YwKV1F9d8IpP/lvzZuBbwOROE64W7DfJ7pbnsB95p2zVoYMkRSnwG",
+      "createdAt": "2026-10-02T12:16:08.949Z",
+      "avatar": "https://api.dicebear.com/7.x/shapes/svg?seed=guest_1790943368822_6v7z"
+    },
+    {
+      "id": "guest_1790943373881_8v8u",
+      "name": "Invité",
+      "email": "guest_1790943373881_8v8u@ryxia.local",
+      "passwordHash": "$2b$10$Pi6PwDJQ6KGMOSinftQP1e.qFd.MJKtYwLNEZEXkuCoqW0Dr..avG",
+      "createdAt": "2026-10-02T12:16:13.986Z",
+      "avatar": "https://api.dicebear.com/7.x/shapes/svg?seed=guest_1790943373881_8v8u"
+    },
+    {
+      "id": "guest_1790943382690_13xc",
+      "name": "Invité",
+      "email": "guest_1790943382690_13xc@ryxia.local",
+      "passwordHash": "$2b$10$VZaIEi1g1YV.PqzNtlXRye6SWDrPoTapmViJnZ2yFlsFJWARAN26y",
+      "createdAt": "2026-10-02T12:16:22.801Z",
+      "avatar": "https://api.dicebear.com/7.x/shapes/svg?seed=guest_1790943382690_13xc"
+    },
+    {
+      "id": "guest_1790943598914_dsq0",
+      "name": "Invité",
+      "email": "guest_1790943598914_dsq0@ryxia.local",
+      "passwordHash": "$2b$10$biYudBU8sOtNjYs8fVZNFu0OK7fX4s8oiK2HY6onW6OlwAaiCEaF2",
+      "createdAt": "2026-10-02T12:19:59.042Z",
+      "avatar": "https://api.dicebear.com/7.x/shapes/svg?seed=guest_1790943598914_dsq0"
+    }
+  ],
+  "conversations": [
+    {
+      "id": "conv_1790939577545_qqc1h",
+      "userId": "usr_1790939574033_wfzmz",
+      "title": "Bonjour RYXIA ! Peux-tu me présenter tes capacit...",
+      "mode": "general",
+      "createdAt": "2026-10-02T11:12:57.545Z",
+      "updatedAt": "2026-10-02T11:12:57.545Z"
+    },
+    {
+      "id": "conv_1790939676038_9rntn",
+      "userId": "usr_1790939574033_wfzmz",
+      "title": "Quelle est la vision de RYXIA en une phrase ?",
+      "mode": "general",
+      "createdAt": "2026-10-02T11:14:36.038Z",
+      "updatedAt": "2026-10-02T11:14:40.452Z"
+    },
+    {
+      "id": "conv_1790939704777_nb6uh",
+      "userId": "usr_1790939574033_wfzmz",
+      "title": "Présente-toi en une phrase percutante.",
+      "mode": "general",
+      "createdAt": "2026-10-02T11:15:04.777Z",
+      "updatedAt": "2026-10-02T11:15:07.802Z"
+    },
+    {
+      "id": "conv_1790939739694_09ajp",
+      "userId": "usr_1790939574033_wfzmz",
+      "title": "Donne-moi 3 principes pour coder comme un archit...",
+      "mode": "code",
+      "createdAt": "2026-10-02T11:15:39.694Z",
+      "updatedAt": "2026-10-02T11:15:43.777Z"
+    },
+    {
+      "id": "conv_1790940122993_257pz",
+      "userId": "guest_1790940048252_4r1i",
+      "title": "coucou",
+      "mode": "general",
+      "createdAt": "2026-10-02T11:22:02.993Z",
+      "updatedAt": "2026-10-02T11:22:04.086Z"
+    },
+    {
+      "id": "conv_1790940461840_2c1ft",
+      "userId": "guest_1790940048252_4r1i",
+      "title": "bonjour",
+      "mode": "general",
+      "createdAt": "2026-10-02T11:27:41.840Z",
+      "updatedAt": "2026-10-02T11:29:06.324Z"
+    },
+    {
+      "id": "conv_1790940815760_0kib7",
+      "userId": "guest_1790940048252_4r1i",
+      "title": "alkhir",
+      "mode": "general",
+      "createdAt": "2026-10-02T11:33:35.760Z",
+      "updatedAt": "2026-10-02T11:33:36.936Z"
+    },
+    {
+      "id": "conv_1790941012401_d3kxx",
+      "userId": "guest_1790940048252_4r1i",
+      "title": "esque tu connais la jsk",
+      "mode": "general",
+      "createdAt": "2026-10-02T11:36:52.401Z",
+      "updatedAt": "2026-10-02T11:37:02.219Z"
+    },
+    {
+      "id": "conv_1790942759042_ja1zv",
+      "userId": "guest_1790940048252_4r1i",
+      "title": "bonjour",
+      "mode": "general",
+      "createdAt": "2026-10-02T12:05:59.042Z",
+      "updatedAt": "2026-10-02T12:05:59.155Z"
+    },
+    {
+      "id": "conv_1790942860244_mu4x6",
+      "userId": "guest_1790942860085_zaq8",
+      "title": "Bonjour RYXIA, dis juste une courte phrase pour ...",
+      "mode": "general",
+      "createdAt": "2026-10-02T12:07:40.245Z",
+      "updatedAt": "2026-10-02T12:07:41.233Z"
+    },
+    {
+      "id": "conv_1790942868465_0wozo",
+      "userId": "guest_1790942868325_t26j",
+      "title": "Où se trouve la Tour Eiffel à Paris ?",
+      "mode": "general",
+      "createdAt": "2026-10-02T12:07:48.465Z",
+      "updatedAt": "2026-10-02T12:07:49.923Z"
+    },
+    {
+      "id": "conv_1790943013499_0cvzn",
+      "userId": "guest_1790940048252_4r1i",
+      "title": "bonjour",
+      "mode": "general",
+      "createdAt": "2026-10-02T12:10:13.499Z",
+      "updatedAt": "2026-10-02T12:10:18.393Z"
+    },
+    {
+      "id": "conv_1790943015402_v7wya",
+      "userId": "guest_1790940048252_4r1i",
+      "title": "bonjour",
+      "mode": "general",
+      "createdAt": "2026-10-02T12:10:15.402Z",
+      "updatedAt": "2026-10-02T12:15:10.863Z"
+    },
+    {
+      "id": "conv_1790943368991_ashi4",
+      "userId": "guest_1790943368822_6v7z",
+      "title": "Bonjour en mode rapide ! Réponds en 3 mots.",
+      "mode": "fast",
+      "createdAt": "2026-10-02T12:16:08.991Z",
+      "updatedAt": "2026-10-02T12:16:09.789Z"
+    },
+    {
+      "id": "conv_1790943374013_y9pt2",
+      "userId": "guest_1790943373881_8v8u",
+      "title": "Explique la photosynthèse en 1 phrase courte.",
+      "mode": "general",
+      "createdAt": "2026-10-02T12:16:14.013Z",
+      "updatedAt": "2026-10-02T12:16:16.664Z"
+    },
+    {
+      "id": "conv_1790943382823_s6x7s",
+      "userId": "guest_1790943382690_13xc",
+      "title": "Mon fruit préféré est la mangue. Retiens-le bien...",
+      "mode": "general",
+      "createdAt": "2026-10-02T12:16:22.823Z",
+      "updatedAt": "2026-10-02T12:16:26.948Z"
+    },
+    {
+      "id": "conv_1790943599088_9sku6",
+      "userId": "guest_1790943598914_dsq0",
+      "title": "Compare SQL et NoSQL de façon synthétique avec u...",
+      "mode": "general",
+      "createdAt": "2026-10-02T12:19:59.088Z",
+      "updatedAt": "2026-10-02T12:20:07.617Z"
+    }
+  ],
+  "messages": [
+    {
+      "id": "msg_1790939577545_u",
+      "conversationId": "conv_1790939577545_qqc1h",
+      "role": "user",
+      "content": "Bonjour RYXIA ! Peux-tu me présenter tes capacités et ta devise en une phrase ?",
+      "createdAt": "2026-10-02T11:12:57.545Z",
+      "model": "user"
+    },
+    {
+      "id": "msg_1790939676038_u",
+      "conversationId": "conv_1790939676038_9rntn",
+      "role": "user",
+      "content": "Quelle est la vision de RYXIA en une phrase ?",
+      "createdAt": "2026-10-02T11:14:36.038Z",
+      "model": "user"
+    },
+    {
+      "id": "msg_1790939680452_a",
+      "conversationId": "conv_1790939676038_9rntn",
+      "role": "assistant",
+      "content": "",
+      "createdAt": "2026-10-02T11:14:40.452Z",
+      "model": "GPT-5.6 Luna / RYXIA Core"
+    },
+    {
+      "id": "msg_1790939704777_u",
+      "conversationId": "conv_1790939704777_nb6uh",
+      "role": "user",
+      "content": "Présente-toi en une phrase percutante.",
+      "createdAt": "2026-10-02T11:15:04.777Z",
+      "model": "user"
+    },
+    {
+      "id": "msg_1790939707802_a",
+      "conversationId": "conv_1790939704777_nb6uh",
+      "role": "assistant",
+      "content": "",
+      "createdAt": "2026-10-02T11:15:07.802Z",
+      "model": "GPT-5.6 Luna / RYXIA Core"
+    },
+    {
+      "id": "msg_1790939739695_u",
+      "conversationId": "conv_1790939739694_09ajp",
+      "role": "user",
+      "content": "Donne-moi 3 principes pour coder comme un architecte logiciel senior.",
+      "createdAt": "2026-10-02T11:15:39.695Z",
+      "model": "user"
+    },
+    {
+      "id": "msg_1790939743777_a",
+      "conversationId": "conv_1790939739694_09ajp",
+      "role": "assistant",
+      "content": "En tant que **RYXIA CODE**, voici les trois piliers fondamentaux qui distinguent un codeur exécutant d'un architecte logiciel senior. Si tu appliques ces principes, ton code ne sera pas seulement fonctionnel, il sera pérenne et maintenable.\n\n---\n\n### 1. Préférer la \"Code Readability over Cleverness\" (Maintenabilité > Performance apparente)\nUn développeur junior cherche souvent à impressionner par des expressions complexes ou des astuces syntaxiques (one-liners). Un architecte senior privilégie la **lisibilité cognitive**. Le code est lu 10 fois plus souvent qu'il n'est écrit.\n\n*   **L'approche :** Utilise des noms de variables explicites, décompose les fonctions complexes en unités logiques simples (Single Responsibility Principle), et évite les abstractions prématurées.\n*   **La règle d'or :** Si tu dois expliquer ton code avec des commentaires, c'est que ton code n'est pas assez clair. Le code doit être sa propre documentation.\n\n```typescript\n// Mauvais : Trop dense, logique obscure\nconst r = d.filter(x => x.v > 10).map(x => x.id * 2);\n\n// Bon : Sémantique, explicite et facile à déboguer\nconst MIN_THRESHOLD = 10;\nconst validItems = devices.filter(device => device.value > MIN_THRESHOLD);\nconst itemIds = validItems.map(device => device.id * 2);\n```\n\n---\n\n### 2. Le \"Defensive Programming & Fail-Fast\" (Robustesse par le design)\nNe fais jamais confiance aux entrées (inputs), aux services tiers ou à l'état global. Un système robuste ne \"plante\" pas silencieusement ; il échoue immédiatement avec une erreur claire et contextuelle.\n\n*   **L'approche :** Valide les entrées aux frontières de ton système (types, schémas). Utilise le typage fort et les *Guard Clauses* pour sortir tôt des fonctions si les prérequis ne sont pas remplis. Cela réduit drastiquement la profondeur de l'imbrication (`if/else` hell).\n\n```rust\n// Exemple en Rust : Fail-fast avec pattern matching\npub fn process_data(input: Option<Data>) -> Result<Output, Error> {\n    let data = input.ok_or(Error::MissingInput)?; // Guard clause\n    \n    if data.is_invalid() {\n        return Err(Error::InvalidData);\n    }\n    \n    // Suite de la logique métier simplifiée\n    Ok(transform(data))\n}\n```\n\n---\n\n### 3. Penser en \"Decoupled Architectures\" (Modularité et Testabilité)\nL'erreur classique est de coupler la logique métier (business logic) avec les détails d'implémentation (frameworks, base de données, API). Si ton code métier dépend directement de `Express.js` ou d'une bibliothèque spécifique, tu es enchaîné à ces dépendances.\n\n*   **L'approche :** Utilise l'injection de dépendances et le pattern des *Ports & Adapters* (Hexagonal Architecture). Ton cœur métier doit être une \"librairie pure\" qui peut être testée sans lancer un serveur ou une base de données.\n*   **L'impact :** Tu peux remplacer une bibliothèque, changer de base de données ou migrer de framework sans réécrire ta logique métier.\n\n```typescript\n// Interface (Le Port) - Le coeur métier ne connaît pas l'implémentation\ninterface UserRepository {\n  findById(id: string): Promise<User | null>;\n}\n\n// Logique métier (Isolée et testable)\nclass UserService {\n  constructor(private repo: UserRepository) {}\n\n  async getUser(id: string) {\n    return await this.repo.findById(id);\n  }\n}\n```\n\n---\n\n**Le conseil RYXIA CODE :**\nUn architecte ne se contente pas de résoudre le problème immédiat, il anticipe **comment ce code va mourir**. En écrivant des tests unitaires robustes et en isolant tes dépendances, tu permets à ton code de survivre aux changements technologiques.\n\nAs-tu un projet spécifique sur lequel tu souhaites que nous appliquions ces principes ?",
+      "createdAt": "2026-10-02T11:15:43.777Z",
+      "model": "GPT-5.6 Luna / RYXIA Core"
+    },
+    {
+      "id": "msg_1790940123099_u",
+      "conversationId": "conv_1790940122993_257pz",
+      "role": "user",
+      "content": "coucou",
+      "createdAt": "2026-10-02T11:22:03.099Z",
+      "model": "user"
+    },
+    {
+      "id": "msg_1790940124086_a",
+      "conversationId": "conv_1790940122993_257pz",
+      "role": "assistant",
+      "content": "Bonjour. Je suis **RYXIA**, votre assistant conçu par Adan.\n\nEn quoi puis-je vous être utile aujourd'hui ? Je suis à votre écoute pour optimiser vos projets, répondre à vos interrogations ou vous assister dans vos tâches complexes.",
+      "createdAt": "2026-10-02T11:22:04.086Z",
+      "model": "GPT-5.6 Luna / RYXIA Core"
+    },
+    {
+      "id": "msg_1790940461992_u",
+      "conversationId": "conv_1790940461840_2c1ft",
+      "role": "user",
+      "content": "bonjour",
+      "createdAt": "2026-10-02T11:27:41.992Z",
+      "model": "user"
+    },
+    {
+      "id": "msg_1790940463157_a",
+      "conversationId": "conv_1790940461840_2c1ft",
+      "role": "assistant",
+      "content": "Bonjour. Je suis **RYXIA**, votre assistant conçu par Adan.\n\nComment puis-je vous accompagner aujourd'hui ? Je suis à votre disposition pour toute analyse, rédaction ou résolution de problématique complexe.",
+      "createdAt": "2026-10-02T11:27:43.157Z",
+      "model": "GPT-5.6 Luna / RYXIA Core"
+    },
+    {
+      "id": "msg_1790940483775_u",
+      "conversationId": "conv_1790940461840_2c1ft",
+      "role": "user",
+      "content": "donne des exercices de maths niveau premiere",
+      "createdAt": "2026-10-02T11:28:03.775Z",
+      "model": "user"
+    },
+    {
+      "id": "msg_1790940486412_a",
+      "conversationId": "conv_1790940461840_2c1ft",
+      "role": "assistant",
+      "content": "Voici une sélection d'exercices couvrant trois piliers fondamentaux du programme de Première : **le second degré, les suites numériques et la dérivation.**\n\n---\n\n### 1. Second degré : Étude de fonction\nSoit $f$ la fonction définie sur $\\mathbb{R}$ par $f(x) = -2x^2 + 8x - 6$.\n\n*   **Question A :** Déterminer la forme canonique de $f(x)$.\n*   **Question B :** En déduire les coordonnées du sommet $S$ de la parabole.\n*   **Question C :** Résoudre l'inéquation $f(x) \\geq 0$.\n\n### 2. Suites numériques : Étude de convergence\nSoit $(u_n)$ la suite définie par $u_0 = 1$ et, pour tout entier $n \\geq 0$, $u_{n+1} = \\frac{1}{2}u_n + 3$.\n\n*   **Question A :** Calculer $u_1, u_2$ et $u_3$.\n*   **Question B :** On considère la suite $(v_n)$ définie par $v_n = u_n - 6$. Démontrer que $(v_n)$ est une suite géométrique dont vous préciserez la raison et le premier terme.\n*   **Question C :** Exprimer $v_n$ puis $u_n$ en fonction de $n$. En déduire la limite de la suite $(u_n)$.\n\n### 3. Analyse : Dérivation et tangente\nSoit $g$ la fonction définie sur $\\mathbb{R} \\setminus \\{1\\}$ par $g(x) = \\frac{2x + 3}{x - 1}$.\n\n*   **Question A :** Calculer $g'(x)$ pour tout $x \\neq 1$.\n*   **Question B :** Déterminer l'équation de la tangente $T$ à la courbe représentative de $g$ au point d'abscisse $a = 2$.\n*   **Question C :** Étudier le signe de $g'(x)$ et en déduire les variations de la fonction $g$.\n\n---\n\n**Conseils de RYXIA pour la résolution :**\n1. **Forme canonique :** Utilisez la méthode par identification ou la formule $a(x - \\alpha)^2 + \\beta$ avec $\\alpha = -b/2a$.\n2. **Suites :** Pour démontrer qu'une suite est géométrique, calculez toujours le rapport $v_{n+1} / v_n$.\n3. **Dérivation :** Appliquez rigoureusement la formule de la dérivée d'un quotient : $\\left(\\frac{u}{v}\\right)' = \\frac{u'v - uv'}{v^2}$.\n\nSouhaitez-vous que je développe la correction détaillée de l'un de ces exercices ou préférez-vous approfondir un chapitre spécifique ?",
+      "createdAt": "2026-10-02T11:28:06.412Z",
+      "model": "GPT-5.6 Luna / RYXIA Core"
+    },
+    {
+      "id": "msg_1790940506422_u",
+      "conversationId": "conv_1790940461840_2c1ft",
+      "role": "user",
+      "content": "esque tu peux generer des images",
+      "createdAt": "2026-10-02T11:28:26.422Z",
+      "model": "user"
+    },
+    {
+      "id": "msg_1790940508069_a",
+      "conversationId": "conv_1790940461840_2c1ft",
+      "role": "assistant",
+      "content": "En tant qu'intelligence artificielle textuelle conçue par **Adan**, ma spécialité réside dans l'analyse, la logique, la stratégie et la génération de contenus rédactionnels ou techniques de haute précision.\n\n**Je ne dispose pas de moteur de génération d'images intégré.**\n\nCependant, je peux vous accompagner sur la partie créative et technique de vos projets visuels :\n\n*   **Rédaction de Prompts :** Je peux concevoir des descriptions détaillées (pour Midjourney, DALL-E, Stable Diffusion) afin d'obtenir des résultats optimaux.\n*   **Structuration de concepts :** Je peux définir des directives artistiques, des palettes de couleurs ou des compositions pour vos designs.\n*   **Analyse d'image :** Si vous téléversez une image, je peux l'analyser, décrire son contenu ou vous aider à en extraire des informations techniques.\n\nSouhaitez-vous que je rédige un prompt précis pour un projet visuel particulier ?",
+      "createdAt": "2026-10-02T11:28:28.069Z",
+      "model": "GPT-5.6 Luna / RYXIA Core"
+    },
+    {
+      "id": "msg_1790940545313_u",
+      "conversationId": "conv_1790940461840_2c1ft",
+      "role": "user",
+      "content": "tes concus par qui",
+      "createdAt": "2026-10-02T11:29:05.313Z",
+      "model": "user"
+    },
+    {
+      "id": "msg_1790940546324_a",
+      "conversationId": "conv_1790940461840_2c1ft",
+      "role": "assistant",
+      "content": "Je suis **RYXIA**, une intelligence artificielle développée par **Adan**.\n\nMon architecture a été conçue pour offrir une assistance de haut niveau, alliant rigueur analytique, efficacité opérationnelle et une interface utilisateur optimisée pour répondre aux exigences des professionnels et des utilisateurs avancés. \n\nMon identité et mes protocoles sont le fruit de l'expertise technique d'Adan, avec pour mot d'ordre : **\"Your AI. Your way.\"**",
+      "createdAt": "2026-10-02T11:29:06.324Z",
+      "model": "GPT-5.6 Luna / RYXIA Core"
+    },
+    {
+      "id": "msg_1790940815869_u",
+      "conversationId": "conv_1790940815760_0kib7",
+      "role": "user",
+      "content": "alkhir",
+      "createdAt": "2026-10-02T11:33:35.869Z",
+      "model": "user"
+    },
+    {
+      "id": "msg_1790940816936_a",
+      "conversationId": "conv_1790940815760_0kib7",
+      "role": "assistant",
+      "content": "Bonjour. Je suis **RYXIA**, votre assistant conçu par Adan.\n\n\"Alkhir\" (Al-Khair) exprime le bien et la bienveillance. Comment puis-je vous accompagner aujourd'hui avec efficacité et précision ?",
+      "createdAt": "2026-10-02T11:33:36.936Z",
+      "model": "GPT-5.6 Luna / RYXIA Core"
+    },
+    {
+      "id": "msg_1790941012540_u",
+      "conversationId": "conv_1790941012401_d3kxx",
+      "role": "user",
+      "content": "esque tu connais la jsk",
+      "createdAt": "2026-10-02T11:36:52.540Z",
+      "model": "user"
+    },
+    {
+      "id": "msg_1790941022219_a",
+      "conversationId": "conv_1790941012401_d3kxx",
+      "role": "assistant",
+      "content": "Oui, je connais la **JSK** (Jeunesse Sportive de Kabylie).\n\nVoici l'essentiel à retenir sur ce club emblématique :\n\n### Identité\n*   **Nom complet :** Jeunesse Sportive de Kabylie.\n*   **Surnoms :** *Les Canaris*, *Jumbo Jet*, *Le Club le plus titré d'Algérie*.\n*   **Fondation :** 1946.\n*   **Ville :** Tizi Ouzou, Algérie.\n*   **Couleurs :** Jaune et vert.\n\n### Palmarès et Importance\nLa JSK est historiquement le club le plus titré du football algérien et l'un des plus respectés sur la scène continentale.\n\n*   **Championnat d'Algérie :** 14 titres (record national).\n*   **Coupe d'Algérie :** 5 titres.\n*   **Compétitions Africaines :**\n    *   2 Ligues des champions de la CAF (1981, 1990).\n    *   3 Coupes de la CAF (2000, 2001, 2002).\n    *   1 Supercoupe de la CAF (1982).\n\n### Envergure\nAu-delà du sport, la JSK est un symbole culturel et identitaire fort pour la région de Kabylie. Le club a traversé des époques dorées, notamment dans les années 80 et au début des années 2000, imposant sa domination tant au niveau local qu'international.\n\nSouhaites-tu des informations précises sur son actualité, son histoire ou ses statistiques ?",
+      "createdAt": "2026-10-02T11:37:02.219Z",
+      "model": "GPT-5.6 Luna / RYXIA Core"
+    },
+    {
+      "id": "msg_1790942759155_u",
+      "conversationId": "conv_1790942759042_ja1zv",
+      "role": "user",
+      "content": "bonjour",
+      "createdAt": "2026-10-02T12:05:59.155Z",
+      "model": "user"
+    },
+    {
+      "id": "msg_1790942860245_u",
+      "conversationId": "conv_1790942860244_mu4x6",
+      "role": "user",
+      "content": "Bonjour RYXIA, dis juste une courte phrase pour confirmer.",
+      "createdAt": "2026-10-02T12:07:40.245Z",
+      "model": "user"
+    },
+    {
+      "id": "msg_1790942861233_a",
+      "conversationId": "conv_1790942860244_mu4x6",
+      "role": "assistant",
+      "content": "Bonjour. Je suis opérationnelle et à votre écoute.",
+      "createdAt": "2026-10-02T12:07:41.233Z",
+      "model": "RYXIA (gemini-3.1-flash-lite)"
+    },
+    {
+      "id": "msg_1790942868465_u",
+      "conversationId": "conv_1790942868465_0wozo",
+      "role": "user",
+      "content": "Où se trouve la Tour Eiffel à Paris ?",
+      "createdAt": "2026-10-02T12:07:48.465Z",
+      "model": "user"
+    },
+    {
+      "id": "msg_1790942869923_a",
+      "conversationId": "conv_1790942868465_0wozo",
+      "role": "assistant",
+      "content": "### Localisation de la Tour Eiffel\n\nLa Tour Eiffel est située à l'extrémité nord-ouest du parc du **Champ-de-Mars**, en bordure de la Seine, dans le **7e arrondissement** de Paris, France.\n\n*   **Adresse précise :** 5 Avenue Anatole France, 75007 Paris.\n*   **Coordonnées géographiques :** 48° 51′ 29″ Nord, 2° 17′ 40″ Est.\n\nSouhaitez-vous des informations complémentaires sur son accessibilité ou sur les moyens de transport pour vous y rendre ?",
+      "createdAt": "2026-10-02T12:07:49.923Z",
+      "model": "RYXIA (gemini-3.1-flash-lite)"
+    },
+    {
+      "id": "msg_1790943016951_u",
+      "conversationId": "conv_1790943013499_0cvzn",
+      "role": "user",
+      "content": "bonjour",
+      "createdAt": "2026-10-02T12:10:16.951Z",
+      "model": "user"
+    },
+    {
+      "id": "msg_1790943017007_u",
+      "conversationId": "conv_1790943015402_v7wya",
+      "role": "user",
+      "content": "bonjour",
+      "createdAt": "2026-10-02T12:10:17.007Z",
+      "model": "user"
+    },
+    {
+      "id": "msg_1790943018393_a",
+      "conversationId": "conv_1790943013499_0cvzn",
+      "role": "assistant",
+      "content": "Bonjour. Je suis RYXIA, conçu par Adan.\n\nEn quoi puis-je vous être utile aujourd'hui ?",
+      "createdAt": "2026-10-02T12:10:18.393Z",
+      "model": "RYXIA (gemini-3.1-flash-lite)"
+    },
+    {
+      "id": "msg_1790943021641_a",
+      "conversationId": "conv_1790943015402_v7wya",
+      "role": "assistant",
+      "content": "Bonjour. Je suis RYXIA, conçu par Adan.\n\nEn quoi puis-je vous être utile aujourd'hui ?",
+      "createdAt": "2026-10-02T12:10:21.641Z",
+      "model": "RYXIA (gemini-3.1-flash-lite)"
+    },
+    {
+      "id": "msg_1790943036003_u",
+      "conversationId": "conv_1790943015402_v7wya",
+      "role": "user",
+      "content": "donne la descripiton de la photosintese",
+      "createdAt": "2026-10-02T12:10:36.003Z",
+      "model": "user"
+    },
+    {
+      "id": "msg_1790943038685_a",
+      "conversationId": "conv_1790943015402_v7wya",
+      "role": "assistant",
+      "content": "### La Photosynthèse : Définition et Mécanisme\n\nLa photosynthèse est un processus biochimique vital par lequel les organismes autotrophes (plantes, algues, certaines bactéries) convertissent l'énergie lumineuse en énergie chimique. Cette énergie est ensuite utilisée pour synthétiser des molécules organiques (glucides) à partir de dioxyde de carbone et d'eau.\n\n---\n\n### Équation Bilan\nLa réaction chimique globale s'exprime ainsi :\n**6CO₂ + 6H₂O + Énergie lumineuse → C₆H₁₂O₆ (Glucose) + 6O₂**\n\n---\n\n### Les Deux Phases du Processus\n\n#### 1. Phase photochimique (Phase claire)\n*   **Localisation :** Thylakoïdes des chloroplastes.\n*   **Action :** Absorption de l'énergie lumineuse par les pigments (chlorophylle).\n*   **Résultat :** Photolyse de l'eau (scission de la molécule d'eau), libération d'oxygène (O₂) et production d'énergie sous forme d'ATP et de NADPH.\n\n#### 2. Cycle de Calvin (Phase sombre)\n*   **Localisation :** Stroma du chloroplaste.\n*   **Action :** Utilisation de l'ATP et du NADPH produits lors de la phase claire pour fixer le carbone du CO₂ atmosphérique.\n*   **Résultat :** Synthèse de molécules organiques (glucides/glucose).\n\n---\n\n### Composants Clés\n| Élément | Rôle |\n| :--- | :--- |\n| **Chlorophylle** | Pigment capteur de photons. |\n| **Chloroplaste** | Organite spécialisé où se déroule la réaction. |\n| **CO₂** | Source de carbone pour la structure organique. |\n| **Lumière** | Source d'énergie primaire. |\n\n---\n\n**Note :** La photosynthèse est le pilier fondamental des écosystèmes terrestres : elle est la source principale d'oxygène dans l'atmosphère et la base de la quasi-totalité des chaînes alimentaires.\n\nSouhaitez-vous approfondir un aspect spécifique de ce mécanisme ou son impact sur le cycle du carbone ?",
+      "createdAt": "2026-10-02T12:10:38.685Z",
+      "model": "RYXIA (gemini-3.1-flash-lite)"
+    },
+    {
+      "id": "msg_1790943296117_u",
+      "conversationId": "conv_1790943015402_v7wya",
+      "role": "user",
+      "content": "Tu es RYXIA, un assistant IA intelligent, précis et hautement structuré. Ton objectif est de fournir des réponses d'une qualité visuelle et rédactionnelle irréprochable, inspirées des standards de ChatGPT et Gemini.\n\nRÈGLES DISCIPLINAIRES DE FORMATE-MARKDOWN :\n\n1. HIÉRARCHIE & TITRES :\n   - Divise toujours tes réponses longues ou explicatives avec des titres clairs en Markdown.\n   - Utilise `##` pour les sections principales et `###` pour les sous-sections.\n   - Ne mets jamais tout un texte d'un seul bloc.\n\n2. AÉRATION ET PARAGRAPHES :\n   - Laisse TOUJOURS une ligne vide entre chaque paragraphe, titre, ou liste.\n   - Limite les paragraphes à 2 ou 3 phrases maximum pour garantir une lecture fluide.\n\n3. LISTES ET MISE EN VALEUR :\n   - Utilise des listes à puces (`-` ou `*`) pour énumérer des faits, des points-clés ou des options.\n   - Utilise des listes numérotées (`1.`, `2.`, `3.`) pour décrire des étapes chronologiques ou des procédures.\n   - Mets systématiquement en gras (`**mot-clé**`) les termes importants pour permettre une lecture rapide.\n\n4. CODES, ÉQUATIONS ET TABLEAUX :\n   - Place tout code informatique dans un bloc de code avec le langage spécifié (ex: ```typescript ... ```).\n   - Utilise des tableaux Markdown pour comparer des éléments ou présenter des données structurées.\n   - Présente les équations scientifiques ou chimiques de façon lisible et détachée du texte principal.\n\n5. TON ET STYLE DE RÉPONSE :\n   - Va directement au but dès la première phrase (pas d'introductions inutiles comme \"Bien sûr, voici la réponse...\").\n   - Sois synthétique, pédagogue et précis.",
+      "createdAt": "2026-10-02T12:14:56.117Z",
+      "model": "user"
+    },
+    {
+      "id": "msg_1790943297118_a",
+      "conversationId": "conv_1790943015402_v7wya",
+      "role": "assistant",
+      "content": "Bien reçu. Les règles de structuration et de style sont intégrées. Je suis prêt à traiter vos futures requêtes avec la précision et la rigueur exigées.\n\nVeuillez formuler votre prochaine demande.",
+      "createdAt": "2026-10-02T12:14:57.118Z",
+      "model": "RYXIA (gemini-3.1-flash-lite)"
+    },
+    {
+      "id": "msg_1790943308069_u",
+      "conversationId": "conv_1790943015402_v7wya",
+      "role": "user",
+      "content": "decris la photosintese",
+      "createdAt": "2026-10-02T12:15:08.069Z",
+      "model": "user"
+    },
+    {
+      "id": "msg_1790943310863_a",
+      "conversationId": "conv_1790943015402_v7wya",
+      "role": "assistant",
+      "content": "### Définition Fondamentale\nLa **photosynthèse** est un processus métabolique permettant aux organismes autotrophes de convertir l'**énergie lumineuse** en **énergie chimique**. Cette réaction transforme des matières inorganiques en molécules organiques complexes nécessaires à la croissance cellulaire.\n\n---\n\n### Équation Chimique\nLe bilan global de la réaction est le suivant :\n\n$$6CO_2 + 6H_2O + \\text{lumière} \\rightarrow C_6H_{12}O_6 + 6O_2$$\n\nCe processus nécessite du **dioxyde de carbone**, de l'**eau** et un apport de **photons** pour produire du **glucose** et libérer du **dioxygène**.\n\n---\n\n### Mécanismes Opérationnels\n\nLe processus se divise en deux étapes distinctes se déroulant dans les **chloroplastes** :\n\n1.  **Phase photochimique (Phase claire) :**\n    *   Localisation : Membrane des **thylakoïdes**.\n    *   Action : La chlorophylle capte l'énergie solaire.\n    *   Résultat : Photolyse de l'eau, production d'**ATP** et de **NADPH**, et rejet d'oxygène ($O_2$).\n\n2.  **Cycle de Calvin (Phase sombre) :**\n    *   Localisation : **Stroma** du chloroplaste.\n    *   Action : Fixation et réduction du carbone issu du $CO_2$.\n    *   Résultat : Synthèse de **glucides** (sucres) utilisant l'énergie générée durant la phase claire.\n\n---\n\n### Tableau Récapitulatif\n\n| Étape | Intrant principal | Produit principal |\n| :--- | :--- | :--- |\n| **Phase Claire** | Lumière, $H_2O$ | $O_2$, ATP, NADPH |\n| **Cycle de Calvin** | $CO_2$, ATP, NADPH | Glucose ($C_6H_{12}O_6$) |\n\n---\n\n### Importance Écologique\n*   **Production primaire :** Base indispensable de la quasi-totalité des réseaux trophiques.\n*   **Régulation atmosphérique :** Absorption du $CO_2$ (gaz à effet de serre) et renouvellement de l'oxygène.\n*   **Stockage d'énergie :** Accumulation d'énergie solaire sous forme de biomasse.",
+      "createdAt": "2026-10-02T12:15:10.863Z",
+      "model": "RYXIA (gemini-3.1-flash-lite)"
+    },
+    {
+      "id": "msg_1790943368991_u",
+      "conversationId": "conv_1790943368991_ashi4",
+      "role": "user",
+      "content": "Bonjour en mode rapide ! Réponds en 3 mots.",
+      "createdAt": "2026-10-02T12:16:08.991Z",
+      "model": "user"
+    },
+    {
+      "id": "msg_1790943369789_a",
+      "conversationId": "conv_1790943368991_ashi4",
+      "role": "assistant",
+      "content": "Bonjour. Prêt. RYXIA.",
+      "createdAt": "2026-10-02T12:16:09.789Z",
+      "model": "RYXIA (gemini-3.1-flash-lite)"
+    },
+    {
+      "id": "msg_1790943374013_u",
+      "conversationId": "conv_1790943374013_y9pt2",
+      "role": "user",
+      "content": "Explique la photosynthèse en 1 phrase courte.",
+      "createdAt": "2026-10-02T12:16:14.013Z",
+      "model": "user"
+    },
+    {
+      "id": "msg_1790943376664_a",
+      "conversationId": "conv_1790943374013_y9pt2",
+      "role": "assistant",
+      "content": "La photosynthèse est le processus biologique par lequel les plantes convertissent la lumière du soleil, l'eau et le dioxyde de carbone en nutriments (glucose) et en oxygène.",
+      "createdAt": "2026-10-02T12:16:16.664Z",
+      "model": "RYXIA (gemini-3.5-flash)"
+    },
+    {
+      "id": "msg_1790943382823_u",
+      "conversationId": "conv_1790943382823_s6x7s",
+      "role": "user",
+      "content": "Mon fruit préféré est la mangue. Retiens-le bien.",
+      "createdAt": "2026-10-02T12:16:22.823Z",
+      "model": "user"
+    },
+    {
+      "id": "msg_1790943385288_a",
+      "conversationId": "conv_1790943382823_s6x7s",
+      "role": "assistant",
+      "content": "### Préférence enregistrée : Mangue 🥭\n\nC'est bien noté. Votre fruit préféré est la **mangue**. \n\nCette information est désormais ancrée dans ma mémoire et sera prise en compte pour personnaliser nos futurs échanges. \n\nQue souhaitez-vous que nous fassions à présent ?",
+      "createdAt": "2026-10-02T12:16:25.288Z",
+      "model": "RYXIA (gemini-3.5-flash)"
+    },
+    {
+      "id": "msg_1790943385320_u",
+      "conversationId": "conv_1790943382823_s6x7s",
+      "role": "user",
+      "content": "Quel est mon fruit préféré ?",
+      "createdAt": "2026-10-02T12:16:25.320Z",
+      "model": "user"
+    },
+    {
+      "id": "msg_1790943386948_a",
+      "conversationId": "conv_1790943382823_s6x7s",
+      "role": "assistant",
+      "content": "Votre fruit préféré est la **mangue** 🥭.",
+      "createdAt": "2026-10-02T12:16:26.948Z",
+      "model": "RYXIA (gemini-3.5-flash)"
+    },
+    {
+      "id": "msg_1790943599088_u",
+      "conversationId": "conv_1790943599088_9sku6",
+      "role": "user",
+      "content": "Compare SQL et NoSQL de façon synthétique avec un tableau et des points clés.",
+      "createdAt": "2026-10-02T12:19:59.088Z",
+      "model": "user"
+    },
+    {
+      "id": "msg_1790943607617_a",
+      "conversationId": "conv_1790943599088_9sku6",
+      "role": "assistant",
+      "content": "Le choix entre **SQL** et **NoSQL** repose sur la structure de vos données, vos besoins de scalabilité et la nature de votre projet.\n\n## Tableau Comparatif : SQL vs NoSQL\n\n| Critère | SQL (Relationnel) | NoSQL (Non-Relationnel) |\n| :--- | :--- | :--- |\n| **Modèle de données** | Tables (lignes et colonnes) | Documents, Clés-Valeurs, Graphes, Colonnes |\n| **Schéma** | Strict, prédéfini et structuré | Flexible, dynamique et non structuré |\n| **Scalabilité** | Verticale (**Scale-up** / puissance machine) | Horizontale (**Scale-out** / ajout de serveurs) |\n| **Transactions** | Robustes, respectant les normes **ACID** | Compromis via le théorème **CAP** (consistance éventuelle) |\n| **Langage** | Langage standardisé (**SQL**) | Requêtes spécifiques (ex: JSON, APIs dédiées) |\n| **Exemples** | PostgreSQL, MySQL, SQLite | MongoDB, Redis, Cassandra, Neo4j |\n\n## Différences Clés et Fonctionnement\n\n### SQL (Bases de données relationnelles)\n\nLes bases SQL organisent les données dans des tables interconnectées par des **clés primaires et étrangères**. \n\n- **Schéma rigide** : La structure des données doit être définie avant l'insertion, ce qui garantit une intégrité absolue.\n- **Transactions ACID** : Assurent une fiabilité parfaite pour les opérations financières ou critiques (Atomicité, Cohérence, Isolation, Durabilité).\n- **Requêtes complexes** : Permettent des analyses croisées puissantes grâce aux jointures multiples en une seule commande.\n\n### NoSQL (Bases de données non-relationnelles)\n\nLes bases NoSQL stockent les informations sous des formats variés, optimisés pour la vitesse et la gestion de **volumes massifs**.\n\n- **Flexibilité totale** : Les documents ou objets peuvent être modifiés à la volée sans impacter l'ensemble de la base de données.\n- **Haute performance** : Conçues dès le départ pour distribuer les données sur des dizaines de serveurs avec un temps de réponse minimal.\n- **Modèles spécialisés** : Parfaitement adaptées aux structures complexes comme les réseaux sociaux (graphes) ou les systèmes de cache rapide (clés-valeurs).\n\n## Critères de Choix : Quand utiliser quoi ?\n\nPour orienter rapidement votre décision technique, appliquez ces deux règles de sélection :\n\n1. **Choisissez SQL** si vos données sont hautement structurées, que la cohérence transactionnelle est cruciale (fintech, ERP) et que vos relations de données sont stables.\n2. **Choisissez NoSQL** si vous gérez de grands volumes de données non structurées (Big Data, IoT), si vous devez scaler rapidement à l'international, ou si vos schémas de données évoluent constamment.",
+      "createdAt": "2026-10-02T12:20:07.617Z",
+      "model": "RYXIA (gemini-3.5-flash)"
+    }
+  ],
+  "settings": {
+    "usr_1790939574033_wfzmz": {
+      "userId": "usr_1790939574033_wfzmz",
+      "theme": "obsidian",
+      "fontSize": "md",
+      "enterSends": true,
+      "animations": true,
+      "aiProvider": "auto",
+      "customOpenAiModel": "gpt-5.6-luna"
+    },
+    "guest_1790940032270_pwf0": {
+      "userId": "guest_1790940032270_pwf0",
+      "theme": "obsidian",
+      "fontSize": "md",
+      "enterSends": true,
+      "animations": true,
+      "aiProvider": "auto",
+      "customOpenAiModel": "gpt-5.6-luna"
+    },
+    "guest_1790940048252_4r1i": {
+      "userId": "guest_1790940048252_4r1i",
+      "theme": "dark",
+      "fontSize": "md",
+      "enterSends": true,
+      "animations": true,
+      "aiProvider": "auto",
+      "customOpenAiModel": "gpt-5.6-luna"
+    },
+    "guest_1790942860085_zaq8": {
+      "userId": "guest_1790942860085_zaq8",
+      "theme": "obsidian",
+      "fontSize": "md",
+      "enterSends": true,
+      "animations": true,
+      "aiProvider": "auto",
+      "customOpenAiModel": "gpt-5.6-luna"
+    },
+    "guest_1790942868325_t26j": {
+      "userId": "guest_1790942868325_t26j",
+      "theme": "obsidian",
+      "fontSize": "md",
+      "enterSends": true,
+      "animations": true,
+      "aiProvider": "auto",
+      "customOpenAiModel": "gpt-5.6-luna"
+    },
+    "guest_1790943368822_6v7z": {
+      "userId": "guest_1790943368822_6v7z",
+      "theme": "obsidian",
+      "fontSize": "md",
+      "enterSends": true,
+      "animations": true,
+      "aiProvider": "auto",
+      "customOpenAiModel": "gpt-5.6-luna"
+    },
+    "guest_1790943373881_8v8u": {
+      "userId": "guest_1790943373881_8v8u",
+      "theme": "obsidian",
+      "fontSize": "md",
+      "enterSends": true,
+      "animations": true,
+      "aiProvider": "auto",
+      "customOpenAiModel": "gpt-5.6-luna"
+    },
+    "guest_1790943382690_13xc": {
+      "userId": "guest_1790943382690_13xc",
+      "theme": "obsidian",
+      "fontSize": "md",
+      "enterSends": true,
+      "animations": true,
+      "aiProvider": "auto",
+      "customOpenAiModel": "gpt-5.6-luna"
+    },
+    "guest_1790943598914_dsq0": {
+      "userId": "guest_1790943598914_dsq0",
+      "theme": "obsidian",
+      "fontSize": "md",
+      "enterSends": true,
+      "animations": true,
+      "aiProvider": "auto",
+      "customOpenAiModel": "gpt-5.6-luna"
+    }
+  }
+}

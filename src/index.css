@@ -30,27 +30,27 @@
   }
 
   [data-theme="light"], .theme-light {
-    /* Light theme (ChatGPT light style) */
+    /* Polished Light theme (Refined Apple/ChatGPT modern light style) */
     --bg-main: #ffffff;
-    --bg-sidebar: #f9f9f9;
-    --bg-surface: #f4f4f4;
-    --bg-surface-hover: #ebebeb;
-    --text-primary: #0d0d0d;
-    --text-secondary: #424242;
-    --text-muted: #71717a;
-    --border-color: #e5e5e5;
-    --border-subtle: #eaeaea;
-    --dot-color: rgba(0, 0, 0, 0.04);
-    --input-bg: #f4f4f4;
-    --input-border: #e5e5e5;
-    --user-bubble: #f4f4f4;
-    --user-bubble-text: #0d0d0d;
-    --code-bg: #f8f9fa;
-    --code-header: #eeeeee;
-    --code-border: #e0e0e0;
-    --code-text: #1f2328;
-    --glow-amber: rgba(245, 158, 11, 0.03);
-    --glow-indigo: rgba(99, 102, 241, 0.02);
+    --bg-sidebar: #f8f9fa;
+    --bg-surface: #f1f3f5;
+    --bg-surface-hover: #e9ecef;
+    --text-primary: #111827;
+    --text-secondary: #4b5563;
+    --text-muted: #6b7280;
+    --border-color: #e5e7eb;
+    --border-subtle: #f3f4f6;
+    --dot-color: rgba(0, 0, 0, 0.05);
+    --input-bg: #f8f9fa;
+    --input-border: #e2e8f0;
+    --user-bubble: #f1f3f5;
+    --user-bubble-text: #111827;
+    --code-bg: #f8fafc;
+    --code-header: #edf2f7;
+    --code-border: #e2e8f0;
+    --code-text: #0f172a;
+    --glow-amber: rgba(245, 158, 11, 0.06);
+    --glow-indigo: rgba(99, 102, 241, 0.04);
   }
 
   body {
@@ -89,6 +89,41 @@
   background: rgba(128, 128, 128, 0.4);
 }
 
+.theme-light ::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.18);
+}
+
+.theme-light ::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.32);
+}
+
+/* Light mode crisp prose typography */
+.theme-light .prose {
+  color: var(--text-primary);
+}
+
+.theme-light .prose h1,
+.theme-light .prose h2,
+.theme-light .prose h3,
+.theme-light .prose h4 {
+  color: #0f172a;
+}
+
+.theme-light .prose p,
+.theme-light .prose li {
+  color: #1e293b;
+}
+
+.theme-light .prose strong {
+  color: #0f172a;
+}
+
+.theme-light .prose blockquote {
+  border-left-color: #f59e0b;
+  background-color: #f8fafc;
+  color: #334155;
+}
+
 /* Code block highlight styles */
 pre code {
   font-family: var(--font-mono);
@@ -103,3 +138,220 @@ pre code {
   mask-image: radial-gradient(ellipse 80% 70% at 50% 30%, black 25%, transparent 85%);
   -webkit-mask-image: radial-gradient(ellipse 80% 70% at 50% 30%, black 25%, transparent 85%);
 }
+
+/* Typing indicator & live generation animations */
+@keyframes typingBlink {
+  0%, 100% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+  50% {
+    opacity: 0.15;
+    transform: scaleY(0.7);
+  }
+}
+
+@keyframes waveBarPulse {
+  0%, 100% {
+    transform: scaleY(0.35);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+.animate-typing-cursor {
+  display: inline-block;
+  width: 3px;
+  height: 1.15em;
+  background-color: #f59e0b;
+  border-radius: 1.5px;
+  margin-left: 3px;
+  vertical-align: -0.15em;
+  animation: typingBlink 0.85s ease-in-out infinite;
+  box-shadow: 0 0 10px rgba(245, 158, 11, 0.7);
+}
+
+.animate-wave-bar {
+  animation: waveBarPulse 0.9s ease-in-out infinite;
+  transform-origin: bottom;
+}
+
+/* ==========================================================================
+   Desktop Sidebar Smooth Transitions
+   ========================================================================== */
+@media (min-width: 769px) {
+  .sidebar-drawer {
+    position: relative;
+    height: 100%;
+    flex-shrink: 0;
+    overflow: hidden;
+    will-change: width;
+    transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+                border-color 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .sidebar-drawer.is-open {
+    width: 260px;
+    border-right: 1px solid var(--border-subtle);
+  }
+
+  .sidebar-drawer.is-closed {
+    width: 0px;
+    border-right: 1px solid transparent;
+    pointer-events: none;
+  }
+
+  .sidebar-inner-content {
+    width: 260px;
+    min-width: 260px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+
+  .sidebar-backdrop {
+    display: none !important;
+  }
+}
+
+/* ==========================================================================
+   Mobile Responsive Rules (@media (max-width: 768px))
+   Strictly isolated to mobile screens: Desktop layout & styles are 100% untouched.
+   ========================================================================== */
+@media (max-width: 768px) {
+  /* Fix 100dvh for mobile browsers (compensates dynamic address bar on iOS & Android) */
+  html,
+  body {
+    height: 100%;
+    height: 100dvh;
+    width: 100%;
+    overflow: hidden;
+    position: fixed;
+    overscroll-behavior-y: none;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  /* App layout container: 100dvh viewport bounds */
+  .app-layout {
+    height: 100% !important;
+    height: 100dvh !important;
+    max-height: 100dvh !important;
+    width: 100vw !important;
+    overflow: hidden !important;
+    position: relative !important;
+  }
+
+  /* Sidebar Drawer: Slides in as an overlay/drawer without shifting page layout */
+  .sidebar-drawer {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    bottom: 0 !important;
+    height: 100% !important;
+    height: 100dvh !important;
+    width: 280px !important;
+    max-width: 85vw !important;
+    z-index: 50 !important;
+    overflow: hidden !important;
+    will-change: transform, box-shadow;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease !important;
+  }
+
+  .sidebar-drawer.is-open {
+    transform: translateX(0) !important;
+    box-shadow: 8px 0 28px rgba(0, 0, 0, 0.55) !important;
+  }
+
+  .sidebar-drawer.is-closed {
+    transform: translateX(-100%) !important;
+    box-shadow: none !important;
+    pointer-events: none !important;
+  }
+
+  .sidebar-inner-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+  }
+
+  /* Sidebar Backdrop */
+  .sidebar-backdrop {
+    position: fixed !important;
+    inset: 0 !important;
+    z-index: 45 !important;
+    background-color: rgba(0, 0, 0, 0.65) !important;
+    backdrop-filter: blur(4px) !important;
+    -webkit-backdrop-filter: blur(4px) !important;
+    transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  }
+
+  /* Main chat column: Full flexible height with 100dvh */
+  .chat-main {
+    height: 100% !important;
+    height: 100dvh !important;
+    max-height: 100dvh !important;
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    overflow: hidden !important;
+  }
+
+  /* Compact header on mobile */
+  .chat-header {
+    height: 52px !important;
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+    flex-shrink: 0 !important;
+  }
+
+  /* Chat messages scroll area: flex 1 and smooth native iOS touch scrolling */
+  .chat-scroll-area {
+    flex: 1 1 0% !important;
+    min-height: 0 !important;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+
+  /* Messages stream: comfort bottom spacing so content doesn't collide with composer */
+  .chat-messages-container {
+    padding-top: 10px !important;
+    padding-bottom: 24px !important;
+  }
+
+  /* Bottom composer bar: fluidly pinned at bottom with iOS safe area inset */
+  .chat-composer-wrapper {
+    position: relative !important;
+    width: 100% !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    padding-top: 6px !important;
+    padding-bottom: calc(10px + env(safe-area-inset-bottom, 0px)) !important;
+    background: var(--bg-main) !important;
+    border-top: 1px solid var(--border-subtle) !important;
+    flex-shrink: 0 !important;
+    z-index: 20 !important;
+  }
+
+  /* Prevent automatic iOS Safari zoom on focus (enforces 16px minimum font size) */
+  input[type="text"],
+  input[type="search"],
+  input[type="email"],
+  input[type="password"],
+  textarea,
+  .chat-textarea {
+    font-size: 16px !important;
+    line-height: 1.4 !important;
+  }
+}
+

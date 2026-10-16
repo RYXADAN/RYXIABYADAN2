@@ -1,17 +1,21 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { api } from './lib/api.ts';
-import { User, Conversation, Message, UserSettings, UserStats, RyxiaMode } from './types/index.ts';
+import { User, Conversation, Message, UserSettings, UserStats, RyxiaMode, FileAttachment, ClientTimeInfo } from './types/index.ts';
 import { Sidebar } from './components/sidebar/Sidebar.tsx';
 import { ChatArea } from './components/chat/ChatArea.tsx';
 import { AuthModal } from './components/auth/AuthModal.tsx';
 import { SettingsModal } from './components/settings/SettingsModal.tsx';
 import { ShortcutsModal } from './components/modals/ShortcutsModal.tsx';
+import { VoiceConversationModal } from './components/voice/VoiceConversationModal.tsx';
 import {
   syncMessageToFirestore,
   syncConversationToFirestore,
   deleteConversationFromFirestore,
   logOut as firebaseLogOut,
   auth as firebaseAuth,
+  signInWithGoogle,
+  subscribeToUserConversations,
+  subscribeToConversationMessages,
 } from './lib/firebase.ts';
 import { onAuthStateChanged } from 'firebase/auth';
 
@@ -31,7 +35,9 @@ export default function App() {
     enterSends: true,
     animations: true,
     aiProvider: 'auto',
-    customOpenAiModel: 'gemini-3.5-flash',
+    speedMode: 'turbo',
+    responseLength: 'balanced',
+    customOpenAiModel: 'RYXIA Core v1',
   });
   const [stats, setStats] = useState<UserStats | undefined>(undefined);
 
@@ -41,10 +47,53 @@ export default function App() {
   const abortControllerRef = useRef<AbortController | null>(null);
 
   // Layout & Modals
-  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(() => {
+    if (typeof window !== 'undefined') {
+      return window.innerWidth >= 768;
+    }
+    return true;
+  });
   const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
   const [isSettingsModalOpen, setIsSettingsModalOpen] = useState(false);
   const [isShortcutsModalOpen, setIsShortcutsModalOpen] = useState(false);
+
+  // Live Voice Conversation (Voix Directe RYXIA)
+  const [isVoiceModalOpen, setIsVoiceModalOpen] = useState(false);
+
+  const handleVoiceTranscriptSaved = async (
+    transcript: { role: 'user' | 'assistant'; text: string }[]
+  ) => {
+    if (transcript.length === 0) return;
+    let convId = activeConversationId;
+    if (!convId) {
+      try {
+        const firstUserTurn = transcript.find((t) => t.role === 'user');
+        const title = firstUserTurn?.text.slice(0, 36) || 'Conversation Vocale';
+        const newConv = await api.conversations.create(title, 'general');
+        convId = newConv.id;
+        setActiveConversationId(newConv.id);
+        setConversations((prev) => [newConv, ...prev]);
+        syncConversationToFirestore(newConv);
+      } catch (e) {
+        console.error('Failed to create conv for voice transcript:', e);
+        return;
+      }
+    }
+
+    const newMsgs: Message[] = transcript.map((turn, i) => ({
+      id: `msg_${Date.now()}_${i}`,
+      conversationId: convId!,
+      role: turn.role,
+      content: turn.text,
+      createdAt: new Date().toISOString(),
+      model: turn.role === 'assistant' ? 'RYXIA Audio' : 'user',
+    }));
+
+    setMessages((prev) => [...prev, ...newMsgs]);
+    if (user) {
+      newMsgs.forEach((m) => syncMessageToFirestore(m, user.id));
+    }
+  };
 
   // Global Keyboard Shortcuts (Cmd+K / Ctrl+K for new conversation, Esc to close modals, Cmd+B for sidebar, Cmd+/ for shortcuts help)
   useEffect(() => {
@@ -54,16 +103,27 @@ export default function App() {
 
       // 1. Esc: Close open modals
       if (e.key === 'Escape') {
-        if (isAuthModalOpen || isSettingsModalOpen || isShortcutsModalOpen) {
+        if (isAuthModalOpen || isSettingsModalOpen || isShortcutsModalOpen || isVoiceModalOpen) {
           e.preventDefault();
           setIsAuthModalOpen(false);
           setIsSettingsModalOpen(false);
           setIsShortcutsModalOpen(false);
+          setIsVoiceModalOpen(false);
           return;
         }
       }
 
-      // 2. Cmd+K or Ctrl+K: Open new conversation
+      // 2. Cmd+Shift+V or Ctrl+Shift+V: Open Voice Conversation (RYXIA Audio)
+      if (isCmdOrCtrl && e.shiftKey && e.key.toLowerCase() === 'v') {
+        e.preventDefault();
+        setIsAuthModalOpen(false);
+        setIsSettingsModalOpen(false);
+        setIsShortcutsModalOpen(false);
+        setIsVoiceModalOpen((prev) => !prev);
+        return;
+      }
+
+      // 3. Cmd+K or Ctrl+K: Open new conversation
       if (isCmdOrCtrl && e.key.toLowerCase() === 'k') {
         e.preventDefault();
         setIsAuthModalOpen(false);
@@ -73,14 +133,14 @@ export default function App() {
         return;
       }
 
-      // 3. Cmd+B or Ctrl+B: Toggle sidebar
+      // 4. Cmd+B or Ctrl+B: Toggle sidebar
       if (isCmdOrCtrl && e.key.toLowerCase() === 'b') {
         e.preventDefault();
         setIsSidebarOpen((prev) => !prev);
         return;
       }
 
-      // 4. Cmd+/ or Ctrl+/: Toggle shortcuts help modal
+      // 5. Cmd+/ or Ctrl+/: Toggle shortcuts help modal
       if (isCmdOrCtrl && (e.key === '/' || e.key === '?')) {
         e.preventDefault();
         setIsShortcutsModalOpen((prev) => !prev);
@@ -90,7 +150,7 @@ export default function App() {
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [isAuthModalOpen, isSettingsModalOpen, isShortcutsModalOpen, isStreaming]);
+  }, [isAuthModalOpen, isSettingsModalOpen, isShortcutsModalOpen, isVoiceModalOpen, isStreaming]);
 
   // Sync theme with HTML root and document
   useEffect(() => {
@@ -98,9 +158,15 @@ export default function App() {
     if (isLight) {
       document.documentElement.setAttribute('data-theme', 'light');
       document.documentElement.classList.add('theme-light');
+      document.documentElement.classList.remove('dark');
+      document.body.classList.add('theme-light');
+      document.body.classList.remove('dark');
     } else {
       document.documentElement.setAttribute('data-theme', 'dark');
       document.documentElement.classList.remove('theme-light');
+      document.documentElement.classList.add('dark');
+      document.body.classList.remove('theme-light');
+      document.body.classList.add('dark');
     }
   }, [settings.theme]);
 
@@ -160,6 +226,47 @@ export default function App() {
     initSession();
   }, []);
 
+  // Synchronisation multi-appareils temps réel des conversations (Google OAuth)
+  useEffect(() => {
+    if (!user || user.id === 'guest' || !user.id) return;
+
+    const unsubscribe = subscribeToUserConversations(user.id, (firestoreConvs) => {
+      if (firestoreConvs && firestoreConvs.length > 0) {
+        setConversations((prev) => {
+          const map = new Map(prev.map((c) => [c.id, c]));
+          for (const fc of firestoreConvs) {
+            map.set(fc.id, fc);
+          }
+          return Array.from(map.values()).sort(
+            (a, b) => new Date(b.updatedAt).getTime() - new Date(a.updatedAt).getTime()
+          );
+        });
+      }
+    });
+
+    return () => unsubscribe();
+  }, [user?.id]);
+
+  // Synchronisation multi-appareils temps réel des messages du fil actif
+  useEffect(() => {
+    if (!activeConversationId || !user || user.id === 'guest' || isStreaming) return;
+
+    const unsubscribe = subscribeToConversationMessages(activeConversationId, (firestoreMsgs) => {
+      if (firestoreMsgs && firestoreMsgs.length > 0 && !isStreaming) {
+        setMessages((prev) => {
+          const prevIds = new Set(prev.map((m) => m.id));
+          const hasNew = firestoreMsgs.some((m) => !prevIds.has(m.id));
+          if (hasNew || firestoreMsgs.length !== prev.length) {
+            return firestoreMsgs;
+          }
+          return prev;
+        });
+      }
+    });
+
+    return () => unsubscribe();
+  }, [activeConversationId, user?.id, isStreaming]);
+
   const handleToggleTheme = async () => {
     const nextTheme: 'dark' | 'light' = settings.theme === 'light' ? 'dark' : 'light';
     setSettings((prev) => ({ ...prev, theme: nextTheme }));
@@ -204,9 +311,17 @@ export default function App() {
   const handleSendMessage = async (
     text: string,
     groundingPreference?: 'auto' | 'search' | 'maps',
-    latLng?: { latitude: number; longitude: number }
+    latLng?: { latitude: number; longitude: number },
+    speedModeOverride?: 'turbo' | 'balanced' | 'deep',
+    attachment?: FileAttachment,
+    attachments?: FileAttachment[]
   ) => {
     if (isStreaming) return;
+
+    const allAttachments = (attachments && attachments.length > 0)
+      ? attachments
+      : (attachment ? [attachment] : undefined);
+    const primaryAttachment = allAttachments?.[0];
 
     let targetConvId = activeConversationId;
     const currentMode: RyxiaMode = activeConversation?.mode || 'general';
@@ -214,7 +329,8 @@ export default function App() {
     // Auto-create conversation if empty
     if (!targetConvId) {
       try {
-        const newConv = await api.conversations.create(text.slice(0, 40), currentMode);
+        const titleText = text.trim() ? text.slice(0, 40) : (primaryAttachment?.name ? `Images: ${primaryAttachment.name.slice(0, 30)}` : 'Nouvelle conversation');
+        const newConv = await api.conversations.create(titleText, currentMode);
         targetConvId = newConv.id;
         setActiveConversationId(newConv.id);
         setConversations((prev) => [newConv, ...prev]);
@@ -225,7 +341,7 @@ export default function App() {
       }
     }
 
-    // Append optimistic user message
+    // Append optimistic user message with attachments
     const tempUserMsg: Message = {
       id: `temp_${Date.now()}`,
       conversationId: targetConvId,
@@ -233,6 +349,8 @@ export default function App() {
       content: text,
       createdAt: new Date().toISOString(),
       model: 'user',
+      attachment: primaryAttachment,
+      attachments: allAttachments,
     };
     setMessages((prev) => [...prev, tempUserMsg]);
     if (user) {
@@ -245,12 +363,33 @@ export default function App() {
     const controller = new AbortController();
     abortControllerRef.current = controller;
 
+    const now = new Date();
+    const clientTime: ClientTimeInfo = {
+      iso: now.toISOString(),
+      dateString: new Intl.DateTimeFormat('fr-FR', {
+        weekday: 'long',
+        day: 'numeric',
+        month: 'long',
+        year: 'numeric',
+      }).format(now),
+      timeString: new Intl.DateTimeFormat('fr-FR', {
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+      }).format(now),
+      timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone || 'Europe/Paris',
+    };
+
     await api.chat.stream({
       conversationId: targetConvId,
       message: text,
       mode: currentMode,
       groundingPreference,
+      speedMode: speedModeOverride || settings.speedMode || 'balanced',
       latLng,
+      attachment: primaryAttachment,
+      attachments: allAttachments,
+      clientTime,
       signal: controller.signal,
       onInit: (initData) => {
         setConversations((prev) =>
@@ -300,11 +439,20 @@ export default function App() {
         role: 'assistant',
         content: streamingText,
         createdAt: new Date().toISOString(),
-        model: 'gemini-3.5-flash (Arrêté)',
+        model: 'RYXIA (Interrompu)',
       };
       setMessages((prev) => [...prev, partialMsg]);
     }
     setStreamingText('');
+  };
+
+  const handleToggleSpeedMode = async (newSpeed: 'turbo' | 'balanced' | 'deep') => {
+    setSettings((prev) => ({ ...prev, speedMode: newSpeed }));
+    try {
+      await api.settings.update({ speedMode: newSpeed });
+    } catch (e) {
+      console.warn('Speed mode update warning:', e);
+    }
   };
 
   const handleRegenerate = async () => {
@@ -327,6 +475,7 @@ export default function App() {
       conversationId: activeConversationId,
       regenerate: true,
       mode: activeConversation?.mode || 'general',
+      speedMode: settings.speedMode || 'turbo',
       signal: controller.signal,
       onChunk: (chunk) => {
         setStreamingText((prev) => prev + chunk);
@@ -342,7 +491,15 @@ export default function App() {
       onError: (errMsg) => {
         setIsStreaming(false);
         setStreamingText('');
-        alert(errMsg);
+        const errAssistantMsg: Message = {
+          id: `err_${Date.now()}`,
+          conversationId: activeConversationId!,
+          role: 'assistant',
+          content: `⚠️ **Erreur lors de la régénération** : ${errMsg}`,
+          createdAt: new Date().toISOString(),
+          model: 'system-error',
+        };
+        setMessages((prev) => [...prev, errAssistantMsg]);
       },
     });
   };
@@ -353,7 +510,7 @@ export default function App() {
       setConversations((prev) => prev.map((c) => (c.id === id ? { ...c, title: updated.title } : c)));
       syncConversationToFirestore(updated);
     } catch (err: any) {
-      alert(err.message || 'Erreur lors du renommage');
+      console.error('Erreur renommage:', err);
     }
   };
 
@@ -370,7 +527,7 @@ export default function App() {
         setMessages([]);
       }
     } catch (err: any) {
-      alert(err.message || 'Erreur lors de la suppression');
+      console.error('Erreur suppression:', err);
     }
   };
 
@@ -381,11 +538,14 @@ export default function App() {
       setActiveConversationId(null);
       setMessages([]);
     } catch (err: any) {
-      alert(err.message || 'Erreur lors de la suppression');
+      console.error('Erreur suppression toutes conversations:', err);
     }
   };
 
+  const [draftMode, setDraftMode] = useState<RyxiaMode>('general');
+
   const handleChangeMode = async (mode: RyxiaMode) => {
+    setDraftMode(mode);
     if (activeConversationId) {
       try {
         const updated = await api.conversations.update(activeConversationId, { mode });
@@ -413,6 +573,25 @@ export default function App() {
     setUser(guest.user);
   };
 
+  const handleGoogleSignIn = async () => {
+    try {
+      const fbUser = await signInWithGoogle();
+      const syncResult = await api.auth.firebaseSync({
+        uid: fbUser.id,
+        name: fbUser.name,
+        email: fbUser.email,
+        avatar: fbUser.avatar,
+      });
+      setUser(syncResult.user);
+      const convs = await api.conversations.list();
+      setConversations(convs);
+    } catch (err: any) {
+      console.warn('Google sign in warning:', err);
+      // Fallback: open auth modal if popup blocked or cancelled
+      setIsAuthModalOpen(true);
+    }
+  };
+
   const handleAuthSuccess = async (loggedUser: User) => {
     setUser(loggedUser);
     const session = await api.auth.me();
@@ -425,6 +604,7 @@ export default function App() {
   };
 
   const activeConversation = conversations.find((c) => c.id === activeConversationId) || null;
+  const currentMode: RyxiaMode = activeConversation ? activeConversation.mode : draftMode;
 
   if (loading) {
     return (
@@ -433,7 +613,7 @@ export default function App() {
         style={{ backgroundColor: 'var(--bg-main)', color: 'var(--text-primary)' }}
       >
         <div className="flex flex-col items-center gap-3">
-          <div className="w-6 h-6 border-2 border-amber-500/30 border-t-amber-500 rounded-full animate-spin" />
+          <div className="w-6 h-6 border-2 border-teal-500/30 border-t-teal-400 rounded-full animate-spin" />
         </div>
       </div>
     );
@@ -441,13 +621,15 @@ export default function App() {
 
   return (
     <div
-      className="flex h-screen w-screen overflow-hidden font-sans transition-colors duration-200"
+      className="app-layout flex h-screen w-screen overflow-hidden font-sans transition-colors duration-200"
       style={{ backgroundColor: 'var(--bg-main)', color: 'var(--text-primary)' }}
     >
       {/* ChatGPT-style Left Sidebar */}
       <Sidebar
         conversations={conversations}
         activeConversationId={activeConversationId}
+        activeMode={currentMode}
+        onChangeMode={handleChangeMode}
         onSelectConversation={handleSelectConversation}
         onNewConversation={handleNewConversation}
         onRenameConversation={handleRenameConversation}
@@ -462,11 +644,14 @@ export default function App() {
         theme={settings.theme}
         onToggleTheme={handleToggleTheme}
         onOpenShortcuts={() => setIsShortcutsModalOpen(true)}
+        onOpenVoiceConversation={() => setIsVoiceModalOpen(true)}
+        onGoogleSignIn={handleGoogleSignIn}
       />
 
       {/* ChatGPT-style Main Chat View with Grounding & Search & Maps */}
       <ChatArea
         conversation={activeConversation}
+        activeMode={currentMode}
         messages={messages}
         isStreaming={isStreaming}
         streamingText={streamingText}
@@ -478,8 +663,11 @@ export default function App() {
         onToggleSidebar={() => setIsSidebarOpen(!isSidebarOpen)}
         isSidebarOpen={isSidebarOpen}
         enterSends={settings.enterSends}
+        speedMode={settings.speedMode || 'turbo'}
+        onToggleSpeedMode={handleToggleSpeedMode}
         theme={settings.theme}
         onToggleTheme={handleToggleTheme}
+        onOpenVoiceConversation={() => setIsVoiceModalOpen(true)}
       />
 
       {/* Auth Modal (Google Sign-In + Firebase Auth) */}
@@ -512,6 +700,13 @@ export default function App() {
       <ShortcutsModal
         isOpen={isShortcutsModalOpen}
         onClose={() => setIsShortcutsModalOpen(false)}
+      />
+
+      {/* Live Voice Conversation Modal (Voix Directe RYXIA) */}
+      <VoiceConversationModal
+        isOpen={isVoiceModalOpen}
+        onClose={() => setIsVoiceModalOpen(false)}
+        onSaveToChat={handleVoiceTranscriptSaved}
       />
     </div>
   );

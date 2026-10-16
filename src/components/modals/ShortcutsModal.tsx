@@ -19,6 +19,11 @@ export const ShortcutsModal: React.FC<ShortcutsModalProps> = ({ isOpen, onClose 
       description: 'Démarre immédiatement un nouveau fil de discussion',
     },
     {
+      action: 'Conversation Vocale (RYXIA Audio)',
+      keys: [`${modKey}`, 'Maj', 'V'],
+      description: 'Lance la conversation vocale interactive en direct avec interruption naturelle',
+    },
+    {
       action: 'Fermer les fenêtres / modales',
       keys: ['Échap'],
       description: 'Ferme les paramètres, connexions ou dialogues ouverts',

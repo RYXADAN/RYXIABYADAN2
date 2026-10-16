@@ -1,4 +1,5 @@
 import express from 'express';
+import http from 'node:http';
 import cookieParser from 'cookie-parser';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -6,6 +7,8 @@ import dotenv from 'dotenv';
 import { db } from './server/db.ts';
 import { hashPassword, verifyPassword, generateToken, authenticateToken, AuthenticatedRequest } from './server/auth.ts';
 import { aiEngine } from './server/ai/provider.ts';
+import { setupLiveWebSocket } from './server/ai/live.ts';
+import { scienceService } from './server/science.ts';
 import { Conversation, Message, RyxiaMode } from './src/types/index.ts';
 
 dotenv.config();
@@ -119,12 +122,12 @@ app.post('/api/auth/login', async (req, res) => {
 app.post('/api/auth/guest', async (req, res) => {
   try {
     const guestId = `guest_${Date.now()}_${Math.random().toString(36).substring(2, 6)}`;
-    const guestEmail = `${guestId}@ryxia.local`;
+    const guestEmail = 'invite@ryxia.app';
     const passwordHash = await hashPassword('ryxia_guest_pass');
 
     const newUser = db.createUser({
       id: guestId,
-      name: 'Invité',
+      name: 'Invité RYXIA',
       email: guestEmail,
       passwordHash,
       createdAt: new Date().toISOString(),
@@ -340,10 +343,254 @@ app.get('/api/conversations/:id/export', authenticateToken, (req: AuthenticatedR
   return res.send(md);
 });
 
+// --- Image Generation & Editing Routes using gemini-3.1-flash-lite-image ---
+app.post('/api/images/generate', authenticateToken, async (req: AuthenticatedRequest, res) => {
+  const userId = req.user!.id;
+  const { prompt, aspectRatio = '1:1', conversationId } = req.body;
+
+  if (!prompt || typeof prompt !== 'string' || !prompt.trim()) {
+    return res.status(400).json({ error: 'Veuillez fournir une description pour générer l\'image.' });
+  }
+
+  const userSettings = db.getSettings(userId);
+
+  try {
+    const result = await aiEngine.generateImage({
+      prompt: prompt.trim(),
+      aspectRatio,
+      customApiKey: userSettings?.customOpenAiKey,
+    });
+
+    // If conversationId provided, record messages in conversation
+    if (conversationId) {
+      const conv = db.getConversation(conversationId, userId);
+      if (conv) {
+        // User prompt message
+        db.addMessage({
+          id: `msg_${Date.now()}_u_img`,
+          conversationId: conv.id,
+          role: 'user',
+          content: `🎨 Créer une image : "${prompt.trim()}" (Ratio ${aspectRatio})`,
+          createdAt: new Date().toISOString(),
+          model: 'user',
+        });
+
+        // Assistant generated image message
+        const imgMarkdown = `![${prompt.trim()}](${result.imageUrl})\n\n*Image générée avec **${result.model}** (Format ${aspectRatio})*`;
+        db.addMessage({
+          id: `msg_${Date.now()}_a_img`,
+          conversationId: conv.id,
+          role: 'assistant',
+          content: imgMarkdown,
+          createdAt: new Date().toISOString(),
+          model: result.model,
+          imageUrl: result.imageUrl,
+          imagePrompt: prompt.trim(),
+        });
+      }
+    }
+
+    return res.json({
+      success: true,
+      image: result,
+    });
+  } catch (err: any) {
+    console.error('Image generation error:', err);
+    return res.status(500).json({
+      error: err.message || 'Échec de la génération de l\'image.',
+    });
+  }
+});
+
+app.post('/api/images/edit', authenticateToken, async (req: AuthenticatedRequest, res) => {
+  const userId = req.user!.id;
+  const { prompt, imageBase64, mimeType = 'image/png', aspectRatio = '1:1', conversationId } = req.body;
+
+  if (!prompt || typeof prompt !== 'string' || !prompt.trim()) {
+    return res.status(400).json({ error: 'Veuillez indiquer les instructions de modification.' });
+  }
+  if (!imageBase64 || typeof imageBase64 !== 'string') {
+    return res.status(400).json({ error: 'Image de départ requise pour l\'édition.' });
+  }
+
+  const userSettings = db.getSettings(userId);
+
+  try {
+    const result = await aiEngine.editImage({
+      prompt: prompt.trim(),
+      imageBase64,
+      mimeType,
+      aspectRatio,
+      customApiKey: userSettings?.customOpenAiKey,
+    });
+
+    // If conversationId provided, record messages in conversation
+    if (conversationId) {
+      const conv = db.getConversation(conversationId, userId);
+      if (conv) {
+        db.addMessage({
+          id: `msg_${Date.now()}_u_edit`,
+          conversationId: conv.id,
+          role: 'user',
+          content: `🖌️ Modifier l'image : "${prompt.trim()}"`,
+          createdAt: new Date().toISOString(),
+          model: 'user',
+        });
+
+        const imgMarkdown = `![${prompt.trim()}](${result.imageUrl})\n\n*Image modifiée avec **${result.model}***`;
+        db.addMessage({
+          id: `msg_${Date.now()}_a_edit`,
+          conversationId: conv.id,
+          role: 'assistant',
+          content: imgMarkdown,
+          createdAt: new Date().toISOString(),
+          model: result.model,
+          imageUrl: result.imageUrl,
+          imagePrompt: prompt.trim(),
+        });
+      }
+    }
+
+    return res.json({
+      success: true,
+      image: result,
+    });
+  } catch (err: any) {
+    console.error('Image edit error:', err);
+    return res.status(500).json({
+      error: err.message || 'Échec de la modification de l\'image.',
+    });
+  }
+});
+
+// --- Audio Transcription Route (utilisant gemini-3.5-transcribe) ---
+app.post('/api/audio/transcribe', authenticateToken, async (req: AuthenticatedRequest, res) => {
+  const userId = req.user!.id;
+  const { audioBase64, mimeType = 'audio/webm' } = req.body;
+
+  if (!audioBase64 || typeof audioBase64 !== 'string') {
+    return res.status(400).json({ error: 'Fichier audio manquant ou invalide.' });
+  }
+
+  const userSettings = db.getSettings(userId);
+
+  try {
+    const text = await aiEngine.transcribeAudio({
+      audioBase64,
+      mimeType,
+      customApiKey: userSettings?.customOpenAiKey,
+    });
+
+    return res.json({ text });
+  } catch (err: any) {
+    console.error('Erreur transcription audio gemini-3.5-transcribe:', err);
+    return res.status(500).json({
+      error: err.message || 'Échec de la transcription audio.',
+    });
+  }
+});
+
+// --- DeepMind Science Skills Routes (AlphaFold, PDB, PubChem, Europe PMC) ---
+app.get('/api/science/protein/:id', async (req, res) => {
+  try {
+    const { id } = req.params;
+    const data = await scienceService.getProtein(id);
+    return res.json(data);
+  } catch (err: any) {
+    return res.status(404).json({ error: err.message || 'Protéine introuvable.' });
+  }
+});
+
+app.get('/api/science/chemical/:query', async (req, res) => {
+  try {
+    const { query } = req.params;
+    const data = await scienceService.getChemical(query);
+    return res.json(data);
+  } catch (err: any) {
+    return res.status(404).json({ error: err.message || 'Composé chimique introuvable.' });
+  }
+});
+
+app.get('/api/science/literature/:query', async (req, res) => {
+  try {
+    const { query } = req.params;
+    const data = await scienceService.getLiterature(query);
+    return res.json({ results: data });
+  } catch (err: any) {
+    return res.status(500).json({ error: err.message || 'Erreur lors de la recherche bibliographique.' });
+  }
+});
+
+// Helper to detect in-chat image generation requests (e.g. "une image d'un chat", "une image d'un schéma", "dessine un chat")
+function extractImageGenerationPrompt(rawText: string | undefined): string | null {
+  if (!rawText) return null;
+  const text = rawText.trim();
+  if (text.length < 2 || text.length > 500) return null;
+
+  // Normalize accents and lowercasing for intent detection
+  const normalized = text
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/['’]/g, "'")
+    .trim();
+
+  // Strip polite prefixes
+  const cleanNorm = normalized
+    .replace(/^(?:peux-tu|pourrais-tu|merci de|stp|s'il te plait|veuillez|est-ce que tu peux|tu peux)\s+/i, '')
+    .trim();
+
+  const stripFillers = (s: string) =>
+    s.replace(/\s+(?:par exemple|stp|s'il te pla[iî]t|s'il vous pla[iî]t|merci)\s*$/i, '').trim();
+
+  // 1. "genere/cree/fais/dessine/donne/produis/affiche [moi] [une] image [de/du/d'un/dun] ..."
+  const m1 = cleanNorm.match(/^(?:genere(?:[- ]moi)?|cree(?:[- ]moi)?|fais(?:[- ]moi)?|dessine(?:[- ]moi)?|affiche(?:[- ]moi)?|produis(?:[- ]moi)?|donne(?:[- ]moi)?)\s+(?:une?\s+|l'|des?\s+)?image\s+(?:d'|de\s+|du\s+|d'un\s+|dun\s+|d'une\s+|dune\s+)?(.+)$/i);
+  if (m1 && m1[1]) {
+    const rawTarget = text.slice(cleanNorm.indexOf(m1[1])).trim();
+    return stripFillers(rawTarget);
+  }
+
+  // 2. "[une/l'] image [d'/de/du/d'un/dun] ..."
+  const m2 = cleanNorm.match(/^(?:une?|l')?\s*image\s+(?:d'|de\s+|du\s+|d'un\s+|dun\s+|d'une\s+|dune\s+)(.+)$/i);
+  if (m2 && m2[1]) {
+    const rawTarget = text.slice(cleanNorm.indexOf(m2[1])).trim();
+    return stripFillers(rawTarget);
+  }
+
+  // 3. "dessine/illustre [moi] [un/une] ..."
+  const m3 = cleanNorm.match(/^(?:dessine(?:[- ]moi)?|illustre(?:[- ]moi)?)\s+(?:un\s+|une\s+|des\s+|le\s+|la\s+|l')?(.+)$/i);
+  if (m3 && m3[1]) {
+    const rawTarget = text.slice(cleanNorm.indexOf(m3[1])).trim();
+    return stripFillers(rawTarget);
+  }
+
+  // 4. "fais-moi un dessin/visuel/schema visuel de ..."
+  const m4 = cleanNorm.match(/^(?:fais|cree|genere)(?:[- ]moi)?\s+(?:un\s+)?(?:dessin|visuel|illustration|schema\s+visuel)\s+(?:d'|de\s+|du\s+|d'un\s+|dun\s+|d'une\s+|dune\s+)?(.+)$/i);
+  if (m4 && m4[1]) {
+    const rawTarget = text.slice(cleanNorm.indexOf(m4[1])).trim();
+    return stripFillers(rawTarget);
+  }
+
+  // 5. English patterns
+  const m5 = cleanNorm.match(/^(?:generate|create|draw|make|show)\s+(?:me\s+)?(?:an?\s+)?(?:image|picture|drawing|illustration)\s+(?:of\s+)?(.+)$/i);
+  if (m5 && m5[1]) {
+    const rawTarget = text.slice(cleanNorm.indexOf(m5[1])).trim();
+    return stripFillers(rawTarget);
+  }
+
+  const m6 = cleanNorm.match(/^(?:an?\s+)?(?:image|picture)\s+of\s+(.+)$/i);
+  if (m6 && m6[1]) {
+    const rawTarget = text.slice(cleanNorm.indexOf(m6[1])).trim();
+    return stripFillers(rawTarget);
+  }
+
+  return null;
+}
+
 // --- Chat Streaming Route (SSE) ---
 app.post('/api/chat/stream', authenticateToken, async (req: AuthenticatedRequest, res) => {
   const userId = req.user!.id;
-  const { conversationId, message, mode, regenerate, groundingPreference, latLng } = req.body;
+  const { conversationId, message, mode, regenerate, groundingPreference, speedMode, latLng, attachment, attachments, clientTime } = req.body;
 
   let conv = db.getConversation(conversationId, userId);
   if (!conv) {
@@ -352,7 +599,7 @@ app.post('/api/chat/stream', authenticateToken, async (req: AuthenticatedRequest
     conv = db.createConversation({
       id: conversationId || `conv_${Date.now()}_${Math.random().toString(36).substring(2, 7)}`,
       userId,
-      title: message ? message.slice(0, 40) : 'Nouvelle conversation',
+      title: message ? message.slice(0, 40) : (attachment?.name ? `Analyse: ${attachment.name.slice(0, 30)}` : 'Nouvelle conversation'),
       mode: newMode,
       createdAt: new Date().toISOString(),
       updatedAt: new Date().toISOString(),
@@ -367,43 +614,80 @@ app.post('/api/chat/stream', authenticateToken, async (req: AuthenticatedRequest
   // If regenerate, pop last assistant message
   if (regenerate) {
     db.deleteLastAssistantMessage(conv.id);
-  } else if (message) {
-    // Add new user message
+  } else if (message || attachment || (Array.isArray(attachments) && attachments.length > 0)) {
+    // Process up to 4 attached images or documents
+    const rawAttachments: any[] = Array.isArray(attachments) && attachments.length > 0
+      ? attachments.slice(0, 4)
+      : (attachment ? [attachment] : []);
+
+    const processedAttachments = rawAttachments.map((att: any) => {
+      const cleanBase64 = att.base64Data || (att.dataUrl ? att.dataUrl.split(',')[1] : undefined);
+      const dataUrl = att.dataUrl || (cleanBase64 && (att.type?.startsWith('image/') || !att.type) ? `data:${att.type || 'image/jpeg'};base64,${cleanBase64}` : undefined);
+      return {
+        name: att.name || 'Fichier joint',
+        type: att.type || 'image/jpeg',
+        size: att.size || 0,
+        dataUrl,
+        base64Data: cleanBase64,
+        textContent: att.textContent,
+      };
+    });
+
     const userMsg: Message = {
       id: `msg_${Date.now()}_u`,
       conversationId: conv.id,
       role: 'user',
-      content: message.trim(),
+      content: (message || '').trim(),
       createdAt: new Date().toISOString(),
       model: 'user',
+      attachment: processedAttachments[0],
+      attachments: processedAttachments.length > 0 ? processedAttachments : undefined,
     };
     db.addMessage(userMsg);
 
     // If this is the first message in conversation, update title dynamically
     const allMsgs = db.getMessages(conv.id, userId);
     if (allMsgs.length <= 1) {
-      const cleanTitle = message.trim().slice(0, 48) + (message.length > 48 ? '...' : '');
+      const msgText = (message || '').trim();
+      const cleanTitle = msgText
+        ? (msgText.slice(0, 48) + (msgText.length > 48 ? '...' : ''))
+        : (processedAttachments[0]?.name ? `Images : ${processedAttachments.length} fichier(s)` : 'Nouvelle conversation');
       db.updateConversation(conv.id, userId, { title: cleanTitle });
     }
   }
 
-  // Fetch full conversation history for context memory
+  // Fetch full conversation history for context memory with multimodal attachment support
   const history = db.getMessages(conv.id, userId);
-  const contextMessages = history.map(m => ({
-    role: m.role as 'user' | 'assistant' | 'system',
-    content: m.content,
-  }));
+  const contextMessages = history.map(m => {
+    const rawList = (m.attachments && m.attachments.length > 0)
+      ? m.attachments
+      : (m.attachment ? [m.attachment] : []);
+    const chatAtts = rawList.map(a => ({
+      name: a.name,
+      mimeType: a.type,
+      base64Data: a.base64Data,
+      textContent: a.textContent,
+    }));
+    return {
+      role: m.role as 'user' | 'assistant' | 'system',
+      content: m.content,
+      attachment: chatAtts[0],
+      attachments: chatAtts,
+    };
+  });
 
   const userSettings = db.getSettings(userId);
+  const effectiveSpeedMode = speedMode || userSettings.speedMode || (conv.mode === 'fast' ? 'turbo' : 'balanced');
 
-  // Set SSE Headers
+  // Set SSE Headers with X-Accel-Buffering disabled for zero-latency streaming
   res.setHeader('Content-Type', 'text/event-stream; charset=utf-8');
   res.setHeader('Cache-Control', 'no-cache, no-transform');
   res.setHeader('Connection', 'keep-alive');
+  res.setHeader('X-Accel-Buffering', 'no');
   res.flushHeaders?.();
 
   // Send initial conversation metadata
-  res.write(`data: ${JSON.stringify({ type: 'init', conversationId: conv.id, title: conv.title, mode: conv.mode })}\n\n`);
+  res.write(`data: ${JSON.stringify({ type: 'init', conversationId: conv.id, title: conv.title, mode: conv.mode, speedMode: effectiveSpeedMode })}\n\n`);
 
   let accumulatedText = '';
   const abortController = new AbortController();
@@ -415,21 +699,68 @@ app.post('/api/chat/stream', authenticateToken, async (req: AuthenticatedRequest
   });
 
   try {
+    // Check if user specifically requested an image generation in chat (e.g. "une image dun shema", "une image dun chat", etc.)
+    const detectedImagePrompt = extractImageGenerationPrompt(message);
+    const hasAttachments = Boolean(attachment || (Array.isArray(attachments) && attachments.length > 0));
+
+    if (detectedImagePrompt && !hasAttachments && !regenerate) {
+      res.write(`data: ${JSON.stringify({ type: 'chunk', text: '🎨 **Création visuelle en cours...**\n\n' })}\n\n`);
+      (res as any).flush?.();
+
+      try {
+        let generationPrompt = detectedImagePrompt;
+        if (/^sch?[eé]ma/i.test(detectedImagePrompt)) {
+          generationPrompt = `Un schéma explicatif clair, précis et esthétique, infographie pédagogique détaillée avec annotations : ${detectedImagePrompt}`;
+        } else {
+          generationPrompt = `Une illustration ou photographie détaillée de haute qualité : ${detectedImagePrompt}`;
+        }
+
+        const imgResult = await aiEngine.generateImage({
+          prompt: generationPrompt,
+          aspectRatio: '1:1',
+          customApiKey: userSettings.customOpenAiKey,
+        });
+
+        const assistantMsg: Message = {
+          id: `msg_${Date.now()}_a`,
+          conversationId: conv!.id,
+          role: 'assistant',
+          content: `Voici l'image générée pour votre demande : **${detectedImagePrompt}**`,
+          imageUrl: imgResult.imageUrl,
+          imagePrompt: detectedImagePrompt,
+          createdAt: new Date().toISOString(),
+          model: imgResult.model || 'RYXIA Vector Studio',
+        };
+        db.addMessage(assistantMsg);
+
+        res.write(`data: ${JSON.stringify({ type: 'done', message: assistantMsg })}\n\n`);
+        res.end();
+        return;
+      } catch (err: any) {
+        console.warn('Direct chat image generation failed, falling back to chat streaming:', err.message || err);
+        // Fallback to regular chat streaming below
+      }
+    }
+
     await aiEngine.streamChat(
       {
         mode: conv.mode,
         messages: contextMessages,
         customApiKey: userSettings.customOpenAiKey,
-        customModel: userSettings.customOpenAiModel || process.env.OPENAI_MODEL || 'gpt-5.6-luna',
+        customModel: userSettings.customOpenAiModel || process.env.OPENAI_MODEL,
         providerPreference: userSettings.aiProvider || 'auto',
         groundingPreference: groundingPreference || 'auto',
+        speedMode: effectiveSpeedMode,
+        responseLength: userSettings.responseLength || 'balanced',
         latLng,
+        clientTime,
         signal: abortController.signal,
       },
       {
         onChunk: (chunk: string) => {
           accumulatedText += chunk;
           res.write(`data: ${JSON.stringify({ type: 'chunk', text: chunk })}\n\n`);
+          (res as any).flush?.();
         },
         onDone: (fullText: string, modelName: string, sources?: any[]) => {
           const finalContent = fullText || accumulatedText;
@@ -502,8 +833,12 @@ async function startServer() {
     });
   }
 
-  app.listen(PORT, '0.0.0.0', () => {
+  const httpServer = http.createServer(app);
+  setupLiveWebSocket(httpServer);
+
+  httpServer.listen(PORT, '0.0.0.0', () => {
     console.log(`[RYXIA Engine] Server is active at http://0.0.0.0:${PORT}`);
+    console.log(`[RYXIA Engine] Live Voice WebSocket endpoint: ws://0.0.0.0:${PORT}/api/live`);
     console.log(`[RYXIA Engine] Signature: RYXIA — by Adan | Your AI. Your way.`);
   });
 }

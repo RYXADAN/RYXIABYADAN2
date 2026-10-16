@@ -71,6 +71,310 @@
       "passwordHash": "$2b$10$biYudBU8sOtNjYs8fVZNFu0OK7fX4s8oiK2HY6onW6OlwAaiCEaF2",
       "createdAt": "2026-10-02T12:19:59.042Z",
       "avatar": "https://api.dicebear.com/7.x/shapes/svg?seed=guest_1790943598914_dsq0"
+    },
+    {
+      "id": "guest_1791020467236_637h",
+      "name": "Invité",
+      "email": "guest_1791020467236_637h@ryxia.local",
+      "passwordHash": "$2b$10$xD/fLqaBEUuBiPXXXxVJbemRdDu08Cs0QPaeud8gcdTZNQtqZqUrm",
+      "createdAt": "2026-10-03T09:41:07.359Z",
+      "avatar": "https://api.dicebear.com/7.x/shapes/svg?seed=guest_1791020467236_637h"
+    },
+    {
+      "id": "guest_1791020509817_67po",
+      "name": "Invité",
+      "email": "guest_1791020509817_67po@ryxia.local",
+      "passwordHash": "$2b$10$EV9XkGifrwSMjdth9Gyvp.IOxaUOxWnz2hR/ArY5uxZ/xscwTQ7RC",
+      "createdAt": "2026-10-03T09:41:49.947Z",
+      "avatar": "https://api.dicebear.com/7.x/shapes/svg?seed=guest_1791020509817_67po"
+    },
+    {
+      "id": "guest_1791021104322_s24o",
+      "name": "Invité",
+      "email": "guest_1791021104322_s24o@ryxia.local",
+      "passwordHash": "$2b$10$NDnUuWegY8g2C9CHtktTm.kx8vA1P85JqBUxaPf9oTvSkze9QkX6K",
+      "createdAt": "2026-10-03T09:51:44.452Z",
+      "avatar": "https://api.dicebear.com/7.x/shapes/svg?seed=guest_1791021104322_s24o"
+    },
+    {
+      "id": "guest_1791021118595_cxsx",
+      "name": "Invité",
+      "email": "guest_1791021118595_cxsx@ryxia.local",
+      "passwordHash": "$2b$10$6jHjO4GH8q8aWzdPmeggI.cQ4QQYIegAyIlXICbS5mm4R9QudSWyq",
+      "createdAt": "2026-10-03T09:51:58.710Z",
+      "avatar": "https://api.dicebear.com/7.x/shapes/svg?seed=guest_1791021118595_cxsx"
+    },
+    {
+      "id": "guest_1791021129583_f9td",
+      "name": "Invité",
+      "email": "guest_1791021129583_f9td@ryxia.local",
+      "passwordHash": "$2b$10$JBRPvv65m8pEghxUVkCW7OfotcAuHyaJbeACax3I7nrUJKAC47vUy",
+      "createdAt": "2026-10-03T09:52:09.703Z",
+      "avatar": "https://api.dicebear.com/7.x/shapes/svg?seed=guest_1791021129583_f9td"
+    },
+    {
+      "id": "guest_1791021158814_6gpr",
+      "name": "Invité",
+      "email": "guest_1791021158814_6gpr@ryxia.local",
+      "passwordHash": "$2b$10$0HSI3KcX48J8/39VYhPxYeZ23J.YqCkXIpbsfmShFWNdcJT.qhCCO",
+      "createdAt": "2026-10-03T09:52:38.942Z",
+      "avatar": "https://api.dicebear.com/7.x/shapes/svg?seed=guest_1791021158814_6gpr"
+    },
+    {
+      "id": "guest_1791021202076_3jlc",
+      "name": "Invité",
+      "email": "guest_1791021202076_3jlc@ryxia.local",
+      "passwordHash": "$2b$10$wSctXeTvW29GwVUIliLIhOIZVBENdle5w7TzxGfwa2FdTpi4hp8DS",
+      "createdAt": "2026-10-03T09:53:22.212Z",
+      "avatar": "https://api.dicebear.com/7.x/shapes/svg?seed=guest_1791021202076_3jlc"
+    },
+    {
+      "id": "guest_1791021214178_bsf8",
+      "name": "Invité",
+      "email": "guest_1791021214178_bsf8@ryxia.local",
+      "passwordHash": "$2b$10$Zw5JsVkIxrksEXUZ4E9Xau7YQLYb2eOBvVy1LqK8ly8QamA6XWRMW",
+      "createdAt": "2026-10-03T09:53:34.284Z",
+      "avatar": "https://api.dicebear.com/7.x/shapes/svg?seed=guest_1791021214178_bsf8"
+    },
+    {
+      "id": "guest_1791021234866_ixot",
+      "name": "Invité",
+      "email": "guest_1791021234866_ixot@ryxia.local",
+      "passwordHash": "$2b$10$Dc6WQRxcUZUSrAUzlKS5eeQ8.rSMrgWULbc1/rKP3RPCHF2JkKoaO",
+      "createdAt": "2026-10-03T09:53:54.995Z",
+      "avatar": "https://api.dicebear.com/7.x/shapes/svg?seed=guest_1791021234866_ixot"
+    },
+    {
+      "id": "guest_1791021244270_duzr",
+      "name": "Invité",
+      "email": "guest_1791021244270_duzr@ryxia.local",
+      "passwordHash": "$2b$10$wcQGeLNNuTnDnW9GXSLXzuoC3dLDQWgm3BeQr0HpB/14Bs64NFagC",
+      "createdAt": "2026-10-03T09:54:04.387Z",
+      "avatar": "https://api.dicebear.com/7.x/shapes/svg?seed=guest_1791021244270_duzr"
+    },
+    {
+      "id": "guest_1791021259676_6uoa",
+      "name": "Invité",
+      "email": "guest_1791021259676_6uoa@ryxia.local",
+      "passwordHash": "$2b$10$G60Em1Zh1YQdyW.F2/G4BuWV3nTylL02gxcgMYpvoIvmO6gf90Ffi",
+      "createdAt": "2026-10-03T09:54:19.780Z",
+      "avatar": "https://api.dicebear.com/7.x/shapes/svg?seed=guest_1791021259676_6uoa"
+    },
+    {
+      "id": "guest_1791021545389_3315",
+      "name": "Invité",
+      "email": "guest_1791021545389_3315@ryxia.local",
+      "passwordHash": "$2b$10$z6A4aHERLTmfSyEKodctWOwnAWtuXoTgzgWZ.xVonC6Q94uNmcbly",
+      "createdAt": "2026-10-03T09:59:05.519Z",
+      "avatar": "https://api.dicebear.com/7.x/shapes/svg?seed=guest_1791021545389_3315"
+    },
+    {
+      "id": "guest_1791021750675_f099",
+      "name": "Invité",
+      "email": "guest_1791021750675_f099@ryxia.local",
+      "passwordHash": "$2b$10$AO2SEpoMUnENGp5b/X9sI.gren7FhDuJl2QmM3MG6QEP6ZNhayNVq",
+      "createdAt": "2026-10-03T10:02:30.800Z",
+      "avatar": "https://api.dicebear.com/7.x/shapes/svg?seed=guest_1791021750675_f099"
+    },
+    {
+      "id": "guest_1791021762054_6q63",
+      "name": "Invité",
+      "email": "guest_1791021762054_6q63@ryxia.local",
+      "passwordHash": "$2b$10$JX1LhJDvwPPPzk7HRVF43OLokDLNv5Q2LZgG0oY9ANI1rFG0ZQERa",
+      "createdAt": "2026-10-03T10:02:42.183Z",
+      "avatar": "https://api.dicebear.com/7.x/shapes/svg?seed=guest_1791021762054_6q63"
+    },
+    {
+      "id": "guest_1791021961400_8qrf",
+      "name": "Invité",
+      "email": "guest_1791021961400_8qrf@ryxia.local",
+      "passwordHash": "$2b$10$qnJFo.zdH8d2yrufB2Pai.Th0ns8uWKn4BjrMncgPJgqpEaXlwyVu",
+      "createdAt": "2026-10-03T10:06:01.536Z",
+      "avatar": "https://api.dicebear.com/7.x/shapes/svg?seed=guest_1791021961400_8qrf"
+    },
+    {
+      "id": "guest_1791021971507_xxi4",
+      "name": "Invité",
+      "email": "guest_1791021971507_xxi4@ryxia.local",
+      "passwordHash": "$2b$10$iXZ5Y00LyD2JDCLEi9.62.hKjqbrHZUwaHfQsQQLXi4lGHnZQqnxu",
+      "createdAt": "2026-10-03T10:06:11.620Z",
+      "avatar": "https://api.dicebear.com/7.x/shapes/svg?seed=guest_1791021971507_xxi4"
+    },
+    {
+      "id": "guest_1791107298674_87y1",
+      "name": "Invité",
+      "email": "guest_1791107298674_87y1@ryxia.local",
+      "passwordHash": "$2b$10$G5O13VvMK7853oJRRQF9uuRiVfHKwr/V1TXEwghLEJp7zIW8FfpI6",
+      "createdAt": "2026-10-04T09:48:18.822Z",
+      "avatar": "https://api.dicebear.com/7.x/shapes/svg?seed=guest_1791107298674_87y1"
+    },
+    {
+      "id": "guest_1791107406647_ys9m",
+      "name": "Invité",
+      "email": "guest_1791107406647_ys9m@ryxia.local",
+      "passwordHash": "$2b$10$7LJZKXo.XtCS2puvruendeKnJ5TyI9NAdxrlASaMwr1xiv5/2ftzC",
+      "createdAt": "2026-10-04T09:50:06.766Z",
+      "avatar": "https://api.dicebear.com/7.x/shapes/svg?seed=guest_1791107406647_ys9m"
+    },
+    {
+      "id": "guest_1791107543666_lo38",
+      "name": "Invité",
+      "email": "guest_1791107543666_lo38@ryxia.local",
+      "passwordHash": "$2b$10$sQ0ajX42DSmpGh6pdlYF5e6DX5eW9eWSX.AXubPefmpnRARLkeZ5.",
+      "createdAt": "2026-10-04T09:52:23.818Z",
+      "avatar": "https://api.dicebear.com/7.x/shapes/svg?seed=guest_1791107543666_lo38"
+    },
+    {
+      "id": "guest_1791132210412_drym",
+      "name": "Invité",
+      "email": "guest_1791132210412_drym@ryxia.local",
+      "passwordHash": "$2b$10$COY7BFWUQcW1hi4XKwfKQ.jePign/YtI.j90YRnVr2a9klhlPq4wq",
+      "createdAt": "2026-10-04T16:43:30.557Z",
+      "avatar": "https://api.dicebear.com/7.x/shapes/svg?seed=guest_1791132210412_drym"
+    },
+    {
+      "id": "guest_1791132219729_ubpa",
+      "name": "Invité",
+      "email": "guest_1791132219729_ubpa@ryxia.local",
+      "passwordHash": "$2b$10$/0xKRyaio432Cm0JNaBjCelmipd5.KOCo6Wy4amp42oDBP4zQwVK.",
+      "createdAt": "2026-10-04T16:43:39.840Z",
+      "avatar": "https://api.dicebear.com/7.x/shapes/svg?seed=guest_1791132219729_ubpa"
+    },
+    {
+      "id": "guest_1791141063172_ylsc",
+      "name": "Invité",
+      "email": "guest_1791141063172_ylsc@ryxia.local",
+      "passwordHash": "$2b$10$xzA.od1MR3nBs5vDdENVjuvjeirg5C0ab8TGpjsLEBofdPfDVWDW2",
+      "createdAt": "2026-10-04T19:11:03.302Z",
+      "avatar": "https://api.dicebear.com/7.x/shapes/svg?seed=guest_1791141063172_ylsc"
+    },
+    {
+      "id": "guest_1791141323617_9skf",
+      "name": "Invité",
+      "email": "guest_1791141323617_9skf@ryxia.local",
+      "passwordHash": "$2b$10$tPqQ8YMAj9tMzN6GHiHhV.Er9iJo7yniJnH8MtnIg9TCCwFshb.rK",
+      "createdAt": "2026-10-04T19:15:23.726Z",
+      "avatar": "https://api.dicebear.com/7.x/shapes/svg?seed=guest_1791141323617_9skf"
+    },
+    {
+      "id": "guest_1791141350017_onum",
+      "name": "Invité",
+      "email": "guest_1791141350017_onum@ryxia.local",
+      "passwordHash": "$2b$10$9XPCzlnxQ6/Ahd5HnaY36OFuw.7.bzNLq73Qla1wDrnPM1.QP.2qC",
+      "createdAt": "2026-10-04T19:15:50.152Z",
+      "avatar": "https://api.dicebear.com/7.x/shapes/svg?seed=guest_1791141350017_onum"
+    },
+    {
+      "id": "guest_1791141354073_k0q5",
+      "name": "Invité",
+      "email": "guest_1791141354073_k0q5@ryxia.local",
+      "passwordHash": "$2b$10$y.MK31QN6jboPvxraIkhbOKUuIwqDOv3YATHEG9JK9AW/KqeLrc1S",
+      "createdAt": "2026-10-04T19:15:54.183Z",
+      "avatar": "https://api.dicebear.com/7.x/shapes/svg?seed=guest_1791141354073_k0q5"
+    },
+    {
+      "id": "guest_1791141378068_xagh",
+      "name": "Invité",
+      "email": "guest_1791141378068_xagh@ryxia.local",
+      "passwordHash": "$2b$10$pp9Gn6btf0vx2DeCCdi6WOb36gpHhYWVGDlwf7WoIzoT2gGIJmIdC",
+      "createdAt": "2026-10-04T19:16:18.196Z",
+      "avatar": "https://api.dicebear.com/7.x/shapes/svg?seed=guest_1791141378068_xagh"
+    },
+    {
+      "id": "guest_1791306621446_bzrd",
+      "name": "Invité RYXIA",
+      "email": "invite@ryxia.app",
+      "passwordHash": "$2b$10$iU.n6Yps6qDuPRieEEG7TOxCZuKx/AnIJEcvUFrRwXRd4LIM7HWVe",
+      "createdAt": "2026-10-06T17:10:21.566Z",
+      "avatar": "https://api.dicebear.com/7.x/shapes/svg?seed=guest_1791306621446_bzrd"
+    },
+    {
+      "id": "guest_1791306625536_y7f7",
+      "name": "Invité RYXIA",
+      "email": "invite@ryxia.app",
+      "passwordHash": "$2b$10$qxAtLpw331mD8iImv6rRhe5DZXOSfces97uNXli7h0CLo0rnvoyt.",
+      "createdAt": "2026-10-06T17:10:25.636Z",
+      "avatar": "https://api.dicebear.com/7.x/shapes/svg?seed=guest_1791306625536_y7f7"
+    },
+    {
+      "id": "guest_1791306630468_tari",
+      "name": "Invité RYXIA",
+      "email": "invite@ryxia.app",
+      "passwordHash": "$2b$10$rpbdrpK9/c8kVAqCJbEDDe9vfZnfHEfsKtAIvS2FL83ScdWGAerIu",
+      "createdAt": "2026-10-06T17:10:30.578Z",
+      "avatar": "https://api.dicebear.com/7.x/shapes/svg?seed=guest_1791306630468_tari"
+    },
+    {
+      "id": "guest_1791309029172_bi2x",
+      "name": "Invité RYXIA",
+      "email": "invite@ryxia.app",
+      "passwordHash": "$2b$10$QKubs4cwE0cZo/asebY26.YkcopNPlqxnvFyfe755l1S.fP01GPk2",
+      "createdAt": "2026-10-06T17:50:29.276Z",
+      "avatar": "https://api.dicebear.com/7.x/shapes/svg?seed=guest_1791309029172_bi2x"
+    },
+    {
+      "id": "guest_1791309033109_73qm",
+      "name": "Invité RYXIA",
+      "email": "invite@ryxia.app",
+      "passwordHash": "$2b$10$/A7Y4.AABUaEU.0CaBb0aO.kXyN5HvRuOmR.ElNXs1hpF1GRkLJLK",
+      "createdAt": "2026-10-06T17:50:33.203Z",
+      "avatar": "https://api.dicebear.com/7.x/shapes/svg?seed=guest_1791309033109_73qm"
+    },
+    {
+      "id": "guest_1791309326192_vgqm",
+      "name": "Invité RYXIA",
+      "email": "invite@ryxia.app",
+      "passwordHash": "$2b$10$594FNQT0.P0nCrzGAnw09.mNY3dicDE.EysNwvOkot4qQ334lp4YC",
+      "createdAt": "2026-10-06T17:55:26.305Z",
+      "avatar": "https://api.dicebear.com/7.x/shapes/svg?seed=guest_1791309326192_vgqm"
+    },
+    {
+      "id": "guest_1791655667559_y27f",
+      "name": "Invité RYXIA",
+      "email": "invite@ryxia.app",
+      "passwordHash": "$2b$10$M2vwllgyUV5el0baTBHBmu8oP7y5lW28OaeFPfByN.C7tflXCGDv6",
+      "createdAt": "2026-10-10T18:07:47.693Z",
+      "avatar": "https://api.dicebear.com/7.x/shapes/svg?seed=guest_1791655667559_y27f"
+    },
+    {
+      "id": "2xNfZTcZJyMguJur5ejkILWf1e02",
+      "name": "Radia Amari",
+      "email": "amariradia24@gmail.com",
+      "passwordHash": "$2b$10$uU4XoTH6MZKm7.lWmdH5X.Onbxyp9DAmkihvz/6vfvWxxlBDB8Nli",
+      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocJjbbeytuH4xM0YsLAquEdxDWjyPgIRfBe7J1yNDUsfL3G2Mkhr=s96-c",
+      "createdAt": "2026-10-10T18:07:50.659Z"
+    },
+    {
+      "id": "guest_1791903793246_lmdw",
+      "name": "Invité RYXIA",
+      "email": "invite@ryxia.app",
+      "passwordHash": "$2b$10$SCrZr/p/xIpb8/9.xdCGt.iYId5FS8u5OOwrFS.PpoHpdJllGclli",
+      "createdAt": "2026-10-13T15:03:13.385Z",
+      "avatar": "https://api.dicebear.com/7.x/shapes/svg?seed=guest_1791903793246_lmdw"
+    },
+    {
+      "id": "guest_1791905046612_5kb9",
+      "name": "Invité RYXIA",
+      "email": "invite@ryxia.app",
+      "passwordHash": "$2b$10$zW91QLLYap30roR2zNBDi.OYy.XHTZaJIL2zGohuIU8PsInRQ6SI6",
+      "createdAt": "2026-10-13T15:24:06.740Z",
+      "avatar": "https://api.dicebear.com/7.x/shapes/svg?seed=guest_1791905046612_5kb9"
+    },
+    {
+      "id": "guest_1791905050769_nll0",
+      "name": "Invité RYXIA",
+      "email": "invite@ryxia.app",
+      "passwordHash": "$2b$10$4euIWCSVvfNWLOJg2wre5u2OwAgJOZhUQyVRV.0Aoypp.wqzAr7fS",
+      "createdAt": "2026-10-13T15:24:10.886Z",
+      "avatar": "https://api.dicebear.com/7.x/shapes/svg?seed=guest_1791905050769_nll0"
+    },
+    {
+      "id": "guest_1791905342952_pbhb",
+      "name": "Invité RYXIA",
+      "email": "invite@ryxia.app",
+      "passwordHash": "$2b$10$z6jqyjTdsDEDEieFd7CCAujuwT3WJyWeaNulWb/Krl2bgN1MPHhtW",
+      "createdAt": "2026-10-13T15:29:03.082Z",
+      "avatar": "https://api.dicebear.com/7.x/shapes/svg?seed=guest_1791905342952_pbhb"
     }
   ],
   "conversations": [
@@ -209,6 +513,366 @@
       "mode": "general",
       "createdAt": "2026-10-02T12:19:59.088Z",
       "updatedAt": "2026-10-02T12:20:07.617Z"
+    },
+    {
+      "id": "conv_1791021030388_o816r",
+      "userId": "guest_1790940048252_4r1i",
+      "title": "bonjour",
+      "mode": "general",
+      "createdAt": "2026-10-03T09:50:30.388Z",
+      "updatedAt": "2026-10-03T09:50:51.821Z"
+    },
+    {
+      "id": "conv_1791021104499_dhm4n",
+      "userId": "guest_1791021104322_s24o",
+      "title": "Quelle est la capitale de la France ?",
+      "mode": "general",
+      "createdAt": "2026-10-03T09:51:44.499Z",
+      "updatedAt": "2026-10-03T09:52:17.205Z"
+    },
+    {
+      "id": "conv_1791021118733_7t46k",
+      "userId": "guest_1791021118595_cxsx",
+      "title": "Quelle est la capitale de la France ?",
+      "mode": "general",
+      "createdAt": "2026-10-03T09:51:58.733Z",
+      "updatedAt": "2026-10-03T09:51:58.733Z"
+    },
+    {
+      "id": "conv_1791021158948_dir5x",
+      "userId": "guest_1791021158814_6gpr",
+      "title": "Quelle est la capitale de la France ?",
+      "mode": "general",
+      "createdAt": "2026-10-03T09:52:38.948Z",
+      "updatedAt": "2026-10-03T09:52:57.855Z"
+    },
+    {
+      "id": "conv_1791021202264_49088",
+      "userId": "guest_1791021202076_3jlc",
+      "title": "Bonjour, quelle est la capitale de l Italie ?",
+      "mode": "general",
+      "createdAt": "2026-10-03T09:53:22.264Z",
+      "updatedAt": "2026-10-03T09:53:22.264Z"
+    },
+    {
+      "id": "conv_1791021235046_qw36x",
+      "userId": "guest_1791021234866_ixot",
+      "title": "Quelle est la capitale de l Italie ?",
+      "mode": "general",
+      "createdAt": "2026-10-03T09:53:55.046Z",
+      "updatedAt": "2026-10-03T09:54:12.985Z"
+    },
+    {
+      "id": "conv_1791021244587_ucal1",
+      "userId": "guest_1791021244270_duzr",
+      "title": "Quelle est la capitale de l Italie ?",
+      "mode": "general",
+      "createdAt": "2026-10-03T09:54:04.587Z",
+      "updatedAt": "2026-10-03T09:54:04.587Z"
+    },
+    {
+      "id": "conv_1791021259804_o6y1j",
+      "userId": "guest_1791021259676_6uoa",
+      "title": "Comment dit-on merci en japonais ?",
+      "mode": "general",
+      "createdAt": "2026-10-03T09:54:19.804Z",
+      "updatedAt": "2026-10-03T09:54:22.333Z"
+    },
+    {
+      "id": "conv_1791021304527_ta052",
+      "userId": "guest_1790940048252_4r1i",
+      "title": "bonjour",
+      "mode": "general",
+      "createdAt": "2026-10-03T09:55:04.527Z",
+      "updatedAt": "2026-10-03T09:56:16.541Z"
+    },
+    {
+      "id": "conv_1791021545563_jowvd",
+      "userId": "guest_1791021545389_3315",
+      "title": "Comment dit-on merci en japonais ?",
+      "mode": "general",
+      "createdAt": "2026-10-03T09:59:05.563Z",
+      "updatedAt": "2026-10-03T09:59:13.086Z"
+    },
+    {
+      "id": "conv_1791021575353_s0anc",
+      "userId": "guest_1790940048252_4r1i",
+      "title": "bonjour",
+      "mode": "general",
+      "createdAt": "2026-10-03T09:59:35.353Z",
+      "updatedAt": "2026-10-03T10:00:25.248Z"
+    },
+    {
+      "id": "conv_1791021750843_f0enf",
+      "userId": "guest_1791021750675_f099",
+      "title": "Explique brièvement ce qu est une API.",
+      "mode": "general",
+      "createdAt": "2026-10-03T10:02:30.843Z",
+      "updatedAt": "2026-10-03T10:02:35.757Z"
+    },
+    {
+      "id": "conv_1791021762207_af9py",
+      "userId": "guest_1791021762054_6q63",
+      "title": "Écris une fonction TypeScript simple pour invers...",
+      "mode": "code",
+      "createdAt": "2026-10-03T10:02:42.207Z",
+      "updatedAt": "2026-10-03T10:02:50.627Z"
+    },
+    {
+      "id": "conv_1791021961592_b57ne",
+      "userId": "guest_1791021961400_8qrf",
+      "title": "Quelles sont les dernières actualités sur la mis...",
+      "mode": "general",
+      "createdAt": "2026-10-03T10:06:01.592Z",
+      "updatedAt": "2026-10-03T10:06:12.985Z"
+    },
+    {
+      "id": "conv_1791021971836_dn7az",
+      "userId": "guest_1791021971507_xxi4",
+      "title": "Quelle est la météo à Paris aujourd hui ?",
+      "mode": "general",
+      "createdAt": "2026-10-03T10:06:11.836Z",
+      "updatedAt": "2026-10-03T10:06:11.836Z"
+    },
+    {
+      "id": "conv_1791107298865_cfyif",
+      "userId": "guest_1791107298674_87y1",
+      "title": "Hello, what is 2+2?",
+      "mode": "fast",
+      "createdAt": "2026-10-04T09:48:18.865Z",
+      "updatedAt": "2026-10-04T09:48:30.759Z"
+    },
+    {
+      "id": "conv_1791107406802_f9c16",
+      "userId": "guest_1791107406647_ys9m",
+      "title": "2+2 = ?",
+      "mode": "general",
+      "createdAt": "2026-10-04T09:50:06.802Z",
+      "updatedAt": "2026-10-04T09:50:14.848Z"
+    },
+    {
+      "id": "conv_1791107543877_8c9m3",
+      "userId": "guest_1791107543666_lo38",
+      "title": "Bonjour, qui es-tu en 1 phrase ?",
+      "mode": "general",
+      "createdAt": "2026-10-04T09:52:23.877Z",
+      "updatedAt": "2026-10-04T09:52:23.878Z"
+    },
+    {
+      "id": "conv_1791132210604_adezc",
+      "userId": "guest_1791132210412_drym",
+      "title": "Explique le théorème de Pythagore avec les étape...",
+      "mode": "study",
+      "createdAt": "2026-10-04T16:43:30.604Z",
+      "updatedAt": "2026-10-04T16:43:35.917Z"
+    },
+    {
+      "id": "conv_1791132219860_79wl6",
+      "userId": "guest_1791132219729_ubpa",
+      "title": "Explique brièvement le théorème de Pythagore",
+      "mode": "study",
+      "createdAt": "2026-10-04T16:43:39.860Z",
+      "updatedAt": "2026-10-04T16:43:43.186Z"
+    },
+    {
+      "id": "conv_1791141264727_obrv4",
+      "userId": "guest_1791141063172_ylsc",
+      "title": "comment a tu ete crer",
+      "mode": "general",
+      "createdAt": "2026-10-04T19:14:24.727Z",
+      "updatedAt": "2026-10-04T19:15:00.411Z"
+    },
+    {
+      "id": "conv_1791141323751_3g33y",
+      "userId": "guest_1791141323617_9skf",
+      "title": "qui t'a créé ?",
+      "mode": "general",
+      "createdAt": "2026-10-04T19:15:23.751Z",
+      "updatedAt": "2026-10-04T19:15:29.158Z"
+    },
+    {
+      "id": "conv_1791141329165_jwrto",
+      "userId": "guest_1791141323617_9skf",
+      "title": "qui t'a développé ?",
+      "mode": "general",
+      "createdAt": "2026-10-04T19:15:29.165Z",
+      "updatedAt": "2026-10-04T19:15:35.544Z"
+    },
+    {
+      "id": "conv_1791141335553_q2c7m",
+      "userId": "guest_1791141323617_9skf",
+      "title": "comment as-tu été conçu ?",
+      "mode": "general",
+      "createdAt": "2026-10-04T19:15:35.553Z",
+      "updatedAt": "2026-10-04T19:15:39.428Z"
+    },
+    {
+      "id": "conv_1791141339433_gpus7",
+      "userId": "guest_1791141323617_9skf",
+      "title": "qui a créé ryxia ?",
+      "mode": "general",
+      "createdAt": "2026-10-04T19:15:39.433Z",
+      "updatedAt": "2026-10-04T19:15:39.433Z"
+    },
+    {
+      "id": "conv_1791141350193_0rqmu",
+      "userId": "guest_1791141350017_onum",
+      "title": "qui t'a créé ?",
+      "mode": "general",
+      "createdAt": "2026-10-04T19:15:50.193Z",
+      "updatedAt": "2026-10-04T19:15:50.196Z"
+    },
+    {
+      "id": "conv_1791141350201_rj13a",
+      "userId": "guest_1791141350017_onum",
+      "title": "qui t'a développé ?",
+      "mode": "general",
+      "createdAt": "2026-10-04T19:15:50.201Z",
+      "updatedAt": "2026-10-04T19:15:50.202Z"
+    },
+    {
+      "id": "conv_1791141350210_zvtvc",
+      "userId": "guest_1791141350017_onum",
+      "title": "comment as-tu été conçu ?",
+      "mode": "general",
+      "createdAt": "2026-10-04T19:15:50.210Z",
+      "updatedAt": "2026-10-04T19:15:50.211Z"
+    },
+    {
+      "id": "conv_1791141350223_bl9zm",
+      "userId": "guest_1791141350017_onum",
+      "title": "qui a créé ryxia ?",
+      "mode": "general",
+      "createdAt": "2026-10-04T19:15:50.223Z",
+      "updatedAt": "2026-10-04T19:15:50.223Z"
+    },
+    {
+      "id": "conv_1791141350233_3aadn",
+      "userId": "guest_1791141350017_onum",
+      "title": "qui est ton créateur ?",
+      "mode": "general",
+      "createdAt": "2026-10-04T19:15:50.233Z",
+      "updatedAt": "2026-10-04T19:15:50.234Z"
+    },
+    {
+      "id": "conv_1791141354204_jpqn9",
+      "userId": "guest_1791141354073_k0q5",
+      "title": "tu as été créé par qui ?",
+      "mode": "general",
+      "createdAt": "2026-10-04T19:15:54.204Z",
+      "updatedAt": "2026-10-04T19:15:59.313Z"
+    },
+    {
+      "id": "conv_1791141359329_4c71x",
+      "userId": "guest_1791141354073_k0q5",
+      "title": "qui est le créateur de cette IA ?",
+      "mode": "general",
+      "createdAt": "2026-10-04T19:15:59.329Z",
+      "updatedAt": "2026-10-04T19:15:59.329Z"
+    },
+    {
+      "id": "conv_1791141359341_9xzmn",
+      "userId": "guest_1791141354073_k0q5",
+      "title": "d'où viens-tu ?",
+      "mode": "general",
+      "createdAt": "2026-10-04T19:15:59.341Z",
+      "updatedAt": "2026-10-04T19:15:59.342Z"
+    },
+    {
+      "id": "conv_1791141359349_zhehj",
+      "userId": "guest_1791141354073_k0q5",
+      "title": "comment tu as été fait ?",
+      "mode": "general",
+      "createdAt": "2026-10-04T19:15:59.349Z",
+      "updatedAt": "2026-10-04T19:15:59.350Z"
+    },
+    {
+      "id": "conv_1791141378236_3ets1",
+      "userId": "guest_1791141378068_xagh",
+      "title": "tu as été créé par qui ?",
+      "mode": "general",
+      "createdAt": "2026-10-04T19:16:18.236Z",
+      "updatedAt": "2026-10-04T19:16:18.238Z"
+    },
+    {
+      "id": "conv_1791306625669_r12ru",
+      "userId": "guest_1791306625536_y7f7",
+      "title": "on est quelle jour",
+      "mode": "general",
+      "createdAt": "2026-10-06T17:10:25.669Z",
+      "updatedAt": "2026-10-06T17:10:25.706Z"
+    },
+    {
+      "id": "conv_1791306630609_vjeh8",
+      "userId": "guest_1791306630468_tari",
+      "title": "Quel est le jour de demain et quel est le mois e...",
+      "mode": "general",
+      "createdAt": "2026-10-06T17:10:30.609Z",
+      "updatedAt": "2026-10-06T17:10:34.839Z"
+    },
+    {
+      "id": "conv_1791306878779_0w1jl",
+      "userId": "guest_1790940048252_4r1i",
+      "title": "bonjour",
+      "mode": "general",
+      "createdAt": "2026-10-06T17:14:38.779Z",
+      "updatedAt": "2026-10-06T17:15:56.154Z"
+    },
+    {
+      "id": "conv_1791309029295_4eikj",
+      "userId": "guest_1791309029172_bi2x",
+      "title": "on est quelle jour",
+      "mode": "general",
+      "createdAt": "2026-10-06T17:50:29.295Z",
+      "updatedAt": "2026-10-06T17:50:29.305Z"
+    },
+    {
+      "id": "conv_1791309033219_tws6y",
+      "userId": "guest_1791309033109_73qm",
+      "title": "Salut, comment tu vas ?",
+      "mode": "general",
+      "createdAt": "2026-10-06T17:50:33.219Z",
+      "updatedAt": "2026-10-06T17:50:43.302Z"
+    },
+    {
+      "id": "conv_1791309282221_iqqs5",
+      "userId": "guest_1790940048252_4r1i",
+      "title": "bojour",
+      "mode": "general",
+      "createdAt": "2026-10-06T17:54:42.221Z",
+      "updatedAt": "2026-10-06T17:54:42.221Z"
+    },
+    {
+      "id": "conv_1791309326343_dfqe8",
+      "userId": "guest_1791309326192_vgqm",
+      "title": "Explique la différence entre une promesse et un ...",
+      "mode": "general",
+      "createdAt": "2026-10-06T17:55:26.343Z",
+      "updatedAt": "2026-10-06T17:55:36.621Z"
+    },
+    {
+      "id": "conv_1791657400140_ir7mb",
+      "userId": "2xNfZTcZJyMguJur5ejkILWf1e02",
+      "title": "quelle",
+      "mode": "general",
+      "createdAt": "2026-10-10T18:36:40.140Z",
+      "updatedAt": "2026-10-10T18:36:40.371Z"
+    },
+    {
+      "id": "conv_1791903455179_snjy6",
+      "userId": "2xNfZTcZJyMguJur5ejkILWf1e02",
+      "title": "genere image de chat",
+      "mode": "general",
+      "createdAt": "2026-10-13T14:57:35.179Z",
+      "updatedAt": "2026-10-13T14:57:37.249Z"
+    },
+    {
+      "id": "conv_1791904289261_s54yo",
+      "userId": "2xNfZTcZJyMguJur5ejkILWf1e02",
+      "title": "genere une image dun chat",
+      "mode": "general",
+      "createdAt": "2026-10-13T15:11:29.261Z",
+      "updatedAt": "2026-10-13T15:11:30.175Z"
     }
   ],
   "messages": [
@@ -579,6 +1243,736 @@
       "content": "Le choix entre **SQL** et **NoSQL** repose sur la structure de vos données, vos besoins de scalabilité et la nature de votre projet.\n\n## Tableau Comparatif : SQL vs NoSQL\n\n| Critère | SQL (Relationnel) | NoSQL (Non-Relationnel) |\n| :--- | :--- | :--- |\n| **Modèle de données** | Tables (lignes et colonnes) | Documents, Clés-Valeurs, Graphes, Colonnes |\n| **Schéma** | Strict, prédéfini et structuré | Flexible, dynamique et non structuré |\n| **Scalabilité** | Verticale (**Scale-up** / puissance machine) | Horizontale (**Scale-out** / ajout de serveurs) |\n| **Transactions** | Robustes, respectant les normes **ACID** | Compromis via le théorème **CAP** (consistance éventuelle) |\n| **Langage** | Langage standardisé (**SQL**) | Requêtes spécifiques (ex: JSON, APIs dédiées) |\n| **Exemples** | PostgreSQL, MySQL, SQLite | MongoDB, Redis, Cassandra, Neo4j |\n\n## Différences Clés et Fonctionnement\n\n### SQL (Bases de données relationnelles)\n\nLes bases SQL organisent les données dans des tables interconnectées par des **clés primaires et étrangères**. \n\n- **Schéma rigide** : La structure des données doit être définie avant l'insertion, ce qui garantit une intégrité absolue.\n- **Transactions ACID** : Assurent une fiabilité parfaite pour les opérations financières ou critiques (Atomicité, Cohérence, Isolation, Durabilité).\n- **Requêtes complexes** : Permettent des analyses croisées puissantes grâce aux jointures multiples en une seule commande.\n\n### NoSQL (Bases de données non-relationnelles)\n\nLes bases NoSQL stockent les informations sous des formats variés, optimisés pour la vitesse et la gestion de **volumes massifs**.\n\n- **Flexibilité totale** : Les documents ou objets peuvent être modifiés à la volée sans impacter l'ensemble de la base de données.\n- **Haute performance** : Conçues dès le départ pour distribuer les données sur des dizaines de serveurs avec un temps de réponse minimal.\n- **Modèles spécialisés** : Parfaitement adaptées aux structures complexes comme les réseaux sociaux (graphes) ou les systèmes de cache rapide (clés-valeurs).\n\n## Critères de Choix : Quand utiliser quoi ?\n\nPour orienter rapidement votre décision technique, appliquez ces deux règles de sélection :\n\n1. **Choisissez SQL** si vos données sont hautement structurées, que la cohérence transactionnelle est cruciale (fintech, ERP) et que vos relations de données sont stables.\n2. **Choisissez NoSQL** si vous gérez de grands volumes de données non structurées (Big Data, IoT), si vous devez scaler rapidement à l'international, ou si vos schémas de données évoluent constamment.",
       "createdAt": "2026-10-02T12:20:07.617Z",
       "model": "RYXIA (gemini-3.5-flash)"
+    },
+    {
+      "id": "msg_1791021030479_u",
+      "conversationId": "conv_1791021030388_o816r",
+      "role": "user",
+      "content": "bonjour",
+      "createdAt": "2026-10-03T09:50:30.479Z",
+      "model": "user"
+    },
+    {
+      "id": "msg_1791021051821_a",
+      "conversationId": "conv_1791021030388_o816r",
+      "role": "assistant",
+      "content": "Bonjour. Je suis **RYXIA**, l'assistant d'intelligence artificielle haut de gamme conçu par Adan (*Your AI. Your way.*).\n\nComment puis-je vous accompagner aujourd'hui ? Vous pouvez me solliciter pour :\n\n- **Résoudre** des problèmes complexes et générer du code informatique.\n- **Rédiger** ou synthétiser des documents professionnels et techniques.\n- **Structurer** vos projets et analyser des données précises.\n\nPartagez votre objectif avec moi, et nous irons droit au but.",
+      "createdAt": "2026-10-03T09:50:51.821Z",
+      "model": "RYXIA (gemini-3.5-flash)"
+    },
+    {
+      "id": "msg_1791021104499_u",
+      "conversationId": "conv_1791021104499_dhm4n",
+      "role": "user",
+      "content": "Quelle est la capitale de la France ?",
+      "createdAt": "2026-10-03T09:51:44.499Z",
+      "model": "user"
+    },
+    {
+      "id": "msg_1791021118733_u",
+      "conversationId": "conv_1791021118733_7t46k",
+      "role": "user",
+      "content": "Quelle est la capitale de la France ?",
+      "createdAt": "2026-10-03T09:51:58.733Z",
+      "model": "user"
+    },
+    {
+      "id": "msg_1791021137205_a",
+      "conversationId": "conv_1791021104499_dhm4n",
+      "role": "assistant",
+      "content": "La capitale de la France est Paris.",
+      "createdAt": "2026-10-03T09:52:17.205Z",
+      "model": "RYXIA (gemini-3.5-flash)"
+    },
+    {
+      "id": "msg_1791021158948_u",
+      "conversationId": "conv_1791021158948_dir5x",
+      "role": "user",
+      "content": "Quelle est la capitale de la France ?",
+      "createdAt": "2026-10-03T09:52:38.948Z",
+      "model": "user"
+    },
+    {
+      "id": "msg_1791021177855_a",
+      "conversationId": "conv_1791021158948_dir5x",
+      "role": "assistant",
+      "content": "La capitale de la France est Paris.",
+      "createdAt": "2026-10-03T09:52:57.855Z",
+      "model": "RYXIA (gemini-3.5-flash)"
+    },
+    {
+      "id": "msg_1791021202264_u",
+      "conversationId": "conv_1791021202264_49088",
+      "role": "user",
+      "content": "Bonjour, quelle est la capitale de l Italie ?",
+      "createdAt": "2026-10-03T09:53:22.264Z",
+      "model": "user"
+    },
+    {
+      "id": "msg_1791021235046_u",
+      "conversationId": "conv_1791021235046_qw36x",
+      "role": "user",
+      "content": "Quelle est la capitale de l Italie ?",
+      "createdAt": "2026-10-03T09:53:55.046Z",
+      "model": "user"
+    },
+    {
+      "id": "msg_1791021244587_u",
+      "conversationId": "conv_1791021244587_ucal1",
+      "role": "user",
+      "content": "Quelle est la capitale de l Italie ?",
+      "createdAt": "2026-10-03T09:54:04.587Z",
+      "model": "user"
+    },
+    {
+      "id": "msg_1791021252985_a",
+      "conversationId": "conv_1791021235046_qw36x",
+      "role": "assistant",
+      "content": "La capitale de l'Italie est Rome.",
+      "createdAt": "2026-10-03T09:54:12.985Z",
+      "model": "RYXIA (gemini-3.5-flash)"
+    },
+    {
+      "id": "msg_1791021259804_u",
+      "conversationId": "conv_1791021259804_o6y1j",
+      "role": "user",
+      "content": "Comment dit-on merci en japonais ?",
+      "createdAt": "2026-10-03T09:54:19.804Z",
+      "model": "user"
+    },
+    {
+      "id": "msg_1791021262333_a",
+      "conversationId": "conv_1791021259804_o6y1j",
+      "role": "assistant",
+      "content": "Arigatō.",
+      "createdAt": "2026-10-03T09:54:22.333Z",
+      "model": "RYXIA (gemini-3.1-flash-lite)"
+    },
+    {
+      "id": "msg_1791021304615_u",
+      "conversationId": "conv_1791021304527_ta052",
+      "role": "user",
+      "content": "bonjour",
+      "createdAt": "2026-10-03T09:55:04.615Z",
+      "model": "user"
+    },
+    {
+      "id": "msg_1791021307447_a",
+      "conversationId": "conv_1791021304527_ta052",
+      "role": "assistant",
+      "content": "Bonjour. Que puis-je faire pour vous ?",
+      "createdAt": "2026-10-03T09:55:07.447Z",
+      "model": "RYXIA (gemini-3.1-flash-lite)"
+    },
+    {
+      "id": "msg_1791021315227_u",
+      "conversationId": "conv_1791021304527_ta052",
+      "role": "user",
+      "content": "tu est qui",
+      "createdAt": "2026-10-03T09:55:15.227Z",
+      "model": "user"
+    },
+    {
+      "id": "msg_1791021376541_a",
+      "conversationId": "conv_1791021304527_ta052",
+      "role": "assistant",
+      "content": "Je suis RYXIA, l'intelligence artificielle conçue par Adan.",
+      "createdAt": "2026-10-03T09:56:16.541Z",
+      "model": "RYXIA (gemini-3.1-flash-lite)"
+    },
+    {
+      "id": "msg_1791021545563_u",
+      "conversationId": "conv_1791021545563_jowvd",
+      "role": "user",
+      "content": "Comment dit-on merci en japonais ?",
+      "createdAt": "2026-10-03T09:59:05.563Z",
+      "model": "user"
+    },
+    {
+      "id": "msg_1791021553086_a",
+      "conversationId": "conv_1791021545563_jowvd",
+      "role": "assistant",
+      "content": "La manière la plus courante de dire merci en japonais est **Arigatō** (ありがとう), qui est une forme décontractée adaptée aux amis ou à la famille. Dans un cadre plus formel ou pour exprimer une reconnaissance plus profonde, on privilégiera **Arigatō gozaimasu** (ありがとうございます), qui est la version polie indispensable dans la vie quotidienne au Japon.",
+      "createdAt": "2026-10-03T09:59:13.086Z",
+      "model": "RYXIA (gemini-3.1-flash-lite)"
+    },
+    {
+      "id": "msg_1791021575511_u",
+      "conversationId": "conv_1791021575353_s0anc",
+      "role": "user",
+      "content": "bonjour",
+      "createdAt": "2026-10-03T09:59:35.511Z",
+      "model": "user"
+    },
+    {
+      "id": "msg_1791021578391_a",
+      "conversationId": "conv_1791021575353_s0anc",
+      "role": "assistant",
+      "content": "Bonjour. Je suis **RYXIA**, votre assistant personnel conçu par **Adan**. Je suis à votre disposition pour vous accompagner dans vos projets, répondre à vos interrogations ou optimiser vos tâches quotidiennes avec précision et efficacité. En quoi puis-je vous aider aujourd'hui ?",
+      "createdAt": "2026-10-03T09:59:38.391Z",
+      "model": "RYXIA (gemini-3.1-flash-lite)"
+    },
+    {
+      "id": "msg_1791021621435_u",
+      "conversationId": "conv_1791021575353_s0anc",
+      "role": "user",
+      "content": "comment tu a ete crer",
+      "createdAt": "2026-10-03T10:00:21.435Z",
+      "model": "user"
+    },
+    {
+      "id": "msg_1791021625248_a",
+      "conversationId": "conv_1791021575353_s0anc",
+      "role": "assistant",
+      "content": "J'ai été conçu par **Adan** en utilisant des architectures d'**intelligence artificielle** avancées, fondées sur des réseaux de neurones profonds entraînés sur d'immenses volumes de données. Mon développement repose sur une optimisation rigoureuse du **traitement du langage naturel**, ce qui me permet d'analyser vos intentions, de formuler des réponses cohérentes et de m'adapter à vos besoins spécifiques avec une grande précision.",
+      "createdAt": "2026-10-03T10:00:25.248Z",
+      "model": "RYXIA (gemini-3.1-flash-lite)"
+    },
+    {
+      "id": "msg_1791021750843_u",
+      "conversationId": "conv_1791021750843_f0enf",
+      "role": "user",
+      "content": "Explique brièvement ce qu est une API.",
+      "createdAt": "2026-10-03T10:02:30.843Z",
+      "model": "user"
+    },
+    {
+      "id": "msg_1791021755757_a",
+      "conversationId": "conv_1791021750843_f0enf",
+      "role": "assistant",
+      "content": "Une **API** (*Application Programming Interface*, ou interface de programmation d’application) est une passerelle logicielle qui permet à deux systèmes informatiques distincts de communiquer et d'échanger des données de façon standardisée et sécurisée. \n\nElle fonctionne à la manière d'un **intermédiaire** : lorsqu'une application envoie une requête (comme une météo consultée sur votre smartphone), l'API transmet la demande au serveur distant, récupère l'information exacte et la restitue à l'utilisateur. Ce mécanisme permet aux développeurs d'intégrer facilement des services existants — tels que le paiement en ligne, la cartographie ou des modèles d'IA — sans avoir à recréer toute l'infrastructure sous-jacente.",
+      "createdAt": "2026-10-03T10:02:35.757Z",
+      "model": "RYXIA (gemini-3.8-flash)"
+    },
+    {
+      "id": "msg_1791021762207_u",
+      "conversationId": "conv_1791021762207_af9py",
+      "role": "user",
+      "content": "Écris une fonction TypeScript simple pour inverser une chaîne.",
+      "createdAt": "2026-10-03T10:02:42.207Z",
+      "model": "user"
+    },
+    {
+      "id": "msg_1791021770627_a",
+      "conversationId": "conv_1791021762207_af9py",
+      "role": "assistant",
+      "content": "Voici une implémentation robuste et idiomatique en **TypeScript** :\n\n```typescript\nexport function reverseString(input: string): string {\n  return [...input].reverse().join('');\n}\n```\n\nL'utilisation de l'opérateur de décomposition (**spread syntax** `[...input]`) est ici préférée à un simple `split('')`, car elle gère nativement les points de code Unicode sur plusieurs octets (comme les caractères accentués ou les émojis) sans altérer les paires de substitution (*surrogate pairs*). Le tableau généré est ensuite inversé avec `reverse()`, puis réassemblé sous forme de chaîne de caractères via `join('')` avec une complexité temporelle et spatiale linéaire en $\\mathcal{O}(n)$.",
+      "createdAt": "2026-10-03T10:02:50.627Z",
+      "model": "RYXIA (gemini-3.8-flash)"
+    },
+    {
+      "id": "msg_1791021961592_u",
+      "conversationId": "conv_1791021961592_b57ne",
+      "role": "user",
+      "content": "Quelles sont les dernières actualités sur la mission spatiale Artemis ?",
+      "createdAt": "2026-10-03T10:06:01.592Z",
+      "model": "user"
+    },
+    {
+      "id": "msg_1791021971836_u",
+      "conversationId": "conv_1791021971836_dn7az",
+      "role": "user",
+      "content": "Quelle est la météo à Paris aujourd hui ?",
+      "createdAt": "2026-10-03T10:06:11.836Z",
+      "model": "user"
+    },
+    {
+      "id": "msg_1791021972985_a",
+      "conversationId": "conv_1791021961592_b57ne",
+      "role": "assistant",
+      "content": "Le programme **Artemis** de la NASA a récemment réajusté son calendrier pour des impératifs de sécurité et de mise au point technique. La mission **Artemis II**, qui emportera quatre astronautes pour un premier survol habité autour de la Lune, est désormais visée pour **fin 2025**, notamment pour résoudre les anomalies d'érosion constatées sur le bouclier thermique de la capsule **Orion** lors d'Artemis I. \n\nEn conséquence, la mission **Artemis III**, qui doit sceller le retour d'équipages humains sur le sol lunaire, est décalée au plus tôt à **mi-2026**. Cette échéance reste fortement conditionnée par les essais orbitaux du système d'alunissage **Starship HLS** de SpaceX ainsi que par la finalisation des combinaisons spatiales de nouvelle génération conçues par **Axiom Space**.",
+      "createdAt": "2026-10-03T10:06:12.985Z",
+      "model": "RYXIA (gemini-3.8-flash)"
+    },
+    {
+      "id": "msg_1791107298865_u",
+      "conversationId": "conv_1791107298865_cfyif",
+      "role": "user",
+      "content": "Hello, what is 2+2?",
+      "createdAt": "2026-10-04T09:48:18.865Z",
+      "model": "user"
+    },
+    {
+      "id": "msg_1791107310759_a",
+      "conversationId": "conv_1791107298865_cfyif",
+      "role": "assistant",
+      "content": "The result of **2 + 2 is 4**. This basic arithmetic operation represents the addition of two identical pairs in standard decimal mathematics. It serves as one of the fundamental building blocks for elementary counting and algebra.",
+      "createdAt": "2026-10-04T09:48:30.759Z",
+      "model": "RYXIA (gemini-3.8-flash)"
+    },
+    {
+      "id": "msg_1791107406802_u",
+      "conversationId": "conv_1791107406802_f9c16",
+      "role": "user",
+      "content": "2+2 = ?",
+      "createdAt": "2026-10-04T09:50:06.802Z",
+      "model": "user"
+    },
+    {
+      "id": "msg_1791107414848_a",
+      "conversationId": "conv_1791107406802_f9c16",
+      "role": "assistant",
+      "content": "Le résultat de l'addition de **2 + 2** est **4**. Il s'agit d'une opération arithmétique fondamentale qui constitue la base des calculs mathématiques simples que nous utilisons quotidiennement.",
+      "createdAt": "2026-10-04T09:50:14.848Z",
+      "model": "RYXIA (gemini-3.1-flash-lite)"
+    },
+    {
+      "id": "msg_1791107543877_u",
+      "conversationId": "conv_1791107543877_8c9m3",
+      "role": "user",
+      "content": "Bonjour, qui es-tu en 1 phrase ?",
+      "createdAt": "2026-10-04T09:52:23.877Z",
+      "model": "user"
+    },
+    {
+      "id": "msg_1791132210604_u",
+      "conversationId": "conv_1791132210604_adezc",
+      "role": "user",
+      "content": "Explique le théorème de Pythagore avec les étapes",
+      "createdAt": "2026-10-04T16:43:30.604Z",
+      "model": "user"
+    },
+    {
+      "id": "msg_1791132215917_a",
+      "conversationId": "conv_1791132210604_adezc",
+      "role": "assistant",
+      "content": "Le **théorème de Pythagore** stipule que dans tout **triangle rectangle**, le carré de la longueur de l'hypoténuse (le côté opposé à l'angle droit) est égal à la somme des carrés des longueurs des deux autres côtés. Mathématiquement, si les côtés adjacents à l'angle droit mesurent $a$ et $b$ et l'hypoténuse mesure $c$, alors la relation s'écrit **$a^2 + b^2 = c^2$**.\n\nPour appliquer ce théorème, suivez ces étapes simples :\n1. **Identifiez l'hypoténuse** : c'est le côté le plus long, situé face à l'angle droit.\n2. **Appliquez la formule** : calculez les carrés des deux petits côtés et additionnez-les ($a^2 + b^2$).\n3. **Calculez la racine** : le résultat obtenu correspond à $c^2$, il ne vous reste donc plus qu'à prendre la **racine carrée** de ce nombre pour trouver la longueur exacte de $c$.\n\n*Exemple pratique :* Si un triangle a des côtés de 3 cm et 4 cm, le calcul est $3^2 + 4^2 = 9 + 16 = 25$. La racine carrée de 25 étant 5, l'hypoténuse mesure donc **5 cm**. \n\n**Question de contrôle** : Si un triangle rectangle possède des côtés de 6 cm et 8 cm, quelle est la longueur de son hypoténuse ?",
+      "createdAt": "2026-10-04T16:43:35.917Z",
+      "model": "RYXIA (gemini-3.1-flash-lite)"
+    },
+    {
+      "id": "msg_1791132219860_u",
+      "conversationId": "conv_1791132219860_79wl6",
+      "role": "user",
+      "content": "Explique brièvement le théorème de Pythagore",
+      "createdAt": "2026-10-04T16:43:39.860Z",
+      "model": "user"
+    },
+    {
+      "id": "msg_1791132223186_a",
+      "conversationId": "conv_1791132219860_79wl6",
+      "role": "assistant",
+      "content": "Le **théorème de Pythagore** établit une relation fondamentale dans tout **triangle rectangle** : le carré de la longueur de l'hypoténuse (le côté opposé à l'angle droit) est égal à la somme des carrés des longueurs des deux autres côtés. Mathématiquement, cela se traduit par la formule **a² + b² = c²**, où *c* représente l'hypoténuse et *a* et *b* les côtés adjacents à l'angle droit.\n\nCette propriété géométrique est essentielle pour calculer une distance manquante dès lors que deux côtés d'un triangle rectangle sont connus. Pour vérifier ta compréhension : si un triangle possède des côtés de 3 cm et 4 cm formant un angle droit, quelle est la longueur de son hypoténuse selon cette règle ?",
+      "createdAt": "2026-10-04T16:43:43.186Z",
+      "model": "RYXIA (gemini-3.1-flash-lite)"
+    },
+    {
+      "id": "msg_1791141264817_u",
+      "conversationId": "conv_1791141264727_obrv4",
+      "role": "user",
+      "content": "comment a tu ete crer",
+      "createdAt": "2026-10-04T19:14:24.817Z",
+      "model": "user"
+    },
+    {
+      "id": "msg_1791141267495_a",
+      "conversationId": "conv_1791141264727_obrv4",
+      "role": "assistant",
+      "content": "J'ai été développé par **Google** en tant que modèle d'intelligence artificielle de la famille **Gemini**. \n\nMon processus de création repose sur l'entraînement d'un **réseau de neurones profonds** à partir d'immenses volumes de données textuelles, de code et d'autres contenus multimédias. Cette phase d'apprentissage massif a ensuite été affinée grâce à des techniques d'**apprentissage par renforcement à partir des retours humains** (RLHF), ce qui me permet aujourd'hui de comprendre vos requêtes de manière naturelle et d'y répondre avec pertinence et précision.",
+      "createdAt": "2026-10-04T19:14:27.495Z",
+      "model": "RYXIA (gemini-3.8-flash)"
+    },
+    {
+      "id": "msg_1791141283105_u",
+      "conversationId": "conv_1791141264727_obrv4",
+      "role": "user",
+      "content": "c qui adan",
+      "createdAt": "2026-10-04T19:14:43.105Z",
+      "model": "user"
+    },
+    {
+      "id": "msg_1791141286650_a",
+      "conversationId": "conv_1791141264727_obrv4",
+      "role": "assistant",
+      "content": "**Adan** peut faire référence à plusieurs entités ou personnes selon le contexte :\n\n1. **L'ADAN (Association pour le Développement des Actifs Numériques)** : En France et en Europe, c'est l'association professionnelle de référence qui rassemble et défend les acteurs du secteur du **Web3**, de la **blockchain** et des **cryptomonnaies**.\n2. **Une personne ou un créateur** : Il s'agit d'un prénom courant (d'origine hébraïque ou arabe, équivalent d'Adam). Dans mon contexte, **Adan** est le créateur et développeur à l'origine du projet **RYXIA**.\n3. **Une référence géographique ou historique** : Le terme peut également désigner des localités ou des personnalités historiques selon les régions.\n\nSi tu penses à une personne ou à un projet en particulier, n'hésite pas à préciser ton contexte !",
+      "createdAt": "2026-10-04T19:14:46.650Z",
+      "model": "RYXIA (gemini-3.8-flash)"
+    },
+    {
+      "id": "msg_1791141296881_u",
+      "conversationId": "conv_1791141264727_obrv4",
+      "role": "user",
+      "content": "bah ton createur",
+      "createdAt": "2026-10-04T19:14:56.881Z",
+      "model": "user"
+    },
+    {
+      "id": "msg_1791141300411_a",
+      "conversationId": "conv_1791141264727_obrv4",
+      "role": "assistant",
+      "content": "Dans ce contexte, **Adan** est le concepteur et développeur à l'origine de **RYXIA** (« *RYXIA — by Adan* »). \n\nC'est lui qui a pensé, configuré et façonné mon identité, mon interface et mes directives pour faire de moi un assistant d'intelligence artificielle haut de gamme, réactif et adapté à vos besoins selon la devise : *« Your AI. Your way. »*",
+      "createdAt": "2026-10-04T19:15:00.411Z",
+      "model": "RYXIA (gemini-3.8-flash)"
+    },
+    {
+      "id": "msg_1791141323751_u",
+      "conversationId": "conv_1791141323751_3g33y",
+      "role": "user",
+      "content": "qui t'a créé ?",
+      "createdAt": "2026-10-04T19:15:23.751Z",
+      "model": "user"
+    },
+    {
+      "id": "msg_1791141329158_a",
+      "conversationId": "conv_1791141323751_3g33y",
+      "role": "assistant",
+      "content": "Je suis **RYXIA**, une intelligence artificielle haut de gamme créée par **Adan** (*RYXIA — by Adan*). J'ai été conçue pour vous apporter des réponses claires, intelligentes et sur mesure, selon notre vision : *« Your AI. Your way. »*",
+      "createdAt": "2026-10-04T19:15:29.158Z",
+      "model": "RYXIA (gemini-3.8-flash)"
+    },
+    {
+      "id": "msg_1791141329165_u",
+      "conversationId": "conv_1791141329165_jwrto",
+      "role": "user",
+      "content": "qui t'a développé ?",
+      "createdAt": "2026-10-04T19:15:29.165Z",
+      "model": "user"
+    },
+    {
+      "id": "msg_1791141335544_a",
+      "conversationId": "conv_1791141329165_jwrto",
+      "role": "assistant",
+      "content": "Je suis **RYXIA**, une intelligence artificielle développée par **Adan** (*RYXIA — by Adan*). \n\nJ'ai été conçue pour vous apporter des réponses claires, intelligentes et sur mesure, en m'adaptant avec précision à vos besoins et à vos projets.",
+      "createdAt": "2026-10-04T19:15:35.544Z",
+      "model": "RYXIA (gemini-3.8-flash)"
+    },
+    {
+      "id": "msg_1791141335553_u",
+      "conversationId": "conv_1791141335553_q2c7m",
+      "role": "user",
+      "content": "comment as-tu été conçu ?",
+      "createdAt": "2026-10-04T19:15:35.553Z",
+      "model": "user"
+    },
+    {
+      "id": "msg_1791141339428_a",
+      "conversationId": "conv_1791141335553_q2c7m",
+      "role": "assistant",
+      "content": "Je suis **RYXIA**, une intelligence artificielle haut de gamme conçue par **Adan** selon la vision *« Your AI. Your way. »*. \n\nMon architecture repose sur des modèles de langage avancés basés sur la technologie des **Transformers**, entraînés sur de vastes corpus de données textuelles et multimodales. Cet entraînement a ensuite été affiné grâce à des techniques d'**apprentissage par renforcement** et de calibrage précis, ce qui me permet d'analyser des documents complexes, de raisonner avec rigueur et d'offrir des réponses fluides, directes et adaptées à vos besoins.",
+      "createdAt": "2026-10-04T19:15:39.428Z",
+      "model": "RYXIA (gemini-3.8-flash)"
+    },
+    {
+      "id": "msg_1791141339433_u",
+      "conversationId": "conv_1791141339433_gpus7",
+      "role": "user",
+      "content": "qui a créé ryxia ?",
+      "createdAt": "2026-10-04T19:15:39.433Z",
+      "model": "user"
+    },
+    {
+      "id": "msg_1791141350194_u",
+      "conversationId": "conv_1791141350193_0rqmu",
+      "role": "user",
+      "content": "qui t'a créé ?",
+      "createdAt": "2026-10-04T19:15:50.194Z",
+      "model": "user"
+    },
+    {
+      "id": "msg_1791141350196_a",
+      "conversationId": "conv_1791141350193_0rqmu",
+      "role": "assistant",
+      "content": "RYXIA a été créé manuellement et intégralement par Adan.\n\n\n\nIl s'agit donc d'une ingénierie et d'une programmation entièrement conçues et guidées par Adan.",
+      "createdAt": "2026-10-04T19:15:50.196Z",
+      "model": "RYXIA (by Adan)"
+    },
+    {
+      "id": "msg_1791141350201_u",
+      "conversationId": "conv_1791141350201_rj13a",
+      "role": "user",
+      "content": "qui t'a développé ?",
+      "createdAt": "2026-10-04T19:15:50.201Z",
+      "model": "user"
+    },
+    {
+      "id": "msg_1791141350202_a",
+      "conversationId": "conv_1791141350201_rj13a",
+      "role": "assistant",
+      "content": "RYXIA a été créé manuellement et intégralement par Adan.\n\n\n\nIl s'agit donc d'une ingénierie et d'une programmation entièrement conçues et guidées par Adan.",
+      "createdAt": "2026-10-04T19:15:50.202Z",
+      "model": "RYXIA (by Adan)"
+    },
+    {
+      "id": "msg_1791141350210_u",
+      "conversationId": "conv_1791141350210_zvtvc",
+      "role": "user",
+      "content": "comment as-tu été conçu ?",
+      "createdAt": "2026-10-04T19:15:50.210Z",
+      "model": "user"
+    },
+    {
+      "id": "msg_1791141350211_a",
+      "conversationId": "conv_1791141350210_zvtvc",
+      "role": "assistant",
+      "content": "RYXIA a été créé manuellement et intégralement par Adan.\n\n\n\nIl s'agit donc d'une ingénierie et d'une programmation entièrement conçues et guidées par Adan.",
+      "createdAt": "2026-10-04T19:15:50.211Z",
+      "model": "RYXIA (by Adan)"
+    },
+    {
+      "id": "msg_1791141350223_u",
+      "conversationId": "conv_1791141350223_bl9zm",
+      "role": "user",
+      "content": "qui a créé ryxia ?",
+      "createdAt": "2026-10-04T19:15:50.223Z",
+      "model": "user"
+    },
+    {
+      "id": "msg_1791141350223_a",
+      "conversationId": "conv_1791141350223_bl9zm",
+      "role": "assistant",
+      "content": "RYXIA a été créé manuellement et intégralement par Adan.\n\n\n\nIl s'agit donc d'une ingénierie et d'une programmation entièrement conçues et guidées par Adan.",
+      "createdAt": "2026-10-04T19:15:50.223Z",
+      "model": "RYXIA (by Adan)"
+    },
+    {
+      "id": "msg_1791141350233_u",
+      "conversationId": "conv_1791141350233_3aadn",
+      "role": "user",
+      "content": "qui est ton créateur ?",
+      "createdAt": "2026-10-04T19:15:50.233Z",
+      "model": "user"
+    },
+    {
+      "id": "msg_1791141350234_a",
+      "conversationId": "conv_1791141350233_3aadn",
+      "role": "assistant",
+      "content": "RYXIA a été créé manuellement et intégralement par Adan.\n\n\n\nIl s'agit donc d'une ingénierie et d'une programmation entièrement conçues et guidées par Adan.",
+      "createdAt": "2026-10-04T19:15:50.234Z",
+      "model": "RYXIA (by Adan)"
+    },
+    {
+      "id": "msg_1791141354204_u",
+      "conversationId": "conv_1791141354204_jpqn9",
+      "role": "user",
+      "content": "tu as été créé par qui ?",
+      "createdAt": "2026-10-04T19:15:54.204Z",
+      "model": "user"
+    },
+    {
+      "id": "msg_1791141359313_a",
+      "conversationId": "conv_1791141354204_jpqn9",
+      "role": "assistant",
+      "content": "RYXIA a été créé manuellement et intégralement par Adan.\n\nIl s'agit donc d'une ingénierie et d'une programmation entièrement conçues et guidées par Adan.",
+      "createdAt": "2026-10-04T19:15:59.313Z",
+      "model": "RYXIA (gemini-3.8-flash)"
+    },
+    {
+      "id": "msg_1791141359329_u",
+      "conversationId": "conv_1791141359329_4c71x",
+      "role": "user",
+      "content": "qui est le créateur de cette IA ?",
+      "createdAt": "2026-10-04T19:15:59.329Z",
+      "model": "user"
+    },
+    {
+      "id": "msg_1791141359329_a",
+      "conversationId": "conv_1791141359329_4c71x",
+      "role": "assistant",
+      "content": "RYXIA a été créé manuellement et intégralement par Adan.\n\n\n\nIl s'agit donc d'une ingénierie et d'une programmation entièrement conçues et guidées par Adan.",
+      "createdAt": "2026-10-04T19:15:59.329Z",
+      "model": "RYXIA (by Adan)"
+    },
+    {
+      "id": "msg_1791141359341_u",
+      "conversationId": "conv_1791141359341_9xzmn",
+      "role": "user",
+      "content": "d'où viens-tu ?",
+      "createdAt": "2026-10-04T19:15:59.341Z",
+      "model": "user"
+    },
+    {
+      "id": "msg_1791141359342_a",
+      "conversationId": "conv_1791141359341_9xzmn",
+      "role": "assistant",
+      "content": "RYXIA a été créé manuellement et intégralement par Adan.\n\n\n\nIl s'agit donc d'une ingénierie et d'une programmation entièrement conçues et guidées par Adan.",
+      "createdAt": "2026-10-04T19:15:59.342Z",
+      "model": "RYXIA (by Adan)"
+    },
+    {
+      "id": "msg_1791141359349_u",
+      "conversationId": "conv_1791141359349_zhehj",
+      "role": "user",
+      "content": "comment tu as été fait ?",
+      "createdAt": "2026-10-04T19:15:59.349Z",
+      "model": "user"
+    },
+    {
+      "id": "msg_1791141359350_a",
+      "conversationId": "conv_1791141359349_zhehj",
+      "role": "assistant",
+      "content": "RYXIA a été créé manuellement et intégralement par Adan.\n\n\n\nIl s'agit donc d'une ingénierie et d'une programmation entièrement conçues et guidées par Adan.",
+      "createdAt": "2026-10-04T19:15:59.350Z",
+      "model": "RYXIA (by Adan)"
+    },
+    {
+      "id": "msg_1791141378236_u",
+      "conversationId": "conv_1791141378236_3ets1",
+      "role": "user",
+      "content": "tu as été créé par qui ?",
+      "createdAt": "2026-10-04T19:16:18.236Z",
+      "model": "user"
+    },
+    {
+      "id": "msg_1791141378238_a",
+      "conversationId": "conv_1791141378236_3ets1",
+      "role": "assistant",
+      "content": "RYXIA a été créé manuellement et intégralement par Adan.\n\n\n\nIl s'agit donc d'une ingénierie et d'une programmation entièrement conçues et guidées par Adan.",
+      "createdAt": "2026-10-04T19:16:18.238Z",
+      "model": "RYXIA (by Adan)"
+    },
+    {
+      "id": "msg_1791306625669_u",
+      "conversationId": "conv_1791306625669_r12ru",
+      "role": "user",
+      "content": "on est quelle jour",
+      "createdAt": "2026-10-06T17:10:25.669Z",
+      "model": "user"
+    },
+    {
+      "id": "msg_1791306625706_a",
+      "conversationId": "conv_1791306625669_r12ru",
+      "role": "assistant",
+      "content": "Aujourd'hui, nous sommes le **Mardi 6 octobre 2026** et il est actuellement **19:10:25** (Europe/Paris).\n\nL'horloge temps réel de votre interface RYXIA est parfaitement synchronisée.",
+      "createdAt": "2026-10-06T17:10:25.706Z",
+      "model": "RYXIA (Horloge Système)"
+    },
+    {
+      "id": "msg_1791306630610_u",
+      "conversationId": "conv_1791306630609_vjeh8",
+      "role": "user",
+      "content": "Quel est le jour de demain et quel est le mois en cours ?",
+      "createdAt": "2026-10-06T17:10:30.610Z",
+      "model": "user"
+    },
+    {
+      "id": "msg_1791306634839_a",
+      "conversationId": "conv_1791306630609_vjeh8",
+      "role": "assistant",
+      "content": "Nous sommes actuellement le mardi 6 octobre 2026. Par conséquent, demain sera le **mercredi 7 octobre 2026**, et nous sommes toujours dans le **mois d'octobre**, qui marque le début du dernier trimestre de l'année.",
+      "createdAt": "2026-10-06T17:10:34.839Z",
+      "model": "RYXIA Flash"
+    },
+    {
+      "id": "msg_1791306878886_u",
+      "conversationId": "conv_1791306878779_0w1jl",
+      "role": "user",
+      "content": "bonjour",
+      "createdAt": "2026-10-06T17:14:38.886Z",
+      "model": "user"
+    },
+    {
+      "id": "msg_1791306881940_a",
+      "conversationId": "conv_1791306878779_0w1jl",
+      "role": "assistant",
+      "content": "Bonjour. En ce mardi 6 octobre 2026, comment puis-je vous assister dans vos projets ou répondre à vos interrogations ? Je suis à votre disposition pour vous offrir une expérience fluide et sur-mesure.",
+      "createdAt": "2026-10-06T17:14:41.940Z",
+      "model": "RYXIA Flash"
+    },
+    {
+      "id": "msg_1791306949735_u",
+      "conversationId": "conv_1791306878779_0w1jl",
+      "role": "user",
+      "content": "npi$",
+      "createdAt": "2026-10-06T17:15:49.735Z",
+      "model": "user"
+    },
+    {
+      "id": "msg_1791306956154_a",
+      "conversationId": "conv_1791306878779_0w1jl",
+      "role": "assistant",
+      "content": "Les serveurs de traitement sont temporairement occupés. Votre message a été enregistré.",
+      "createdAt": "2026-10-06T17:15:56.154Z",
+      "model": "RYXIA (Secours)"
+    },
+    {
+      "id": "msg_1791309029296_u",
+      "conversationId": "conv_1791309029295_4eikj",
+      "role": "user",
+      "content": "on est quelle jour",
+      "createdAt": "2026-10-06T17:50:29.296Z",
+      "model": "user"
+    },
+    {
+      "id": "msg_1791309029305_a",
+      "conversationId": "conv_1791309029295_4eikj",
+      "role": "assistant",
+      "content": "Aujourd'hui, nous sommes le **Mardi 6 octobre 2026**.",
+      "createdAt": "2026-10-06T17:50:29.305Z",
+      "model": "RYXIA"
+    },
+    {
+      "id": "msg_1791309033220_u",
+      "conversationId": "conv_1791309033219_tws6y",
+      "role": "user",
+      "content": "Salut, comment tu vas ?",
+      "createdAt": "2026-10-06T17:50:33.220Z",
+      "model": "user"
+    },
+    {
+      "id": "msg_1791309043302_a",
+      "conversationId": "conv_1791309033219_tws6y",
+      "role": "assistant",
+      "content": "Je me porte parfaitement, merci de demander. Je suis pleinement opérationnel et prêt à t'accompagner dans tes projets ou à répondre à tes interrogations avec la précision et l'efficacité qui caractérisent mon système. Et de ton côté, comment se passe ta journée ?",
+      "createdAt": "2026-10-06T17:50:43.302Z",
+      "model": "RYXIA Flash"
+    },
+    {
+      "id": "msg_1791309326343_u",
+      "conversationId": "conv_1791309326343_dfqe8",
+      "role": "user",
+      "content": "Explique la différence entre une promesse et un observable en programmation réactive de façon claire et optimisée.",
+      "createdAt": "2026-10-06T17:55:26.343Z",
+      "model": "user"
+    },
+    {
+      "id": "msg_1791309336621_a",
+      "conversationId": "conv_1791309326343_dfqe8",
+      "role": "assistant",
+      "content": "La distinction fondamentale entre une **Promesse** et un **Observable** réside dans leur capacité à gérer les flux de données et leur nature intrinsèque. Une **Promesse** représente l'achèvement unique d'une opération asynchrone : elle est soit résolue, soit rejetée, et elle s'exécute dès sa création sans possibilité d'annulation.\n\nÀ l'inverse, un **Observable** traite des flux de données asynchrones pouvant émettre **plusieurs valeurs** dans le temps. Contrairement à la promesse, l'observable est \"paresseux\" (lazy) : il ne s'exécute que lorsqu'il est souscrit, offre des opérateurs de transformation puissants (comme `map` ou `filter`) et permet une gestion avancée avec la possibilité d'être **annulé** à tout moment via le désabonnement.",
+      "createdAt": "2026-10-06T17:55:36.621Z",
+      "model": "RYXIA Flash"
+    },
+    {
+      "id": "msg_1791657400370_u",
+      "conversationId": "conv_1791657400140_ir7mb",
+      "role": "user",
+      "content": "quelle",
+      "createdAt": "2026-10-10T18:36:40.370Z",
+      "model": "user"
+    },
+    {
+      "id": "msg_1791903455301_u",
+      "conversationId": "conv_1791903455179_snjy6",
+      "role": "user",
+      "content": "genere image de chat",
+      "createdAt": "2026-10-13T14:57:35.301Z",
+      "model": "user"
+    },
+    {
+      "id": "msg_1791903457249_a",
+      "conversationId": "conv_1791903455179_snjy6",
+      "role": "assistant",
+      "content": "Une perturbation temporaire des serveurs est survenue. Le contexte de votre échange a été préservé ; n'hésitez pas à relancer votre question.",
+      "createdAt": "2026-10-13T14:57:37.249Z",
+      "model": "RYXIA (Secours)"
+    },
+    {
+      "id": "msg_1791904289944_u",
+      "conversationId": "conv_1791904289261_s54yo",
+      "role": "user",
+      "content": "genere une image dun chat",
+      "createdAt": "2026-10-13T15:11:29.944Z",
+      "model": "user"
+    },
+    {
+      "id": "msg_1791904290175_a",
+      "conversationId": "conv_1791904289261_s54yo",
+      "role": "assistant",
+      "content": "Voici l'image générée pour votre demande : **chat**",
+      "imageUrl": "data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTAyNCAxMDI0IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogIDxkZWZzPgogICAgPHJhZGlhbEdyYWRpZW50IGlkPSJiZ0ciIGN4PSI1MCUiIGN5PSI1MCUiIHI9IjcwJSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMyYTIyMzgiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSI1MCUiIHN0b3AtY29sb3I9IiMxOTE1MjYiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMGMwYTE0Ii8+CiAgICA8L3JhZGlhbEdyYWRpZW50PgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJmdXJHIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Y1OWUwYiIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iI2VhNTgwYyIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM5YTM0MTIiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImVhckluIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjAlIiB5Mj0iMTAwJSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNmY2E1YTUiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZjQzZjVlIi8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPHJhZGlhbEdyYWRpZW50IGlkPSJleWVHIiBjeD0iMzUlIiBjeT0iMzUlIiByPSI2MCUiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjYTdmM2QwIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iNjAlIiBzdG9wLWNvbG9yPSIjMTBiOTgxIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzA0Nzg1NyIvPgogICAgPC9yYWRpYWxHcmFkaWVudD4KICAgIDxmaWx0ZXIgaWQ9Imdsb3ciIHg9Ii0yMCUiIHk9Ii0yMCUiIHdpZHRoPSIxNDAlIiBoZWlnaHQ9IjE0MCUiPgogICAgICA8ZmVHYXVzc2lhbkJsdXIgc3RkRGV2aWF0aW9uPSIxNSIgcmVzdWx0PSJibHVyIi8+CiAgICAgIDxmZUNvbXBvc2l0ZSBpbj0iU291cmNlR3JhcGhpYyIgaW4yPSJibHVyIiBvcGVyYXRvcj0ib3ZlciIvPgogICAgPC9maWx0ZXI+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSIxMDI0IiBoZWlnaHQ9IjEwMjQiIGZpbGw9InVybCgjYmdHKSIvPgogIDxjaXJjbGUgY3g9IjUxMiIgY3k9IjUxMiIgcj0iNDMwLjA4IiBmaWxsPSIjZjU5ZTBiIiBmaWxsLW9wYWNpdHk9IjAuMDgiIGZpbHRlcj0idXJsKCNnbG93KSIvPgogIDwhLS0gT3JlaWxsZXMgLS0+CiAgPHBvbHlnb24gcG9pbnRzPSIzNzIsNDMyIDMxMiwyNTIgNDcyLDM0MiIgZmlsbD0idXJsKCNmdXJHKSIvPgogIDxwb2x5Z29uIHBvaW50cz0iMzgyLDQyMiAzMjcsMjcyIDQ1MiwzNDciIGZpbGw9InVybCgjZWFySW4pIi8+CiAgPHBvbHlnb24gcG9pbnRzPSI2NTIsNDMyIDcxMiwyNTIgNTUyLDM0MiIgZmlsbD0idXJsKCNmdXJHKSIvPgogIDxwb2x5Z29uIHBvaW50cz0iNjQyLDQyMiA2OTcsMjcyIDU3MiwzNDciIGZpbGw9InVybCgjZWFySW4pIi8+CiAgPCEtLSBUw6p0ZSAtLT4KICA8ZWxsaXBzZSBjeD0iNTEyIiBjeT0iNDgyIiByeD0iMTkwIiByeT0iMTY1IiBmaWxsPSJ1cmwoI2Z1ckcpIi8+CiAgPCEtLSBKb3VlcyAvIEJhYmluZXMgYmxhbmNoZXMgLS0+CiAgPGVsbGlwc2UgY3g9IjQ2NyIgY3k9IjU2NyIgcng9IjU1IiByeT0iNDAiIGZpbGw9IiNmZmZiZWIiLz4KICA8ZWxsaXBzZSBjeD0iNTU3IiBjeT0iNTY3IiByeD0iNTUiIHJ5PSI0MCIgZmlsbD0iI2ZmZmJlYiIvPgogIDwhLS0gWWV1eCAtLT4KICA8ZWxsaXBzZSBjeD0iNDM3IiBjeT0iNDcyIiByeD0iMzgiIHJ5PSI0OCIgZmlsbD0idXJsKCNleWVHKSIvPgogIDxlbGxpcHNlIGN4PSI1ODciIGN5PSI0NzIiIHJ4PSIzOCIgcnk9IjQ4IiBmaWxsPSJ1cmwoI2V5ZUcpIi8+CiAgPGVsbGlwc2UgY3g9IjQzNyIgY3k9IjQ3MiIgcng9IjE0IiByeT0iNDIiIGZpbGw9IiMwZjE3MmEiLz4KICA8ZWxsaXBzZSBjeD0iNTg3IiBjeT0iNDcyIiByeD0iMTQiIHJ5PSI0MiIgZmlsbD0iIzBmMTcyYSIvPgogIDwhLS0gUmVmbGV0cyB5ZXV4IC0tPgogIDxjaXJjbGUgY3g9IjQyNyIgY3k9IjQ1NyIgcj0iMTEiIGZpbGw9IiNmZmZmZmYiLz4KICA8Y2lyY2xlIGN4PSI1NzciIGN5PSI0NTciIHI9IjExIiBmaWxsPSIjZmZmZmZmIi8+CiAgPGNpcmNsZSBjeD0iNDQ0IiBjeT0iNDgyIiByPSI1IiBmaWxsPSIjZmZmZmZmIi8+CiAgPGNpcmNsZSBjeD0iNTk0IiBjeT0iNDgyIiByPSI1IiBmaWxsPSIjZmZmZmZmIi8+CiAgPCEtLSBOZXogcm9zZSAtLT4KICA8cG9seWdvbiBwb2ludHM9IjUxMiw1MzcgNDk2LDUyMiA1MjgsNTIyIiBmaWxsPSIjZjQzZjVlIi8+CiAgPCEtLSBCb3VjaGUgLS0+CiAgPHBhdGggZD0iTTQ3NyA1NzIgUTUxMiA1ODcgNTEyIDUzNyBRNTEyIDU4NyA1NDcgNTcyIiBmaWxsPSJub25lIiBzdHJva2U9IiM0NTFhMDMiIHN0cm9rZS13aWR0aD0iNCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CiAgPCEtLSBNb3VzdGFjaGVzIC0tPgogIDxsaW5lIHgxPSI0NTIiIHkxPSI1NDciIHgyPSIyNzIiIHkyPSI1MjciIHN0cm9rZT0iI2ZmZmZmZiIgc3Ryb2tlLXdpZHRoPSIzLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgb3BhY2l0eT0iMC45Ii8+CiAgPGxpbmUgeDE9IjQ1MiIgeTE9IjU2MiIgeDI9IjI2MiIgeTI9IjU2NyIgc3Ryb2tlPSIjZmZmZmZmIiBzdHJva2Utd2lkdGg9IjMuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBvcGFjaXR5PSIwLjkiLz4KICA8bGluZSB4MT0iNDUyIiB5MT0iNTc3IiB4Mj0iMjgyIiB5Mj0iNjA3IiBzdHJva2U9IiNmZmZmZmYiIHN0cm9rZS13aWR0aD0iMy41IiBzdHJva2UtbGluZWNhcD0icm91bmQiIG9wYWNpdHk9IjAuOSIvPgogIDxsaW5lIHgxPSI1NzIiIHkxPSI1NDciIHgyPSI3NTIiIHkyPSI1MjciIHN0cm9rZT0iI2ZmZmZmZiIgc3Ryb2tlLXdpZHRoPSIzLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgb3BhY2l0eT0iMC45Ii8+CiAgPGxpbmUgeDE9IjU3MiIgeTE9IjU2MiIgeDI9Ijc2MiIgeTI9IjU2NyIgc3Ryb2tlPSIjZmZmZmZmIiBzdHJva2Utd2lkdGg9IjMuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBvcGFjaXR5PSIwLjkiLz4KICA8bGluZSB4MT0iNTcyIiB5MT0iNTc3IiB4Mj0iNzQyIiB5Mj0iNjA3IiBzdHJva2U9IiNmZmZmZmYiIHN0cm9rZS13aWR0aD0iMy41IiBzdHJva2UtbGluZWNhcD0icm91bmQiIG9wYWNpdHk9IjAuOSIvPgogIDwhLS0gQ29ycHMgc3R5bGlzw6kgLS0+CiAgPGVsbGlwc2UgY3g9IjUxMiIgY3k9Ijc5MiIgcng9IjIzMCIgcnk9IjE3MCIgZmlsbD0idXJsKCNmdXJHKSIvPgogIDxlbGxpcHNlIGN4PSI1MTIiIGN5PSI3NzIiIHJ4PSIxMzAiIHJ5PSIxNDAiIGZpbGw9IiNmZmZiZWIiLz4KPC9zdmc+",
+      "imagePrompt": "chat",
+      "createdAt": "2026-10-13T15:11:30.175Z",
+      "model": "RYXIA Vector Studio"
     }
   ],
   "settings": {
@@ -607,7 +2001,9 @@
       "enterSends": true,
       "animations": true,
       "aiProvider": "auto",
-      "customOpenAiModel": "gpt-5.6-luna"
+      "customOpenAiModel": "gpt-5.6-luna",
+      "responseLength": "balanced",
+      "speedMode": "turbo"
     },
     "guest_1790942860085_zaq8": {
       "userId": "guest_1790942860085_zaq8",
@@ -662,6 +2058,397 @@
       "animations": true,
       "aiProvider": "auto",
       "customOpenAiModel": "gpt-5.6-luna"
+    },
+    "guest_1791020467236_637h": {
+      "userId": "guest_1791020467236_637h",
+      "theme": "obsidian",
+      "fontSize": "md",
+      "enterSends": true,
+      "animations": true,
+      "aiProvider": "auto",
+      "customOpenAiModel": "gpt-5.6-luna"
+    },
+    "guest_1791020509817_67po": {
+      "userId": "guest_1791020509817_67po",
+      "theme": "obsidian",
+      "fontSize": "md",
+      "enterSends": true,
+      "animations": true,
+      "aiProvider": "auto",
+      "customOpenAiModel": "gpt-5.6-luna"
+    },
+    "guest_1791021104322_s24o": {
+      "userId": "guest_1791021104322_s24o",
+      "theme": "obsidian",
+      "fontSize": "md",
+      "enterSends": true,
+      "animations": true,
+      "aiProvider": "auto",
+      "customOpenAiModel": "gpt-5.6-luna"
+    },
+    "guest_1791021118595_cxsx": {
+      "userId": "guest_1791021118595_cxsx",
+      "theme": "obsidian",
+      "fontSize": "md",
+      "enterSends": true,
+      "animations": true,
+      "aiProvider": "auto",
+      "customOpenAiModel": "gpt-5.6-luna"
+    },
+    "guest_1791021129583_f9td": {
+      "userId": "guest_1791021129583_f9td",
+      "theme": "obsidian",
+      "fontSize": "md",
+      "enterSends": true,
+      "animations": true,
+      "aiProvider": "auto",
+      "customOpenAiModel": "gpt-5.6-luna"
+    },
+    "guest_1791021158814_6gpr": {
+      "userId": "guest_1791021158814_6gpr",
+      "theme": "obsidian",
+      "fontSize": "md",
+      "enterSends": true,
+      "animations": true,
+      "aiProvider": "auto",
+      "customOpenAiModel": "gpt-5.6-luna"
+    },
+    "guest_1791021202076_3jlc": {
+      "userId": "guest_1791021202076_3jlc",
+      "theme": "obsidian",
+      "fontSize": "md",
+      "enterSends": true,
+      "animations": true,
+      "aiProvider": "auto",
+      "customOpenAiModel": "gpt-5.6-luna"
+    },
+    "guest_1791021214178_bsf8": {
+      "userId": "guest_1791021214178_bsf8",
+      "theme": "obsidian",
+      "fontSize": "md",
+      "enterSends": true,
+      "animations": true,
+      "aiProvider": "auto",
+      "customOpenAiModel": "gpt-5.6-luna"
+    },
+    "guest_1791021234866_ixot": {
+      "userId": "guest_1791021234866_ixot",
+      "theme": "obsidian",
+      "fontSize": "md",
+      "enterSends": true,
+      "animations": true,
+      "aiProvider": "auto",
+      "customOpenAiModel": "gpt-5.6-luna"
+    },
+    "guest_1791021244270_duzr": {
+      "userId": "guest_1791021244270_duzr",
+      "theme": "obsidian",
+      "fontSize": "md",
+      "enterSends": true,
+      "animations": true,
+      "aiProvider": "auto",
+      "customOpenAiModel": "gpt-5.6-luna"
+    },
+    "guest_1791021259676_6uoa": {
+      "userId": "guest_1791021259676_6uoa",
+      "theme": "obsidian",
+      "fontSize": "md",
+      "enterSends": true,
+      "animations": true,
+      "aiProvider": "auto",
+      "customOpenAiModel": "gpt-5.6-luna"
+    },
+    "guest_1791021545389_3315": {
+      "userId": "guest_1791021545389_3315",
+      "theme": "obsidian",
+      "fontSize": "md",
+      "enterSends": true,
+      "animations": true,
+      "aiProvider": "auto",
+      "customOpenAiModel": "gpt-5.6-luna",
+      "responseLength": "balanced"
+    },
+    "guest_1791021750675_f099": {
+      "userId": "guest_1791021750675_f099",
+      "theme": "obsidian",
+      "fontSize": "md",
+      "enterSends": true,
+      "animations": true,
+      "aiProvider": "auto",
+      "customOpenAiModel": "gpt-5.6-luna",
+      "responseLength": "balanced"
+    },
+    "guest_1791021762054_6q63": {
+      "userId": "guest_1791021762054_6q63",
+      "theme": "obsidian",
+      "fontSize": "md",
+      "enterSends": true,
+      "animations": true,
+      "aiProvider": "auto",
+      "customOpenAiModel": "gpt-5.6-luna",
+      "responseLength": "balanced"
+    },
+    "guest_1791021961400_8qrf": {
+      "userId": "guest_1791021961400_8qrf",
+      "theme": "obsidian",
+      "fontSize": "md",
+      "enterSends": true,
+      "animations": true,
+      "aiProvider": "auto",
+      "customOpenAiModel": "gpt-5.6-luna",
+      "responseLength": "balanced"
+    },
+    "guest_1791021971507_xxi4": {
+      "userId": "guest_1791021971507_xxi4",
+      "theme": "obsidian",
+      "fontSize": "md",
+      "enterSends": true,
+      "animations": true,
+      "aiProvider": "auto",
+      "customOpenAiModel": "gpt-5.6-luna",
+      "responseLength": "balanced"
+    },
+    "guest_1791107298674_87y1": {
+      "userId": "guest_1791107298674_87y1",
+      "theme": "obsidian",
+      "fontSize": "md",
+      "enterSends": true,
+      "animations": true,
+      "aiProvider": "auto",
+      "speedMode": "turbo",
+      "responseLength": "balanced",
+      "customOpenAiModel": "gpt-5.6-luna"
+    },
+    "guest_1791107406647_ys9m": {
+      "userId": "guest_1791107406647_ys9m",
+      "theme": "obsidian",
+      "fontSize": "md",
+      "enterSends": true,
+      "animations": true,
+      "aiProvider": "auto",
+      "speedMode": "turbo",
+      "responseLength": "balanced",
+      "customOpenAiModel": "gpt-5.6-luna"
+    },
+    "guest_1791107543666_lo38": {
+      "userId": "guest_1791107543666_lo38",
+      "theme": "obsidian",
+      "fontSize": "md",
+      "enterSends": true,
+      "animations": true,
+      "aiProvider": "auto",
+      "speedMode": "turbo",
+      "responseLength": "balanced",
+      "customOpenAiModel": "gpt-5.6-luna"
+    },
+    "guest_1791132210412_drym": {
+      "userId": "guest_1791132210412_drym",
+      "theme": "obsidian",
+      "fontSize": "md",
+      "enterSends": true,
+      "animations": true,
+      "aiProvider": "auto",
+      "speedMode": "turbo",
+      "responseLength": "balanced",
+      "customOpenAiModel": "gpt-5.6-luna"
+    },
+    "guest_1791132219729_ubpa": {
+      "userId": "guest_1791132219729_ubpa",
+      "theme": "obsidian",
+      "fontSize": "md",
+      "enterSends": true,
+      "animations": true,
+      "aiProvider": "auto",
+      "speedMode": "turbo",
+      "responseLength": "balanced",
+      "customOpenAiModel": "gpt-5.6-luna"
+    },
+    "guest_1791141063172_ylsc": {
+      "userId": "guest_1791141063172_ylsc",
+      "theme": "obsidian",
+      "fontSize": "md",
+      "enterSends": true,
+      "animations": true,
+      "aiProvider": "auto",
+      "speedMode": "turbo",
+      "responseLength": "balanced",
+      "customOpenAiModel": "gpt-5.6-luna"
+    },
+    "guest_1791141323617_9skf": {
+      "userId": "guest_1791141323617_9skf",
+      "theme": "obsidian",
+      "fontSize": "md",
+      "enterSends": true,
+      "animations": true,
+      "aiProvider": "auto",
+      "speedMode": "turbo",
+      "responseLength": "balanced",
+      "customOpenAiModel": "gpt-5.6-luna"
+    },
+    "guest_1791141350017_onum": {
+      "userId": "guest_1791141350017_onum",
+      "theme": "obsidian",
+      "fontSize": "md",
+      "enterSends": true,
+      "animations": true,
+      "aiProvider": "auto",
+      "speedMode": "turbo",
+      "responseLength": "balanced",
+      "customOpenAiModel": "gpt-5.6-luna"
+    },
+    "guest_1791141354073_k0q5": {
+      "userId": "guest_1791141354073_k0q5",
+      "theme": "obsidian",
+      "fontSize": "md",
+      "enterSends": true,
+      "animations": true,
+      "aiProvider": "auto",
+      "speedMode": "turbo",
+      "responseLength": "balanced",
+      "customOpenAiModel": "gpt-5.6-luna"
+    },
+    "guest_1791141378068_xagh": {
+      "userId": "guest_1791141378068_xagh",
+      "theme": "obsidian",
+      "fontSize": "md",
+      "enterSends": true,
+      "animations": true,
+      "aiProvider": "auto",
+      "speedMode": "turbo",
+      "responseLength": "balanced",
+      "customOpenAiModel": "gpt-5.6-luna"
+    },
+    "guest_1791306621446_bzrd": {
+      "userId": "guest_1791306621446_bzrd",
+      "theme": "obsidian",
+      "fontSize": "md",
+      "enterSends": true,
+      "animations": true,
+      "aiProvider": "auto",
+      "speedMode": "turbo",
+      "responseLength": "balanced",
+      "customOpenAiModel": "gpt-4o"
+    },
+    "guest_1791306625536_y7f7": {
+      "userId": "guest_1791306625536_y7f7",
+      "theme": "obsidian",
+      "fontSize": "md",
+      "enterSends": true,
+      "animations": true,
+      "aiProvider": "auto",
+      "speedMode": "turbo",
+      "responseLength": "balanced",
+      "customOpenAiModel": "gpt-4o"
+    },
+    "guest_1791306630468_tari": {
+      "userId": "guest_1791306630468_tari",
+      "theme": "obsidian",
+      "fontSize": "md",
+      "enterSends": true,
+      "animations": true,
+      "aiProvider": "auto",
+      "speedMode": "turbo",
+      "responseLength": "balanced",
+      "customOpenAiModel": "gpt-4o"
+    },
+    "guest_1791309029172_bi2x": {
+      "userId": "guest_1791309029172_bi2x",
+      "theme": "obsidian",
+      "fontSize": "md",
+      "enterSends": true,
+      "animations": true,
+      "aiProvider": "auto",
+      "speedMode": "turbo",
+      "responseLength": "balanced",
+      "customOpenAiModel": "gpt-4o"
+    },
+    "guest_1791309033109_73qm": {
+      "userId": "guest_1791309033109_73qm",
+      "theme": "obsidian",
+      "fontSize": "md",
+      "enterSends": true,
+      "animations": true,
+      "aiProvider": "auto",
+      "speedMode": "turbo",
+      "responseLength": "balanced",
+      "customOpenAiModel": "gpt-4o"
+    },
+    "guest_1791309326192_vgqm": {
+      "userId": "guest_1791309326192_vgqm",
+      "theme": "obsidian",
+      "fontSize": "md",
+      "enterSends": true,
+      "animations": true,
+      "aiProvider": "auto",
+      "speedMode": "turbo",
+      "responseLength": "balanced",
+      "customOpenAiModel": "gpt-4o"
+    },
+    "guest_1791655667559_y27f": {
+      "userId": "guest_1791655667559_y27f",
+      "theme": "obsidian",
+      "fontSize": "md",
+      "enterSends": true,
+      "animations": true,
+      "aiProvider": "auto",
+      "speedMode": "turbo",
+      "responseLength": "balanced",
+      "customOpenAiModel": "gpt-4o"
+    },
+    "2xNfZTcZJyMguJur5ejkILWf1e02": {
+      "userId": "2xNfZTcZJyMguJur5ejkILWf1e02",
+      "theme": "obsidian",
+      "fontSize": "md",
+      "enterSends": true,
+      "animations": true,
+      "aiProvider": "auto",
+      "speedMode": "turbo",
+      "responseLength": "balanced",
+      "customOpenAiModel": "gpt-4o"
+    },
+    "guest_1791903793246_lmdw": {
+      "userId": "guest_1791903793246_lmdw",
+      "theme": "obsidian",
+      "fontSize": "md",
+      "enterSends": true,
+      "animations": true,
+      "aiProvider": "auto",
+      "speedMode": "turbo",
+      "responseLength": "balanced",
+      "customOpenAiModel": "gpt-4o"
+    },
+    "guest_1791905046612_5kb9": {
+      "userId": "guest_1791905046612_5kb9",
+      "theme": "obsidian",
+      "fontSize": "md",
+      "enterSends": true,
+      "animations": true,
+      "aiProvider": "auto",
+      "speedMode": "turbo",
+      "responseLength": "balanced",
+      "customOpenAiModel": "gpt-4o"
+    },
+    "guest_1791905050769_nll0": {
+      "userId": "guest_1791905050769_nll0",
+      "theme": "obsidian",
+      "fontSize": "md",
+      "enterSends": true,
+      "animations": true,
+      "aiProvider": "auto",
+      "speedMode": "turbo",
+      "responseLength": "balanced",
+      "customOpenAiModel": "gpt-4o"
+    },
+    "guest_1791905342952_pbhb": {
+      "userId": "guest_1791905342952_pbhb",
+      "theme": "obsidian",
+      "fontSize": "md",
+      "enterSends": true,
+      "animations": true,
+      "aiProvider": "auto",
+      "speedMode": "turbo",
+      "responseLength": "balanced",
+      "customOpenAiModel": "gpt-4o"
     }
   }
 }

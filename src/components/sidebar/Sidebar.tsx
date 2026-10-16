@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import {
   SquarePen,
   MoreHorizontal,
@@ -14,12 +14,17 @@ import {
   Sun,
   Moon,
   Keyboard,
+  Wand2,
+  Mic,
 } from 'lucide-react';
-import { Conversation, User } from '../../types/index.ts';
+import { VoiceLogo } from '../voice/VoiceLogo.tsx';
+import { Conversation, User, RyxiaMode } from '../../types/index.ts';
 
 interface SidebarProps {
   conversations: Conversation[];
   activeConversationId: string | null;
+  activeMode?: RyxiaMode;
+  onChangeMode?: (mode: RyxiaMode) => void;
   onSelectConversation: (id: string) => void;
   onNewConversation: () => void;
   onRenameConversation: (id: string, newTitle: string) => void;
@@ -34,11 +39,16 @@ interface SidebarProps {
   theme?: 'dark' | 'light' | 'obsidian' | 'midnight';
   onToggleTheme?: () => void;
   onOpenShortcuts?: () => void;
+  onOpenImageStudio?: (mode?: 'create' | 'edit') => void;
+  onOpenVoiceConversation?: () => void;
+  onGoogleSignIn?: () => void;
 }
 
 export const Sidebar: React.FC<SidebarProps> = ({
   conversations,
   activeConversationId,
+  activeMode = 'general',
+  onChangeMode,
   onSelectConversation,
   onNewConversation,
   onRenameConversation,
@@ -53,6 +63,9 @@ export const Sidebar: React.FC<SidebarProps> = ({
   theme = 'dark',
   onToggleTheme,
   onOpenShortcuts,
+  onOpenImageStudio,
+  onOpenVoiceConversation,
+  onGoogleSignIn,
 }) => {
   const [editingId, setEditingId] = useState<string | null>(null);
   const [editTitle, setEditTitle] = useState('');
@@ -103,67 +116,105 @@ export const Sidebar: React.FC<SidebarProps> = ({
     setEditingId(null);
   };
 
-  if (!isOpen) return null;
+  const handleSelectConv = (id: string) => {
+    onSelectConversation(id);
+    if (typeof window !== 'undefined' && window.innerWidth < 768) {
+      onClose();
+    }
+  };
+
+  const handleNewConv = () => {
+    onNewConversation();
+    if (typeof window !== 'undefined' && window.innerWidth < 768) {
+      onClose();
+    }
+  };
+
+  useEffect(() => {
+    if (!isOpen) {
+      setShowUserMenu(false);
+      setActiveMenuId(null);
+      setEditingId(null);
+    }
+  }, [isOpen]);
 
   return (
     <>
-      {/* Mobile backdrop */}
+      {/* Mobile backdrop with smooth opacity transition */}
       <div
-        className="fixed inset-0 bg-black/50 z-30 md:hidden backdrop-blur-xs"
+        className={`sidebar-backdrop ${isOpen ? 'opacity-100 pointer-events-auto visible' : 'opacity-0 pointer-events-none invisible'}`}
         onClick={onClose}
+        aria-hidden={!isOpen}
       />
 
       <aside
-        className="fixed md:relative z-40 h-full w-[260px] flex flex-col justify-between shrink-0 font-sans select-none animate-in slide-in-from-left duration-150 transition-colors duration-200"
+        className={`sidebar-drawer ${isOpen ? 'is-open pointer-events-auto' : 'is-closed pointer-events-none'}`}
         style={{
           backgroundColor: 'var(--bg-sidebar)',
           color: 'var(--text-primary)',
-          borderRight: '1px solid var(--border-subtle)',
         }}
+        aria-hidden={!isOpen}
       >
-        {/* Top: Header & New Chat */}
-        <div className="p-3" style={{ borderBottom: '1px solid var(--border-subtle)' }}>
-          <div className="flex items-center justify-between mb-3 px-1">
-            <div className="flex items-center gap-2">
-              <div className="w-6 h-6 rounded-lg bg-amber-500/10 border border-amber-500/20 flex items-center justify-center">
-                <span className="font-display font-extrabold text-xs text-amber-500">R</span>
-              </div>
-              <div className="flex items-center gap-1.5">
-                <span className="font-display font-bold text-sm tracking-tight">RYXIA</span>
-                <span className="text-[10px] font-semibold text-amber-500 bg-amber-500/10 px-1.5 py-0.5 rounded border border-amber-500/20">
-                  by Adan
-                </span>
-              </div>
+        <div className="sidebar-inner-content">
+        {/* Top: Header, New Chat & Voice Conversation */}
+        <div className="p-3 space-y-2.5" style={{ borderBottom: '1px solid var(--border-subtle)' }}>
+          {/* Brand header - clean without R badge */}
+          <div className="flex items-center justify-between px-1 pt-0.5">
+            <div className="flex items-baseline gap-2">
+              <span className="font-display font-extrabold text-base tracking-tight text-[var(--text-primary)] drop-shadow-[0_0_12px_rgba(255,115,0,0.2)]">
+                RYXIA
+              </span>
+              <span className="text-[11px] font-semibold text-orange-500 dark:text-orange-400 font-mono tracking-tight">
+                by Adan
+              </span>
             </div>
 
             <button
               onClick={onClose}
-              className="p-1.5 rounded-lg hover:bg-[var(--bg-surface-hover)] transition-colors opacity-70 hover:opacity-100"
+              className="p-1.5 rounded-lg hover:bg-[var(--bg-surface-hover)] transition-colors opacity-70 hover:opacity-100 cursor-pointer"
               title="Fermer la barre latérale"
             >
-              <PanelLeftClose className="w-4 h-4" />
+              <PanelLeftClose className="w-4 h-4 text-zinc-500 hover:text-[var(--text-primary)]" />
             </button>
           </div>
 
-          {/* New Chat Button */}
+          {/* New Chat Primary CTA */}
           <button
-            onClick={onNewConversation}
-            className="w-full flex items-center justify-between px-3 py-2 rounded-xl transition-all text-xs font-semibold shadow-xs hover:border-amber-500/30 group"
-            style={{
-              backgroundColor: 'var(--bg-surface)',
-              border: '1px solid var(--border-color)',
-              color: 'var(--text-primary)',
-            }}
+            onClick={handleNewConv}
+            className="w-full flex items-center justify-between px-3 py-2.5 rounded-xl transition-all text-xs font-semibold border border-orange-500/25 hover:border-orange-500/50 bg-white dark:bg-[#0c0e15] hover:bg-orange-50/70 dark:hover:bg-[#141722] text-[var(--text-primary)] group shadow-xs cursor-pointer"
             title="Nouvelle discussion (Cmd+K ou Ctrl+K)"
           >
             <div className="flex items-center gap-2">
-              <SquarePen className="w-3.5 h-3.5 text-amber-500 group-hover:scale-110 transition-transform" />
+              <SquarePen className="w-3.5 h-3.5 text-orange-500 dark:text-orange-400 group-hover:scale-110 transition-transform" />
               <span>Nouvelle discussion</span>
             </div>
-            <kbd className="px-1.5 py-0.5 rounded text-[10px] opacity-70 font-mono border bg-[var(--bg-main)]" style={{ borderColor: 'var(--border-subtle)' }}>
+            <kbd className="px-1.5 py-0.5 rounded text-[10px] opacity-60 font-mono border bg-[var(--bg-main)]" style={{ borderColor: 'var(--border-subtle)' }}>
               ⌘K
             </kbd>
           </button>
+
+          {/* Section Conversation Vocale - DIRECTEMENT SOUS Nouvelle discussion */}
+          {onOpenVoiceConversation && (
+            <button
+              onClick={() => {
+                onOpenVoiceConversation();
+                if (typeof window !== 'undefined' && window.innerWidth < 768) onClose();
+              }}
+              className="w-full flex items-center justify-between px-3 py-2.5 rounded-xl transition-all text-xs font-semibold border border-orange-500/35 hover:border-orange-500 bg-orange-500/10 hover:bg-orange-500/15 text-orange-600 dark:text-orange-300 shadow-[0_0_15px_rgba(255,115,0,0.06)] group cursor-pointer"
+              title="Démarrer la Conversation Vocale (RYXIA Audio)"
+            >
+              <div className="flex items-center gap-2.5">
+                <div className="w-7 h-7 rounded-xl bg-gradient-to-br from-orange-500 to-amber-500 flex items-center justify-center text-white shadow-sm group-hover:scale-105 transition-transform">
+                  <VoiceLogo size="sm" className="text-white" animated />
+                </div>
+                <div className="flex flex-col text-left">
+                  <span className="font-semibold text-zinc-900 dark:text-white group-hover:text-orange-600 dark:group-hover:text-orange-200">Conversation Vocale</span>
+                  <span className="text-[10px] text-orange-600/80 dark:text-orange-400/80 font-mono">Voix Directe RYXIA</span>
+                </div>
+              </div>
+              <span className="w-2 h-2 rounded-full bg-orange-500 dark:bg-orange-400 animate-ping shadow-[0_0_8px_rgba(255,115,0,0.8)]" />
+            </button>
+          )}
         </div>
 
         {/* Conversation History List */}
@@ -217,12 +268,16 @@ export const Sidebar: React.FC<SidebarProps> = ({
                   return (
                     <div
                       key={conv.id}
-                      onClick={() => onSelectConversation(conv.id)}
-                      className="group relative flex items-center justify-between px-3 py-2 rounded-lg cursor-pointer transition-colors text-[13px]"
+                      onClick={() => handleSelectConv(conv.id)}
+                      className={`group relative flex items-center justify-between px-3 py-2 rounded-xl cursor-pointer transition-all text-[13px] ${
+                        isActive
+                          ? 'bg-orange-500/15 dark:bg-orange-500/20 font-semibold border border-orange-500/35 shadow-xs'
+                          : 'hover:bg-[var(--bg-surface-hover)]'
+                      }`}
                       style={{
-                        backgroundColor: isActive ? 'var(--bg-surface)' : 'transparent',
-                        color: isActive ? 'var(--text-primary)' : 'var(--text-secondary)',
-                        fontWeight: isActive ? 600 : 400,
+                        color: isActive
+                          ? (theme === 'light' ? '#c2410c' : '#ffffff')
+                          : 'var(--text-secondary)',
                       }}
                     >
                       <span className="truncate pr-2">{conv.title}</span>
@@ -289,9 +344,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
                                 onClick={(e) => {
                                   e.stopPropagation();
                                   setActiveMenuId(null);
-                                  if (confirm('Supprimer cette discussion ?')) {
-                                    onDeleteConversation(conv.id);
-                                  }
+                                  onDeleteConversation(conv.id);
                                 }}
                                 className="w-full flex items-center gap-2 px-2.5 py-1.5 rounded-md text-red-500 hover:bg-red-500/10 transition-colors"
                               >
@@ -318,6 +371,39 @@ export const Sidebar: React.FC<SidebarProps> = ({
 
         {/* Bottom User Menu (ChatGPT style) */}
         <div className="p-3 relative" style={{ borderTop: '1px solid var(--border-subtle)' }}>
+          {/* Bouton Connexion Google juste en haut du bouton Invité */}
+          {user.name === 'Invité' && (
+            <button
+              onClick={() => {
+                if (onGoogleSignIn) onGoogleSignIn();
+                else onOpenAuth();
+              }}
+              className="w-full mb-2 flex items-center justify-center gap-2 py-2 px-3 rounded-xl border border-[var(--border-subtle)] bg-[var(--bg-surface)] hover:bg-[var(--bg-surface-hover)] text-xs font-semibold shadow-xs transition-all cursor-pointer group hover:border-amber-500/40"
+              style={{ color: 'var(--text-primary)' }}
+              title="Connexion directe avec votre compte Google"
+            >
+              <svg className="w-4 h-4 shrink-0" viewBox="0 0 24 24">
+                <path
+                  fill="#4285F4"
+                  d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
+                />
+                <path
+                  fill="#34A853"
+                  d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+                />
+                <path
+                  fill="#FBBC05"
+                  d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"
+                />
+                <path
+                  fill="#EA4335"
+                  d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"
+                />
+              </svg>
+              <span>Connexion Google</span>
+            </button>
+          )}
+
           <button
             onClick={() => setShowUserMenu(!showUserMenu)}
             className="w-full flex items-center justify-between p-2 rounded-xl hover:bg-[var(--bg-surface-hover)] transition-colors text-left"
@@ -358,6 +444,38 @@ export const Sidebar: React.FC<SidebarProps> = ({
                   border: '1px solid var(--border-color)',
                 }}
               >
+                {/* Quick Google Sign In in popover menu */}
+                {user.name === 'Invité' && (
+                  <button
+                    onClick={() => {
+                      setShowUserMenu(false);
+                      if (onGoogleSignIn) onGoogleSignIn();
+                      else onOpenAuth();
+                    }}
+                    className="w-full flex items-center gap-2.5 px-3 py-2 rounded-xl bg-amber-500/10 hover:bg-amber-500/20 text-amber-500 font-semibold transition-colors"
+                  >
+                    <svg className="w-4 h-4 shrink-0" viewBox="0 0 24 24">
+                      <path
+                        fill="#4285F4"
+                        d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
+                      />
+                      <path
+                        fill="#34A853"
+                        d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+                      />
+                      <path
+                        fill="#FBBC05"
+                        d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"
+                      />
+                      <path
+                        fill="#EA4335"
+                        d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"
+                      />
+                    </svg>
+                    <span>Continuer avec Google</span>
+                  </button>
+                )}
+
                 {/* Theme Toggle option */}
                 {onToggleTheme && (
                   <button
@@ -436,6 +554,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
               </div>
             </>
           )}
+        </div>
         </div>
       </aside>
     </>

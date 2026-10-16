@@ -92,7 +92,9 @@ class Database {
       enterSends: true,
       animations: true,
       aiProvider: 'auto',
-      customOpenAiModel: 'gpt-5.6-luna',
+      speedMode: 'turbo',
+      responseLength: 'balanced',
+      customOpenAiModel: 'gpt-4o',
     };
     this.scheduleSave();
     return user;
@@ -214,9 +216,17 @@ class Database {
         enterSends: true,
         animations: true,
         aiProvider: 'auto',
-        customOpenAiModel: 'gpt-5.6-luna',
+        speedMode: 'turbo',
+        responseLength: 'balanced',
+        customOpenAiModel: 'gpt-4o',
       };
       this.scheduleSave();
+    }
+    if (!this.data.settings[userId].speedMode) {
+      this.data.settings[userId].speedMode = 'turbo';
+    }
+    if (!this.data.settings[userId].responseLength) {
+      this.data.settings[userId].responseLength = 'balanced';
     }
     return this.data.settings[userId];
   }

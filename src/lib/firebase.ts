@@ -23,6 +23,7 @@ import {
   deleteDoc,
   getDocFromServer,
   writeBatch,
+  onSnapshot,
 } from 'firebase/firestore';
 import firebaseConfig from '../../firebase-applet-config.json';
 import { Conversation, Message, User, UserSettings } from '../types/index.ts';
@@ -227,5 +228,83 @@ export async function syncUserSettingsToFirestore(userId: string, settings: Part
     }, { merge: true });
   } catch (err) {
     console.warn('Firestore sync settings failed:', err);
+  }
+}
+
+/**
+ * Abonnement temps réel aux conversations de l'utilisateur pour synchronisation multi-appareils
+ */
+export function subscribeToUserConversations(
+  userId: string,
+  onUpdate: (conversations: Conversation[]) => void
+): () => void {
+  try {
+    const q = query(
+      collection(db, 'conversations'),
+      where('userId', '==', userId),
+      orderBy('updatedAt', 'desc')
+    );
+    return onSnapshot(
+      q,
+      (snap) => {
+        const list: Conversation[] = [];
+        snap.forEach((d) => {
+          list.push(d.data() as Conversation);
+        });
+        onUpdate(list);
+      },
+      (err) => {
+        console.warn('Firestore real-time conversations listener notice:', err);
+      }
+    );
+  } catch (err) {
+    console.warn('Could not establish real-time conversations listener:', err);
+    return () => {};
+  }
+}
+
+/**
+ * Abonnement temps réel aux messages d'une conversation pour affichage instantané multi-écrans
+ */
+export function subscribeToConversationMessages(
+  convId: string,
+  onUpdate: (messages: Message[]) => void
+): () => void {
+  try {
+    const q = query(
+      collection(db, 'conversations', convId, 'messages'),
+      orderBy('createdAt', 'asc')
+    );
+    return onSnapshot(
+      q,
+      (snap) => {
+        const list: Message[] = [];
+        snap.forEach((d) => {
+          list.push(d.data() as Message);
+        });
+        onUpdate(list);
+      },
+      (err) => {
+        console.warn('Firestore real-time messages listener notice:', err);
+      }
+    );
+  } catch (err) {
+    console.warn('Could not establish real-time messages listener:', err);
+    return () => {};
+  }
+}
+
+export async function updateConversationInFirestore(
+  convId: string,
+  data: Partial<Pick<Conversation, 'title' | 'mode'>>
+): Promise<void> {
+  try {
+    const convRef = doc(db, 'conversations', convId);
+    await setDoc(convRef, {
+      ...data,
+      updatedAt: new Date().toISOString(),
+    }, { merge: true });
+  } catch (err) {
+    console.warn('Firestore update conversation warning:', err);
   }
 }

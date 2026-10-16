@@ -316,7 +316,7 @@ const responseStream = await ryxia.chat.stream({
               "L'intelligence artificielle ne doit pas être une boîte noire impersonnelle ni un gadget surchargé. RYXIA a été forgé pour offrir un environnement de réflexion pur, rigoureux et adaptable à votre propre manière de penser et de construire."
             </p>
             <div className="text-xs text-neutral-500">
-              Conception & Architecture · Your AI. Your way.
+              Conception & Architecture · Jeune lycéen en Algérie, passionné de code et de création · Your AI. Your way.
             </div>
           </div>
         </div>

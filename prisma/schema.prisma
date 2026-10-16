@@ -1,0 +1,65 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+enum MessageRole {
+  user
+  assistant
+  system
+}
+
+model User {
+  id            String         @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  googleId      String         @unique @map("google_id") @db.VarChar(255)
+  email         String         @unique @db.VarChar(255)
+  name          String         @db.VarChar(255)
+  avatarUrl     String?        @map("avatar_url")
+  createdAt     DateTime       @default(now()) @map("created_at") @db.Timestamptz
+  updatedAt     DateTime       @updatedAt @map("updated_at") @db.Timestamptz
+
+  conversations Conversation[]
+  messages      Message[]
+
+  @@index([googleId], map: "idx_users_google_id")
+  @@index([email], map: "idx_users_email")
+  @@map("users")
+}
+
+model Conversation {
+  id        String    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  userId    String    @map("user_id") @db.Uuid
+  title     String    @default("Nouvelle discussion") @db.VarChar(255)
+  mode      String    @default("general") @db.VarChar(50)
+  isPinned  Boolean   @default(false) @map("is_pinned")
+  createdAt DateTime  @default(now()) @map("created_at") @db.Timestamptz
+  updatedAt DateTime  @updatedAt @map("updated_at") @db.Timestamptz
+
+  user      User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  messages  Message[]
+
+  @@index([userId, updatedAt(sort: Desc)], map: "idx_conversations_user_updated")
+  @@map("conversations")
+}
+
+model Message {
+  id             String       @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  conversationId String       @map("conversation_id") @db.Uuid
+  userId         String       @map("user_id") @db.Uuid
+  role           MessageRole
+  content        String       @db.Text
+  model          String?      @db.VarChar(100)
+  attachments    Json?
+  createdAt      DateTime     @default(now()) @map("created_at") @db.Timestamptz
+
+  conversation   Conversation @relation(fields: [conversationId], references: [id], onDelete: Cascade)
+  user           User         @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([conversationId, createdAt(sort: Asc)], map: "idx_messages_conversation_created")
+  @@index([userId, createdAt(sort: Desc)], map: "idx_messages_user_created")
+  @@map("messages")
+}

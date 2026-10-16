@@ -27,6 +27,22 @@ export interface GroundingSource {
   type: 'search' | 'maps';
 }
 
+export interface ClientTimeInfo {
+  iso: string;
+  dateString: string;
+  timeString: string;
+  timeZone: string;
+}
+
+export interface FileAttachment {
+  name: string;
+  type: string; // e.g. 'image/png', 'image/jpeg', 'application/pdf', 'text/plain'
+  size: number;
+  dataUrl?: string; // Data URL for preview (e.g. data:image/png;base64,...)
+  base64Data?: string; // Clean base64 without prefix
+  textContent?: string; // For text/code documents
+}
+
 export interface Message {
   id: string;
   conversationId: string;
@@ -35,6 +51,19 @@ export interface Message {
   createdAt: string;
   model: string;
   sources?: GroundingSource[];
+  imageUrl?: string;
+  imagePrompt?: string;
+  attachment?: FileAttachment;
+  attachments?: FileAttachment[];
+}
+
+export interface GeneratedImage {
+  imageUrl: string;
+  mimeType: string;
+  prompt: string;
+  model: string;
+  aspectRatio?: string;
+  createdAt?: string;
 }
 
 export interface Conversation {
@@ -55,6 +84,8 @@ export interface UserSettings {
   enterSends: boolean;
   animations: boolean;
   aiProvider: 'auto' | 'openai' | 'gemini';
+  speedMode?: 'turbo' | 'balanced' | 'deep';
+  responseLength?: 'compact' | 'balanced' | 'detailed';
   customOpenAiModel?: string;
   customOpenAiKey?: string;
 }
@@ -64,4 +95,13 @@ export interface UserStats {
   totalMessages: number;
   favoriteMode: RyxiaMode;
   memberSince: string;
+}
+
+export type LiveVoiceName = 'Zephyr' | 'Puck' | 'Charon' | 'Kore' | 'Fenrir';
+
+export interface VoiceConversationTurn {
+  id: string;
+  speaker: 'user' | 'model';
+  text: string;
+  timestamp: string;
 }
